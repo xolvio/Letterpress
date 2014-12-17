@@ -29,6 +29,7 @@ of [The Meteor Testing Manual](http://www.meteortesting.com).
     * [ ] Invite User
     * [ ] Upgrade / Downgrade User
 * [ ] Chapters
+  * [ ] Add / Remove / Publish / Unpublish
   * [ ] Markdown Authoring
   * [ ] Mark as Free, Paid or Premium
   * [ ] Disqus Integration
