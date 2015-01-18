@@ -10,24 +10,16 @@
 
       var world = helper.world = this;
 
-      world.cucumber = Package['xolvio:cucumber'].cucumber;
-      world.wdio = Package['xolvio:webdriver'].wdio;
+      // set the app URL
+      world.mirrorUrl = Package['xolvio:cucumber'].cucumber.mirror.rootUrl;
 
-      var options = {
-        desiredCapabilities: {browserName: 'PhantomJs'},
-        port: 4444,
-        logLevel: 'silent'
-      };
-
-      world.wdio.getGhostDriver(options, function (browser) {
+      Package['xolvio:webdriver'].wdio.getGhostDriver(function (browser) {
         world.browser = browser;
         browser.call(callback);
       });
 
-
     };
 
   };
-
 
 })();

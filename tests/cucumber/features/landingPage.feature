@@ -5,6 +5,7 @@ Feature: Authorable Landing Page
   So that I can entice people to purchase my book
 
   Scenario: Visitors can see a book heading
-    Given I am a new visitor
-    When When I navigate to the landing page
+    Given The setting with key "public.book.title" and value "Letterpress by Xolv.io" has been set
+    And I am a new visitor
+    When I navigate to the landing page
     Then I see the heading "Letterpress by Xolv.io"

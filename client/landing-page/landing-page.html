@@ -1,3 +1,13 @@
 <body>
 <h1>{{bookTitle}}</h1>
+{{> header}}
 </body>
+
+<template name="header">
+    <header>
+        <figure>
+            <img src="{{imageSrc}}" alt="{{imageCaption}}">
+            <figcaption>{{imageCaption}}</figcaption>
+        </figure>
+    </header>
+</template>
