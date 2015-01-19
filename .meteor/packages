@@ -6,7 +6,9 @@
 meteor-platform
 autopublish
 insecure
+less
+
 sanjo:jasmine
 velocity:html-reporter
 xolvio:cucumber
-less
+email

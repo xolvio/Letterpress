@@ -8,3 +8,9 @@ Template.header.helpers({
     return Meteor.settings.public.book.header.imageCaption;
   }
 });
+
+Template.newsletter.events({
+  'click button#submitNewsletterEmail': function () {
+    Meteor.call('newsletterSignup', $('input#newsletterEmail').val());
+  }
+});

@@ -9,3 +9,9 @@ Feature: Authorable Landing Page
     And I am a new visitor
     When I navigate to the landing page
     Then I see the heading "Letterpress by Xolv.io"
+
+  Scenario: Visitors can sign up for the email list
+    Given I navigate to the landing page
+    When I sign up for the newsletter with "me@example.com"
+#    Then I receive a confirmation email from "letterpress@xolv.io"
+    And my email address is stored

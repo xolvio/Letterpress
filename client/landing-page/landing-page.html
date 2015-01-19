@@ -1,6 +1,7 @@
 <body>
 <h1>{{bookTitle}}</h1>
 {{> header}}
+{{> newsletter}}
 </body>
 
 <template name="header">
@@ -10,4 +11,12 @@
             <figcaption>{{imageCaption}}</figcaption>
         </figure>
     </header>
+</template>
+
+<template name="newsletter">
+    <form>
+        <label for="newsletterEmail">Email</label>
+        <input id="newsletterEmail"/>
+        <button id="submitNewsletterEmail" type="button">Sign Up!</button>
+    </form>
 </template>
