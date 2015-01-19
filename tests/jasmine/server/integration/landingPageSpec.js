@@ -8,7 +8,7 @@ Jasmine.onTest(function () {
     it("should only store an email once", function () {
       Meteor.call('newsletterSignup', 'yo@dude.com');
       Meteor.call('newsletterSignup', 'yo@dude.com');
-      expect(newsletterSignups.find().count()).toBe(1);
+      expect(NewsletterSignups.find().count()).toBe(1);
     });
 
   });

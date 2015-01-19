@@ -4,7 +4,7 @@ Meteor.methods({
 
     this.unblock();
 
-    newsletterSignups.upsert({email: email}, {email: email});
+    NewsletterSignups.upsert({email: email}, {email: email});
 
     Email.send({
       to: email,

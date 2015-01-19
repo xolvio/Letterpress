@@ -2,26 +2,32 @@
 
   'use strict';
 
-  if (Meteor.isClient) {
-    //if (Meteor.isClient || !process.env.IS_MIRROR) {
+  if (Meteor.isClient || !process.env.IS_MIRROR) {
     return;
   }
 
   Meteor.methods({
     'clearState': function () {
-      newsletterSignups.remove({});
+      NewsletterSignups.remove({});
+      Chapters.remove({});
+      Chapters.insert({
+        title: "Item 2",
+        description: "This chapter will cover item 2",
+        chapterNumber: 2
+      });
+      Chapters.insert({
+        title: "Item 1",
+        description: "This chapter will cover item 1",
+        chapterNumber: 1
+      });
     },
     // Note: this could also be achieved with a Meteor.publish + a DDP subscribe
     'findSignupByEmail': function (email) {
-      return newsletterSignups.findOne({"email": email});
+      return NewsletterSignups.findOne({"email": email});
     }
   });
 
   Meteor.startup(function () {
-
-    Chapters.remove({});
-    Chapters.insert({title: "Item 2", description: "This chapter will cover item 2", chapterNumber: 2});
-    Chapters.insert({title: "Item 1", description: "This chapter will cover item 1", chapterNumber: 1});
 
     _initFakeInbox();
 

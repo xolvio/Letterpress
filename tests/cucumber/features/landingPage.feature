@@ -21,3 +21,4 @@ Feature: Authorable Landing Page
     When I navigate to the landing page
     Then I see the chapters descriptions in the preview section
     And the chapters are in order
+

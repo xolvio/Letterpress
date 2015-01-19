@@ -97,7 +97,7 @@
         }
       });
 
-    })
+    });
 
     this.Given(/^I have entered chapter preview descriptions$/, function (callback) {
       callback();
