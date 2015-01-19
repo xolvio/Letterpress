@@ -6,6 +6,7 @@
     <h1>{{bookTitle}}</h1>
   {{> header}}
   {{> newsletter}}
+  {{> chapters}}
 </template>
 
 <template name="header">
@@ -23,4 +24,13 @@
         <input id="newsletterEmail"/>
         <button id="submitNewsletterEmail" type="button">Sign Up!</button>
     </form>
+</template>
+
+<template name="chapters">
+  <div class="chapters">
+    {{#each chapters}}
+      <h2 class="chapter-title">{{title}}</h2>
+      <p class="chapter-description">{{description}}</p>
+    {{/each}}
+  </div>
 </template>

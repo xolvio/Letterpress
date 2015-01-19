@@ -15,3 +15,9 @@ Feature: Authorable Landing Page
     When I sign up for the newsletter with "me@example.com"
     Then I receive a confirmation email from "letterpress@xolv.io"
     And my email address is stored
+
+  Scenario: Visitors can see chapter descriptions
+    Given I have entered chapter preview descriptions
+    When I navigate to the landing page
+    Then I see the chapters descriptions in the preview section
+    And the chapters are in order

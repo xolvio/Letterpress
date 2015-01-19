@@ -45,7 +45,6 @@
         });
     });
 
-
     this.When(/^I sign up for the newsletter with "([^"]*)"$/, function (myEmailAddress, callback) {
       helper.world.users['I'].emailAddress = myEmailAddress;
       helper.world.browser.
@@ -99,6 +98,26 @@
       });
 
     })
+
+    this.Given(/^I have entered chapter preview descriptions$/, function (callback) {
+      callback();
+    });
+
+    this.Then(/^I see the chapters descriptions in the preview section$/, function (callback) {
+      helper.world.browser.
+        getText('p', function (error, actualHeading) {
+          assert.equal(actualHeading[0], "This chapter will cover item 1");
+          callback();
+        });
+    });
+
+    this.Then(/^the chapters are in order$/, function (callback) {
+      helper.world.browser.
+        getText('h2', function (error, actualHeading) {
+          assert.deepEqual(actualHeading, ["Item 1", "Item 2"]);
+          callback();
+        });
+    });
   };
 
 })();
