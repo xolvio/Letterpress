@@ -1,0 +1,11 @@
+{
+  "public": {
+    "book": {
+      "title": "Letterpress by Xolv.io",
+      "header": {
+        "imageSrc": "/header-image.jpg",
+        "imageCaption": "Write your own book with this WYSIWYG markdown powered book app"
+      }
+    }
+  }
+}
