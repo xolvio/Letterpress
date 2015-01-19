@@ -14,3 +14,9 @@ Template.newsletter.events({
     Meteor.call('newsletterSignup', $('input#newsletterEmail').val());
   }
 });
+
+Template.chapters.helpers({
+  'chapters': function() {
+    return Chapters.find({}, {sort: {chapterNumber: 1}});
+  }
+});

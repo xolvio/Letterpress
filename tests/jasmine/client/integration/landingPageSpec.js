@@ -70,3 +70,12 @@ describe("The header", function () {
   });
 
 });
+
+describe("The chapter previews", function() {
+
+  it("should return all the chapters", function () {
+    actualValue = Template.chapters.__helpers.get('chapters')().fetch();
+    expect(actualValue).toEqual(Chapters.find({}, {sort: {chapterNumber: 1}}).fetch());
+  });
+
+});
