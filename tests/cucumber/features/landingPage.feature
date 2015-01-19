@@ -13,5 +13,5 @@ Feature: Authorable Landing Page
   Scenario: Visitors can sign up for the email list
     Given I navigate to the landing page
     When I sign up for the newsletter with "me@example.com"
-#    Then I receive a confirmation email from "letterpress@xolv.io"
+    Then I receive a confirmation email from "letterpress@xolv.io"
     And my email address is stored

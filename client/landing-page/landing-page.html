@@ -1,8 +1,12 @@
 <body>
-<h1>{{bookTitle}}</h1>
-{{> header}}
-{{> newsletter}}
+{{landingPage}}
 </body>
+
+<template name="landingPage">
+    <h1>{{bookTitle}}</h1>
+  {{> header}}
+  {{> newsletter}}
+</template>
 
 <template name="header">
     <header>

@@ -12,3 +12,4 @@ sanjo:jasmine
 velocity:html-reporter
 xolvio:cucumber
 email
+iron:router
