@@ -3,10 +3,12 @@
 </body>
 
 <template name="landingPage">
-    <h1>{{bookTitle}}</h1>
-  {{> header}}
-  {{> newsletter}}
-  {{> chapters}}
+    <div class="landing-page">
+        <h1>{{bookTitle}}</h1>
+      {{> header}}
+      {{> chapters}}
+      {{> newsletter}}
+    </div>
 </template>
 
 <template name="header">
@@ -27,10 +29,13 @@
 </template>
 
 <template name="chapters">
-  <div class="chapters">
-    {{#each chapters}}
-      <h2 class="chapter-title">{{title}}</h2>
-      <p class="chapter-description">{{description}}</p>
-    {{/each}}
-  </div>
+    <section class="chapters">
+      {{#each chapters}}
+          <div class="chapter">
+              <h2 class="chapter-title">{{title}}</h2>
+
+              <p class="chapter-description">{{description}}</p>
+          </div>
+      {{/each}}
+    </section>
 </template>
