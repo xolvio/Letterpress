@@ -10,6 +10,10 @@
 
     this.Given(/^I am not authenticated$/, function (callback) {
       // Write code here that turns the phrase above into concrete actions
+      // helper.world.browser.
+      //   execute(function() {
+      //     Meteor.logout();
+      //   });
       callback();
     });
 
