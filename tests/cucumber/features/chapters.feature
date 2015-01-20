@@ -12,6 +12,6 @@ Feature: Chapters
 
 #  Scenario: Registered users can see premium content
 #    Given I am authenticated
-#    When I navigate to "/chapter/item-1"
+#    When I navigate to "chapter/1"
 #    Then I see "This is premium content"
 #    And I do not see "This chapter is in preview mode"

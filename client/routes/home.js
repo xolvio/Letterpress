@@ -3,7 +3,7 @@ Router.map(function() {
   this.route('chapter', {
     path: '/chapter/:id',
     action: function() {
-      if (!Meteor.loggingIn() && Meteor.user()) {
+      if (Meteor.user()) {
         this.render('chapter');
       } else {
         this.render('chapterPreview');

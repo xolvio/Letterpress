@@ -1,10 +1,27 @@
 <template name='chapter'>
 
-  <div class="chapter content">
+    <div class="chapter content">
 
-    <h1>{{title}}</h1>
-    <p>This is premium content</p>
+        <h1>{{title}}</h1>
 
-  </div>
+        <p>This is premium content</p>
+    </div>
+
+</template>
+
+<template name="chapters">
+    <section>
+      {{> chapterPreview}}
+    </section>
+</template>
+
+
+<template name="chapterPreview">
+
+    <div class="chapter content">
+        <h1>{{title}}</h1>
+
+        <p>This chapter is in preview mode</p>
+    </div>
 
 </template>
