@@ -12,6 +12,12 @@
       callback();
     });
 
+    this.When(/^I navigate to "([^"]*)"$/, function (url, callback) {
+      helper.world.browser.
+        url(helper.world.mirrorUrl + url).
+        call(callback);
+    });
+
     this.Then(/^I see the heading "([^"]*)"$/, function (expectedHeading, callback) {
       helper.world.browser.
         getText('h1', function (error, actualHeading) {
