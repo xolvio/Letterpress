@@ -10,8 +10,9 @@ Feature: Chapters
     Then I see "This chapter is in preview mode"
     And I do not see "This is premium content"
 
-#  Scenario: Registered users can see premium content
-#    Given I am authenticated
-#    When I navigate to "chapter/1"
-#    Then I see "This is premium content"
-#    And I do not see "This chapter is in preview mode"
+  Scenario: Registered users can see premium content
+    Given I navigate to the landing page
+    And I am authenticated
+    When I navigate to "chapter/1"
+    Then I see "This is premium content"
+    And I do not see "This chapter is in preview mode"

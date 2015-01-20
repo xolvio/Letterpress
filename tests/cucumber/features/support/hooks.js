@@ -19,6 +19,7 @@
             width: 1280,
             height: 1024
           }).
+          timeoutsImplicitWait(1000).
           call(callback);
 
       });

@@ -12,8 +12,8 @@ Meteor.startup(function () {
     service: 'twitter',
     consumerKey: 'long_consumer_key',
     secret: 'a_really_big_secret',
-    loginStyle: 'popup'
-    //loginStyle: 'redirect'
+    //loginStyle: 'popup'
+    loginStyle: 'redirect'
   });
   TwitterFake.init();
   TwitterFake.setupRoutes();

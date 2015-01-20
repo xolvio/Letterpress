@@ -4,7 +4,7 @@ Meteor.startup(function () {
     service: 'twitter',
     consumerKey: '6cm3JCgWcdm6wCXh6mKxNNS8w',
     secret: 'P9SxCFmPEEOiVZnWsEcD4HuAsVF7T0MuAxZhcHFwXl984xfaIa',
-    loginStyle: 'popup'
-    //loginStyle: 'redirect'
+    //loginStyle: 'popup'
+    loginStyle: 'redirect'
   });
 });

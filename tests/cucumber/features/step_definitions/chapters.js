@@ -16,9 +16,14 @@
     this.Given(/^I am authenticated$/, function (callback) {
 
       helper.world.browser.
-        click('#login-buttons-twitter')
-
-      callback();
+        waitForExist('#login-buttons-twitter').
+        waitForVisible('#login-buttons-twitter').
+        saveScreenshot(process.env.PWD + '/auth1.png').
+        click('#login-buttons-twitter').
+        saveScreenshot(process.env.PWD + '/auth2.png').
+        waitForExist('.login-display-name').
+        saveScreenshot(process.env.PWD + '/auth3.png').
+        call(callback)
     });
 
   };

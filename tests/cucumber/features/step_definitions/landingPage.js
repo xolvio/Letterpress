@@ -53,37 +53,6 @@
       }
     });
 
-    //this.Then(/^my email address is stored$/, function (callback) {
-    //
-    //  var connection = DDP.connect(helper.world.mirrorUrl);
-    //
-    //  // fail in a 3 seconds if we don't have a DDP connection
-    //  var timeout = Meteor.setTimeout(function () {
-    //    if (!connection.status().connected) {
-    //      callback.fail('DDP call timed out')
-    //    }
-    //  }, 3000);
-    //
-    //
-    //  var emailAddress = helper.world.users['I'].emailAddress;
-    //  connection.call('findSignupByEmail', emailAddress, function (err, res) {
-    //
-    //    // FIXME bug in cucumber not picking up exceptions
-    //    if (err) {
-    //      console.log('error', err, res)
-    //      callback.fail(err);
-    //    } else if (!res || typeof res === 'undefined') {
-    //      callback.fail('User with email ' + emailAddress + ' not found');
-    //    } else if (res.email !== emailAddress) {
-    //      callback.fail('Emails did not match' + emailAddress + ' !== ' + res.email);
-    //    } else {
-    //      Meteor.clearTimeout(timeout);
-    //      connection.disconnect();
-    //      callback();
-    //    }
-    //  });
-    //
-    //});
 
     this.Given(/^I have entered chapter preview descriptions$/, function (callback) {
       callback();
