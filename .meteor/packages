@@ -4,8 +4,8 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
+#autopublish
+#insecure
 less
 
 sanjo:jasmine
@@ -19,3 +19,4 @@ service-configuration
 
 xolvio:twitter-fake
 #xolvio:http-interceptor
+xolvio:inverter

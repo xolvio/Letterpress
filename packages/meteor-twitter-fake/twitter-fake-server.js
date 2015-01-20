@@ -44,6 +44,7 @@ _.extend(TwitterFake, {
 
     HttpInterceptor.registerInterceptor('https://api.twitter.com', Meteor.absoluteUrl('api.twitter.com'));
 
+
     var _state;
     var fakeServiceUrls = {
       requestToken: Meteor.absoluteUrl('api.twitter.com/oauth/request_token'),
@@ -60,6 +61,7 @@ _.extend(TwitterFake, {
     };
 
     Router.route('api.twitter.com/oauth/authenticate', function () {
+
       this.response.writeHead(302, {
         'Location': Meteor.absoluteUrl('_oauth/twitter') +
         '?state=' + _state +
