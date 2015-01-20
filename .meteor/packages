@@ -13,3 +13,9 @@ velocity:html-reporter
 xolvio:cucumber
 email
 iron:router
+accounts-twitter
+accounts-ui
+service-configuration
+
+#xolvio:twitter-fake
+#xolvio:http-interceptor
