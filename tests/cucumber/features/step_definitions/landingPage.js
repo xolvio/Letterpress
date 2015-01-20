@@ -106,6 +106,21 @@
     });
 
 
+    this.When(/^I click on the chapter link$/, function (callback) {
+      // Write code here that turns the phrase above into concrete actions
+      helper.world.browser.
+        click('.chapter-link').
+        call(callback);
+    });
+
+    this.Then(/^I should be at the chapter preview page$/, function (callback) {
+      helper.world.browser.
+        url(function(err, url) {
+          assert.equal(url.value, helper.world.mirrorUrl + "chapter/1" )
+          callback();
+        });
+    });
+
   };
 
 })();

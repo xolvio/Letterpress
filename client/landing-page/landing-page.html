@@ -20,7 +20,7 @@
     <main class="chapters-preview">
       {{#each chapters}}
           <summary>
-              <h2 class="chapter-preview-title">{{title}}</h2>
+              <h2 class="chapter-preview-title"><a class="chapter-link" href="{{pathFor route='chapter'}}">{{title}}</a></h2>
               <p class="chapter-preview-description">{{description}}</p>
           </summary>
       {{/each}}

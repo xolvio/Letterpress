@@ -21,3 +21,7 @@ Feature: Authorable Landing Page
     Then I see the chapters descriptions in the preview section
     And the chapters are in order
 
+  Scenario: Visitors can click through to a chapter preview
+    Given I navigate to the landing page
+    When I click on the chapter link
+    Then I should be at the chapter preview page
