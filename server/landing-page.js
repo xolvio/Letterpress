@@ -13,4 +13,5 @@ Meteor.methods({
       text: 'You are confirmed.'
     });
   }
+
 });

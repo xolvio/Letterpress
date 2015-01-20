@@ -1,14 +1,10 @@
-<body>
-{{landingPage}}
-</body>
-
 <template name="landingPage">
-    <div class="landing-page">
+    <section class="landing-page">
         <h1>{{bookTitle}}</h1>
       {{> header}}
-      {{> chapters}}
+      {{> chaptersPreview}}
       {{> newsletter}}
-    </div>
+    </section>
 </template>
 
 <template name="header">
@@ -20,22 +16,21 @@
     </header>
 </template>
 
+<template name="chaptersPreview">
+    <main class="chapters-preview">
+      {{#each chapters}}
+          <summary>
+              <h2 class="chapter-preview-title">{{title}}</h2>
+              <p class="chapter-preview-description">{{description}}</p>
+          </summary>
+      {{/each}}
+    </main>
+</template>
+
 <template name="newsletter">
     <form>
         <label for="newsletterEmail">Email</label>
         <input id="newsletterEmail"/>
         <button id="submitNewsletterEmail" type="button">Sign Up!</button>
     </form>
-</template>
-
-<template name="chapters">
-    <section class="chapters">
-      {{#each chapters}}
-          <div class="chapter">
-              <h2 class="chapter-title">{{title}}</h2>
-
-              <p class="chapter-description">{{description}}</p>
-          </div>
-      {{/each}}
-    </section>
 </template>
