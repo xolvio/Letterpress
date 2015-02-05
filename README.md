@@ -6,7 +6,7 @@ WYSIWYG Markdown editor.
 
 Letterpress is a Meteor application that has been built from scratch using test-driven
 development. You can follow a step-by-step guide of how this was done in the
-[The Meteor Testing Manual](http://www.meteortesting.com/chapter/letterpress).
+[The Meteor Testing Manual](http://www.meteortesting.com/chapter/letterpress1).
 
 [Click here to see the demo site](http://letterpress.xolv.io) - *in progress, see below for
 completion details*
