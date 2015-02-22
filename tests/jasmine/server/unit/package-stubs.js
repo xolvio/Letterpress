@@ -98,6 +98,10 @@ var packageMetadata = {
             "/sockjs/": {
               "type": "constant",
               "value": "network"
+            },
+            "/_oauth/": {
+              "type": "constant",
+              "value": "network"
             }
           }
         },
@@ -7013,7 +7017,7 @@ var packageMetadata = {
                 },
                 "version": {
                   "type": "constant",
-                  "value": "034edcc9b1b510106007f9b15205f01b7cd25ee7"
+                  "value": "030a69800c6d10e5343a35a89cdbc7d62eff492f"
                 },
                 "PUBLIC_SETTINGS": {
                   "type": "object",
@@ -7161,7 +7165,7 @@ var packageMetadata = {
             },
             "connections": {
               "type": "constant",
-              "value": 1
+              "value": 0
             },
             "timeout": {
               "type": "constant",
@@ -7735,32 +7739,6 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/insecure.js": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/insecure.js"
-                },
-                "sourceMapUrl": {
-                  "type": "constant",
-                  "value": "/packages/3dc9d4a2dad55999b5b15a447d57f3d5fb66b290.map"
-                },
-                "type": {
-                  "type": "constant",
-                  "value": "js"
-                }
-              }
-            },
-            "/packages/3dc9d4a2dad55999b5b15a447d57f3d5fb66b290.map": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/insecure.js.map"
-                }
-              }
-            },
             "/packages/mongo.js": {
               "type": "object",
               "members": {
@@ -7839,16 +7817,16 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/autopublish.js": {
+            "/packages/less.js": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/autopublish.js"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/less.js"
                 },
                 "sourceMapUrl": {
                   "type": "constant",
-                  "value": "/packages/c3059a78bb200b171099fc4fa1a9345101790ddb.map"
+                  "value": "/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map"
                 },
                 "type": {
                   "type": "constant",
@@ -7856,12 +7834,12 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/c3059a78bb200b171099fc4fa1a9345101790ddb.map": {
+            "/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/autopublish.js.map"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/less.js.map"
                 }
               }
             },
@@ -8229,32 +8207,6 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/less.js": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/less.js"
-                },
-                "sourceMapUrl": {
-                  "type": "constant",
-                  "value": "/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map"
-                },
-                "type": {
-                  "type": "constant",
-                  "value": "js"
-                }
-              }
-            },
-            "/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/less.js.map"
-                }
-              }
-            },
             "/packages/velocity_html-reporter.js": {
               "type": "object",
               "members": {
@@ -8342,7 +8294,7 @@ var packageMetadata = {
                 },
                 "sourceMapUrl": {
                   "type": "constant",
-                  "value": "/packages/05fd78044fa2c9c939b2d8952389f3d1892c5858.map"
+                  "value": "/packages/420bfb10fd1714d91653c2a88df9138b42b52069.map"
                 },
                 "type": {
                   "type": "constant",
@@ -8350,7 +8302,7 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/05fd78044fa2c9c939b2d8952389f3d1892c5858.map": {
+            "/packages/420bfb10fd1714d91653c2a88df9138b42b52069.map": {
               "type": "object",
               "members": {
                 "absolutePath": {
@@ -8437,16 +8389,16 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/webapp.js": {
+            "/packages/email.js": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/webapp.js"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/email.js"
                 },
                 "sourceMapUrl": {
                   "type": "constant",
-                  "value": "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map"
+                  "value": "/packages/911578310472ff10dca16a5306b7f455801d0f35.map"
                 },
                 "type": {
                   "type": "constant",
@@ -8454,12 +8406,194 @@ var packageMetadata = {
                 }
               }
             },
-            "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map": {
+            "/packages/911578310472ff10dca16a5306b7f455801d0f35.map": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/webapp.js.map"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/email.js.map"
+                }
+              }
+            },
+            "/packages/ui.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/ui.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/ui.js.map"
+                }
+              }
+            },
+            "/packages/iron_core.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_core.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/d966a1f70c94792fd94c8a155bdbef9bec5e0047.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/d966a1f70c94792fd94c8a155bdbef9bec5e0047.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_core.js.map"
+                }
+              }
+            },
+            "/packages/iron_dynamic-template.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_dynamic-template.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/d425554c9847e4a80567f8ca55719cd6ae3f2722.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/d425554c9847e4a80567f8ca55719cd6ae3f2722.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_dynamic-template.js.map"
+                }
+              }
+            },
+            "/packages/iron_layout.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_layout.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_layout.js.map"
+                }
+              }
+            },
+            "/packages/iron_url.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_url.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/6979e41649a22dcf609df30fc533e36037c7ae58.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/6979e41649a22dcf609df30fc533e36037c7ae58.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_url.js.map"
+                }
+              }
+            },
+            "/packages/iron_middleware-stack.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_middleware-stack.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/0e0f6983a838a6516556b08e62894f89720e2c44.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/0e0f6983a838a6516556b08e62894f89720e2c44.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_middleware-stack.js.map"
+                }
+              }
+            },
+            "/packages/iron_location.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_location.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/ca4f0f6672edbfb6cafab6e5c024208d9364eac9.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/ca4f0f6672edbfb6cafab6e5c024208d9364eac9.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_location.js.map"
                 }
               }
             },
@@ -8489,6 +8623,266 @@ var packageMetadata = {
                 }
               }
             },
+            "/packages/iron_controller.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_controller.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/b02790701804563eafedb2e68c602154983ade06.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/b02790701804563eafedb2e68c602154983ade06.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_controller.js.map"
+                }
+              }
+            },
+            "/packages/iron_router.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_router.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/a427868585af16bb88b7c9996b2449aebb8dbf51.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/a427868585af16bb88b7c9996b2449aebb8dbf51.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/iron_router.js.map"
+                }
+              }
+            },
+            "/packages/localstorage.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/localstorage.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/localstorage.js.map"
+                }
+              }
+            },
+            "/packages/accounts-base.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-base.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/88bb0577cebfbd40b522bb337f8ff8af92244c2f.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/88bb0577cebfbd40b522bb337f8ff8af92244c2f.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-base.js.map"
+                }
+              }
+            },
+            "/packages/oauth.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/oauth.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/7d11f8366dde05ebf22a1a391f7a39de023df59c.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/7d11f8366dde05ebf22a1a391f7a39de023df59c.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/oauth.js.map"
+                }
+              }
+            },
+            "/packages/accounts-oauth.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-oauth.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/e601fdb200ebbc6aa49c1bcd52a0f898ab5eecf7.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/e601fdb200ebbc6aa49c1bcd52a0f898ab5eecf7.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-oauth.js.map"
+                }
+              }
+            },
+            "/packages/service-configuration.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/service-configuration.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/262da6fb1e9c97be84333c429c9a2929c80f8e3b.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/262da6fb1e9c97be84333c429c9a2929c80f8e3b.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/service-configuration.js.map"
+                }
+              }
+            },
+            "/packages/oauth1.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/oauth1.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/oauth1.js.map"
+                }
+              }
+            },
+            "/packages/twitter.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/twitter.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/130c4419c357fe8a79c7f8894b8fab4298559a97.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/130c4419c357fe8a79c7f8894b8fab4298559a97.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/twitter.js.map"
+                }
+              }
+            },
+            "/packages/accounts-twitter.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-twitter.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/a1c5862c55c6bf951b845bee147062ac1d5fb3d4.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/a1c5862c55c6bf951b845bee147062ac1d5fb3d4.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-twitter.js.map"
+                }
+              }
+            },
             "/packages/session.js": {
               "type": "object",
               "members": {
@@ -8515,6 +8909,136 @@ var packageMetadata = {
                 }
               }
             },
+            "/packages/accounts-ui-unstyled.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-ui-unstyled.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/1ac0cc1f87f6e64d6cfbf5cab2e606405bb49183.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/1ac0cc1f87f6e64d6cfbf5cab2e606405bb49183.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-ui-unstyled.js.map"
+                }
+              }
+            },
+            "/packages/accounts-ui.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-ui.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/1ff79db616cce9b320fe8aed6103eded31248467.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/1ff79db616cce9b320fe8aed6103eded31248467.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/accounts-ui.js.map"
+                }
+              }
+            },
+            "/packages/xolvio_twitter-stub.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/xolvio_twitter-stub.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/578edc4f88607ed0a5c3d250a6afbdbd640c325f.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/578edc4f88607ed0a5c3d250a6afbdbd640c325f.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/xolvio_twitter-stub.js.map"
+                }
+              }
+            },
+            "/packages/xolvio_inverter.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/xolvio_inverter.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/bf4709ddc0b262d7682a6af9bed08a078bb08467.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/bf4709ddc0b262d7682a6af9bed08a078bb08467.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/xolvio_inverter.js.map"
+                }
+              }
+            },
+            "/packages/webapp.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/webapp.js"
+                },
+                "sourceMapUrl": {
+                  "type": "constant",
+                  "value": "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/packages/e1be090051b82f046484dccc2de7d747e50c7328.map": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/webapp.js.map"
+                }
+              }
+            },
             "/packages/livedata.js": {
               "type": "object",
               "members": {
@@ -8538,32 +9062,6 @@ var packageMetadata = {
                 "absolutePath": {
                   "type": "constant",
                   "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/livedata.js.map"
-                }
-              }
-            },
-            "/packages/ui.js": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/ui.js"
-                },
-                "sourceMapUrl": {
-                  "type": "constant",
-                  "value": "/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map"
-                },
-                "type": {
-                  "type": "constant",
-                  "value": "js"
-                }
-              }
-            },
-            "/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map": {
-              "type": "object",
-              "members": {
-                "absolutePath": {
-                  "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/packages/ui.js.map"
                 }
               }
             },
@@ -8635,12 +9133,60 @@ var packageMetadata = {
                 }
               }
             },
+            "/client/chapters/template.chapter.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/chapters/template.chapter.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
             "/client/landing-page/template.landing-page.js": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
                   "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/landing-page/template.landing-page.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/client/template.main.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/template.main.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/client/chapters/chapters.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/chapters/chapters.js"
                 },
                 "sourceMapUrl": {
                   "type": "undefined"
@@ -8667,16 +9213,64 @@ var packageMetadata = {
                 }
               }
             },
-            "/6feb3c9b10fe0c0de7b6026aa154835874a5878f.css": {
+            "/client/routes/chapters.js": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/6feb3c9b10fe0c0de7b6026aa154835874a5878f.css"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/routes/chapters.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/client/routes/landing-page.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/client/routes/landing-page.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/collections/chapters.js": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/app/collections/chapters.js"
+                },
+                "sourceMapUrl": {
+                  "type": "undefined"
+                },
+                "type": {
+                  "type": "constant",
+                  "value": "js"
+                }
+              }
+            },
+            "/eb83bbdae43f790d5f5458e422e688d7fec5a63f.css": {
+              "type": "object",
+              "members": {
+                "absolutePath": {
+                  "type": "constant",
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/eb83bbdae43f790d5f5458e422e688d7fec5a63f.css"
                 },
                 "sourceMapUrl": {
                   "type": "constant",
-                  "value": "/6feb3c9b10fe0c0de7b6026aa154835874a5878f.map"
+                  "value": "/eb83bbdae43f790d5f5458e422e688d7fec5a63f.map"
                 },
                 "type": {
                   "type": "constant",
@@ -8684,12 +9278,12 @@ var packageMetadata = {
                 }
               }
             },
-            "/6feb3c9b10fe0c0de7b6026aa154835874a5878f.map": {
+            "/eb83bbdae43f790d5f5458e422e688d7fec5a63f.map": {
               "type": "object",
               "members": {
                 "absolutePath": {
                   "type": "constant",
-                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/6feb3c9b10fe0c0de7b6026aa154835874a5878f.css.map"
+                  "value": "/Users/sam/WebstormProjects/book/Letterpress/.meteor/local/build/programs/web.browser/eb83bbdae43f790d5f5458e422e688d7fec5a63f.css.map"
                 }
               }
             },
@@ -8762,7 +9356,7 @@ var packageMetadata = {
               "members": {
                 "content": {
                   "type": "constant",
-                  "value": "{\"manifest\":[{\"path\":\"packages/underscore.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/underscore.js?0a80a8623e1b40b5df5a05582f288ddd586eaa18\",\"sourceMap\":\"packages/underscore.js.map\",\"sourceMapUrl\":\"/packages/0a80a8623e1b40b5df5a05582f288ddd586eaa18.map\",\"size\":150686,\"hash\":\"0a80a8623e1b40b5df5a05582f288ddd586eaa18\"},{\"path\":\"packages/meteor.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/meteor.js?81e2f06cff198adaa81b3bc09fc4f3728b7370ec\",\"sourceMap\":\"packages/meteor.js.map\",\"sourceMapUrl\":\"/packages/81e2f06cff198adaa81b3bc09fc4f3728b7370ec.map\",\"size\":109437,\"hash\":\"81e2f06cff198adaa81b3bc09fc4f3728b7370ec\"},{\"path\":\"packages/json.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/json.js?e22856eae714c681199eabc5c0710b904b125554\",\"sourceMap\":\"packages/json.js.map\",\"sourceMapUrl\":\"/packages/e22856eae714c681199eabc5c0710b904b125554.map\",\"size\":58343,\"hash\":\"e22856eae714c681199eabc5c0710b904b125554\"},{\"path\":\"packages/base64.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/base64.js?1a63019243b73298e2964e6d4680f25bca657726\",\"sourceMap\":\"packages/base64.js.map\",\"sourceMapUrl\":\"/packages/1a63019243b73298e2964e6d4680f25bca657726.map\",\"size\":15685,\"hash\":\"1a63019243b73298e2964e6d4680f25bca657726\"},{\"path\":\"packages/ejson.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ejson.js?71047b64b5196348bdbe5fd5eea9ac97a5a9eb14\",\"sourceMap\":\"packages/ejson.js.map\",\"sourceMapUrl\":\"/packages/71047b64b5196348bdbe5fd5eea9ac97a5a9eb14.map\",\"size\":81471,\"hash\":\"71047b64b5196348bdbe5fd5eea9ac97a5a9eb14\"},{\"path\":\"packages/logging.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/logging.js?07e201b648f16be8435a4f666156995eeda0c750\",\"sourceMap\":\"packages/logging.js.map\",\"sourceMapUrl\":\"/packages/07e201b648f16be8435a4f666156995eeda0c750.map\",\"size\":27996,\"hash\":\"07e201b648f16be8435a4f666156995eeda0c750\"},{\"path\":\"packages/reload.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reload.js?da8974b7231dd8c0caccb5f322dcf97329d486d1\",\"sourceMap\":\"packages/reload.js.map\",\"sourceMapUrl\":\"/packages/da8974b7231dd8c0caccb5f322dcf97329d486d1.map\",\"size\":25926,\"hash\":\"da8974b7231dd8c0caccb5f322dcf97329d486d1\"},{\"path\":\"packages/tracker.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/tracker.js?517c8fe8ed6408951a30941e64a5383a7174bcfa\",\"sourceMap\":\"packages/tracker.js.map\",\"sourceMapUrl\":\"/packages/517c8fe8ed6408951a30941e64a5383a7174bcfa.map\",\"size\":68185,\"hash\":\"517c8fe8ed6408951a30941e64a5383a7174bcfa\"},{\"path\":\"packages/random.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/random.js?fe7b46080c91ce482acf6fc326afbc5b176f0502\",\"sourceMap\":\"packages/random.js.map\",\"sourceMapUrl\":\"/packages/fe7b46080c91ce482acf6fc326afbc5b176f0502.map\",\"size\":24099,\"hash\":\"fe7b46080c91ce482acf6fc326afbc5b176f0502\"},{\"path\":\"packages/retry.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/retry.js?1f1dd2c35d300110fdaba51ce4473583bc3bf031\",\"sourceMap\":\"packages/retry.js.map\",\"sourceMapUrl\":\"/packages/1f1dd2c35d300110fdaba51ce4473583bc3bf031.map\",\"size\":7245,\"hash\":\"1f1dd2c35d300110fdaba51ce4473583bc3bf031\"},{\"path\":\"packages/check.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/check.js?ac81167b8513b85b926c167bba423981b0c4cf9c\",\"sourceMap\":\"packages/check.js.map\",\"sourceMapUrl\":\"/packages/ac81167b8513b85b926c167bba423981b0c4cf9c.map\",\"size\":35647,\"hash\":\"ac81167b8513b85b926c167bba423981b0c4cf9c\"},{\"path\":\"packages/id-map.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/id-map.js?9ea6eaae8d74693ce2505a858d9a5e60cf191298\",\"sourceMap\":\"packages/id-map.js.map\",\"sourceMapUrl\":\"/packages/9ea6eaae8d74693ce2505a858d9a5e60cf191298.map\",\"size\":8584,\"hash\":\"9ea6eaae8d74693ce2505a858d9a5e60cf191298\"},{\"path\":\"packages/ordered-dict.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ordered-dict.js?bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37\",\"sourceMap\":\"packages/ordered-dict.js.map\",\"sourceMapUrl\":\"/packages/bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37.map\",\"size\":20395,\"hash\":\"bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37\"},{\"path\":\"packages/geojson-utils.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/geojson-utils.js?81b79d5cf96d00b4b7a28987debcffb665c17526\",\"sourceMap\":\"packages/geojson-utils.js.map\",\"sourceMapUrl\":\"/packages/81b79d5cf96d00b4b7a28987debcffb665c17526.map\",\"size\":48339,\"hash\":\"81b79d5cf96d00b4b7a28987debcffb665c17526\"},{\"path\":\"packages/minimongo.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/minimongo.js?e8806aa7782b729b2517ebc0cd10b321667f1427\",\"sourceMap\":\"packages/minimongo.js.map\",\"sourceMapUrl\":\"/packages/e8806aa7782b729b2517ebc0cd10b321667f1427.map\",\"size\":455881,\"hash\":\"e8806aa7782b729b2517ebc0cd10b321667f1427\"},{\"path\":\"packages/ddp.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ddp.js?41b62dcceb3ce0de6ca79c6aed088cccde6a44d8\",\"sourceMap\":\"packages/ddp.js.map\",\"sourceMapUrl\":\"/packages/41b62dcceb3ce0de6ca79c6aed088cccde6a44d8.map\",\"size\":617153,\"hash\":\"41b62dcceb3ce0de6ca79c6aed088cccde6a44d8\"},{\"path\":\"packages/follower-livedata.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/follower-livedata.js?74156c6baa89da861fc4ddb58ef158eac71e58e0\",\"sourceMap\":\"packages/follower-livedata.js.map\",\"sourceMapUrl\":\"/packages/74156c6baa89da861fc4ddb58ef158eac71e58e0.map\",\"size\":1490,\"hash\":\"74156c6baa89da861fc4ddb58ef158eac71e58e0\"},{\"path\":\"packages/application-configuration.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/application-configuration.js?dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f\",\"sourceMap\":\"packages/application-configuration.js.map\",\"sourceMapUrl\":\"/packages/dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f.map\",\"size\":1485,\"hash\":\"dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f\"},{\"path\":\"packages/insecure.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/insecure.js?3dc9d4a2dad55999b5b15a447d57f3d5fb66b290\",\"sourceMap\":\"packages/insecure.js.map\",\"sourceMapUrl\":\"/packages/3dc9d4a2dad55999b5b15a447d57f3d5fb66b290.map\",\"size\":1290,\"hash\":\"3dc9d4a2dad55999b5b15a447d57f3d5fb66b290\"},{\"path\":\"packages/mongo.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/mongo.js?052f30e968644b2b39a96605ffee73a7684ff37b\",\"sourceMap\":\"packages/mongo.js.map\",\"sourceMapUrl\":\"/packages/052f30e968644b2b39a96605ffee73a7684ff37b.map\",\"size\":147662,\"hash\":\"052f30e968644b2b39a96605ffee73a7684ff37b\"},{\"path\":\"packages/autoupdate.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/autoupdate.js?9a5ea03bf057815385bf569c7acc2c285c005491\",\"sourceMap\":\"packages/autoupdate.js.map\",\"sourceMapUrl\":\"/packages/9a5ea03bf057815385bf569c7acc2c285c005491.map\",\"size\":17152,\"hash\":\"9a5ea03bf057815385bf569c7acc2c285c005491\"},{\"path\":\"packages/meteor-platform.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/meteor-platform.js?499a2f8522e25820b1153c69a92751ccaae507b3\",\"sourceMap\":\"packages/meteor-platform.js.map\",\"sourceMapUrl\":\"/packages/499a2f8522e25820b1153c69a92751ccaae507b3.map\",\"size\":1384,\"hash\":\"499a2f8522e25820b1153c69a92751ccaae507b3\"},{\"path\":\"packages/autopublish.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/autopublish.js?c3059a78bb200b171099fc4fa1a9345101790ddb\",\"sourceMap\":\"packages/autopublish.js.map\",\"sourceMapUrl\":\"/packages/c3059a78bb200b171099fc4fa1a9345101790ddb.map\",\"size\":1293,\"hash\":\"c3059a78bb200b171099fc4fa1a9345101790ddb\"},{\"path\":\"packages/coffeescript.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/coffeescript.js?969f68786bbc68e6cad299e74922a53af3d1404b\",\"sourceMap\":\"packages/coffeescript.js.map\",\"sourceMapUrl\":\"/packages/969f68786bbc68e6cad299e74922a53af3d1404b.map\",\"size\":1294,\"hash\":\"969f68786bbc68e6cad299e74922a53af3d1404b\"},{\"path\":\"packages/practicalmeteor_chai.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/practicalmeteor_chai.js?7fbbbec9a13f4adf082b394c5ddd7230d84afc48\",\"sourceMap\":\"packages/practicalmeteor_chai.js.map\",\"sourceMapUrl\":\"/packages/7fbbbec9a13f4adf082b394c5ddd7230d84afc48.map\",\"size\":570118,\"hash\":\"7fbbbec9a13f4adf082b394c5ddd7230d84afc48\"},{\"path\":\"packages/practicalmeteor_loglevel.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/practicalmeteor_loglevel.js?9185331dfa11fd235edfbef93838d4ca3244d638\",\"sourceMap\":\"packages/practicalmeteor_loglevel.js.map\",\"sourceMapUrl\":\"/packages/9185331dfa11fd235edfbef93838d4ca3244d638.map\",\"size\":28719,\"hash\":\"9185331dfa11fd235edfbef93838d4ca3244d638\"},{\"path\":\"packages/velocity_core.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_core.js?cecf2443254038195518d507d5fe0ecdc5dce435\",\"sourceMap\":\"packages/velocity_core.js.map\",\"sourceMapUrl\":\"/packages/cecf2443254038195518d507d5fe0ecdc5dce435.map\",\"size\":12238,\"hash\":\"cecf2443254038195518d507d5fe0ecdc5dce435\"},{\"path\":\"packages/velocity_shim.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_shim.js?14363d085a412115605c41536e4f2867425b89d5\",\"sourceMap\":\"packages/velocity_shim.js.map\",\"sourceMapUrl\":\"/packages/14363d085a412115605c41536e4f2867425b89d5.map\",\"size\":2905,\"hash\":\"14363d085a412115605c41536e4f2867425b89d5\"},{\"path\":\"packages/sanjo_jasmine.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/sanjo_jasmine.js?4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0\",\"sourceMap\":\"packages/sanjo_jasmine.js.map\",\"sourceMapUrl\":\"/packages/4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0.map\",\"size\":537001,\"hash\":\"4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0\"},{\"path\":\"packages/jquery.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/jquery.js?dd8bac56f8fd3666d433d2285ae01e52597cc51a\",\"sourceMap\":\"packages/jquery.js.map\",\"sourceMapUrl\":\"/packages/dd8bac56f8fd3666d433d2285ae01e52597cc51a.map\",\"size\":1296513,\"hash\":\"dd8bac56f8fd3666d433d2285ae01e52597cc51a\"},{\"path\":\"packages/deps.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/deps.js?504589e1e9585dec8f9f6094e5a87b22de3783a1\",\"sourceMap\":\"packages/deps.js.map\",\"sourceMapUrl\":\"/packages/504589e1e9585dec8f9f6094e5a87b22de3783a1.map\",\"size\":1442,\"hash\":\"504589e1e9585dec8f9f6094e5a87b22de3783a1\"},{\"path\":\"packages/htmljs.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/htmljs.js?567eb96d5d22631c03d6aca6afa4c42f0d1295f2\",\"sourceMap\":\"packages/htmljs.js.map\",\"sourceMapUrl\":\"/packages/567eb96d5d22631c03d6aca6afa4c42f0d1295f2.map\",\"size\":60161,\"hash\":\"567eb96d5d22631c03d6aca6afa4c42f0d1295f2\"},{\"path\":\"packages/observe-sequence.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/observe-sequence.js?2fd807ea171ead273b9e6458607cb226012d9240\",\"sourceMap\":\"packages/observe-sequence.js.map\",\"sourceMapUrl\":\"/packages/2fd807ea171ead273b9e6458607cb226012d9240.map\",\"size\":30271,\"hash\":\"2fd807ea171ead273b9e6458607cb226012d9240\"},{\"path\":\"packages/reactive-var.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reactive-var.js?20335b7b37165980ddd9f23943b2e5b00aae1cc2\",\"sourceMap\":\"packages/reactive-var.js.map\",\"sourceMapUrl\":\"/packages/20335b7b37165980ddd9f23943b2e5b00aae1cc2.map\",\"size\":13963,\"hash\":\"20335b7b37165980ddd9f23943b2e5b00aae1cc2\"},{\"path\":\"packages/blaze.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/blaze.js?efa68f65e67544b5a05509804bf97e2c91ce75eb\",\"sourceMap\":\"packages/blaze.js.map\",\"sourceMapUrl\":\"/packages/efa68f65e67544b5a05509804bf97e2c91ce75eb.map\",\"size\":391530,\"hash\":\"efa68f65e67544b5a05509804bf97e2c91ce75eb\"},{\"path\":\"packages/templating.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/templating.js?599ba307216da826d8b335332ebcc9a497a369a0\",\"sourceMap\":\"packages/templating.js.map\",\"sourceMapUrl\":\"/packages/599ba307216da826d8b335332ebcc9a497a369a0.map\",\"size\":11910,\"hash\":\"599ba307216da826d8b335332ebcc9a497a369a0\"},{\"path\":\"packages/amplify.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/amplify.js?0943ecb804169b991257a319fa92b9e6f34e2d1b\",\"sourceMap\":\"packages/amplify.js.map\",\"sourceMapUrl\":\"/packages/0943ecb804169b991257a319fa92b9e6f34e2d1b.map\",\"size\":88428,\"hash\":\"0943ecb804169b991257a319fa92b9e6f34e2d1b\"},{\"path\":\"packages/less.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/less.js?7d1bf981a25a449d6270558bcfc983313c40cd26\",\"sourceMap\":\"packages/less.js.map\",\"sourceMapUrl\":\"/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map\",\"size\":1286,\"hash\":\"7d1bf981a25a449d6270558bcfc983313c40cd26\"},{\"path\":\"packages/velocity_html-reporter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_html-reporter.js?a615bf3410d795106d7a78c6a94379745879f7df\",\"sourceMap\":\"packages/velocity_html-reporter.js.map\",\"sourceMapUrl\":\"/packages/a615bf3410d795106d7a78c6a94379745879f7df.map\",\"size\":90264,\"hash\":\"a615bf3410d795106d7a78c6a94379745879f7df\"},{\"path\":\"packages/url.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/url.js?2312d739008b2ffa52f13c77c5d6fc59c9e17d56\",\"sourceMap\":\"packages/url.js.map\",\"sourceMapUrl\":\"/packages/2312d739008b2ffa52f13c77c5d6fc59c9e17d56.map\",\"size\":6642,\"hash\":\"2312d739008b2ffa52f13c77c5d6fc59c9e17d56\"},{\"path\":\"packages/http.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/http.js?9c5d152169ba9a5a57b6b8ec28e64bbd0d308077\",\"sourceMap\":\"packages/http.js.map\",\"sourceMapUrl\":\"/packages/9c5d152169ba9a5a57b6b8ec28e64bbd0d308077.map\",\"size\":37036,\"hash\":\"9c5d152169ba9a5a57b6b8ec28e64bbd0d308077\"},{\"path\":\"packages/velocity_test-proxy.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_test-proxy.js?05fd78044fa2c9c939b2d8952389f3d1892c5858\",\"sourceMap\":\"packages/velocity_test-proxy.js.map\",\"sourceMapUrl\":\"/packages/05fd78044fa2c9c939b2d8952389f3d1892c5858.map\",\"size\":2956,\"hash\":\"05fd78044fa2c9c939b2d8952389f3d1892c5858\"},{\"path\":\"packages/velocity_node-soft-mirror.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_node-soft-mirror.js?acf27a727fa9aa2f29f237ade3b2046fb9890e36\",\"sourceMap\":\"packages/velocity_node-soft-mirror.js.map\",\"sourceMapUrl\":\"/packages/acf27a727fa9aa2f29f237ade3b2046fb9890e36.map\",\"size\":11067,\"hash\":\"acf27a727fa9aa2f29f237ade3b2046fb9890e36\"},{\"path\":\"packages/xolvio_webdriver.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_webdriver.js?a75f4b698d287f338f30d1ff46380adf6a4ae82f\",\"sourceMap\":\"packages/xolvio_webdriver.js.map\",\"sourceMapUrl\":\"/packages/a75f4b698d287f338f30d1ff46380adf6a4ae82f.map\",\"size\":1301,\"hash\":\"a75f4b698d287f338f30d1ff46380adf6a4ae82f\"},{\"path\":\"packages/xolvio_cucumber.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_cucumber.js?d37dbaae8ea86ff03e815c0e3b0dd2f905331b88\",\"sourceMap\":\"packages/xolvio_cucumber.js.map\",\"sourceMapUrl\":\"/packages/d37dbaae8ea86ff03e815c0e3b0dd2f905331b88.map\",\"size\":1360,\"hash\":\"d37dbaae8ea86ff03e815c0e3b0dd2f905331b88\"},{\"path\":\"packages/webapp.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328\",\"sourceMap\":\"packages/webapp.js.map\",\"sourceMapUrl\":\"/packages/e1be090051b82f046484dccc2de7d747e50c7328.map\",\"size\":3106,\"hash\":\"e1be090051b82f046484dccc2de7d747e50c7328\"},{\"path\":\"packages/reactive-dict.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reactive-dict.js?6b25309b1f0dcf775b44984324878d6f8ad1abc2\",\"sourceMap\":\"packages/reactive-dict.js.map\",\"sourceMapUrl\":\"/packages/6b25309b1f0dcf775b44984324878d6f8ad1abc2.map\",\"size\":19802,\"hash\":\"6b25309b1f0dcf775b44984324878d6f8ad1abc2\"},{\"path\":\"packages/session.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/session.js?e436deefadc999c21b6fd16e8e1ecce55c3c3a55\",\"sourceMap\":\"packages/session.js.map\",\"sourceMapUrl\":\"/packages/e436deefadc999c21b6fd16e8e1ecce55c3c3a55.map\",\"size\":6497,\"hash\":\"e436deefadc999c21b6fd16e8e1ecce55c3c3a55\"},{\"path\":\"packages/livedata.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/livedata.js?718526445deb4d9baacb6d92c551adea1d36c1e1\",\"sourceMap\":\"packages/livedata.js.map\",\"sourceMapUrl\":\"/packages/718526445deb4d9baacb6d92c551adea1d36c1e1.map\",\"size\":1413,\"hash\":\"718526445deb4d9baacb6d92c551adea1d36c1e1\"},{\"path\":\"packages/ui.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ui.js?5a663333fd30f8fd913f110e0ef779e84f67c4b8\",\"sourceMap\":\"packages/ui.js.map\",\"sourceMapUrl\":\"/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map\",\"size\":1529,\"hash\":\"5a663333fd30f8fd913f110e0ef779e84f67c4b8\"},{\"path\":\"packages/spacebars.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/spacebars.js?7f53771c84a2eafac2b561c9796dda0d8af8e7f5\",\"sourceMap\":\"packages/spacebars.js.map\",\"sourceMapUrl\":\"/packages/7f53771c84a2eafac2b561c9796dda0d8af8e7f5.map\",\"size\":42206,\"hash\":\"7f53771c84a2eafac2b561c9796dda0d8af8e7f5\"},{\"path\":\"packages/launch-screen.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/launch-screen.js?13e1092ebecdb7208762500188f1dc2dea5603e9\",\"sourceMap\":\"packages/launch-screen.js.map\",\"sourceMapUrl\":\"/packages/13e1092ebecdb7208762500188f1dc2dea5603e9.map\",\"size\":9707,\"hash\":\"13e1092ebecdb7208762500188f1dc2dea5603e9\"},{\"path\":\"packages/global-imports.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/global-imports.js?ddfcd9be6cef3c8bb0263139937a05092e4a3fe9\",\"size\":718,\"hash\":\"ddfcd9be6cef3c8bb0263139937a05092e4a3fe9\"},{\"path\":\"app/client/landing-page/template.landing-page.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/landing-page/template.landing-page.js?6cfab2e13501300b6197f0abf37840c860800e98\",\"size\":830,\"hash\":\"6cfab2e13501300b6197f0abf37840c860800e98\"},{\"path\":\"app/client/landing-page/landing-page.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/landing-page/landing-page.js?fd286ca72322a349ebfb466c579b70a8cec1b520\",\"size\":298,\"hash\":\"fd286ca72322a349ebfb466c579b70a8cec1b520\"},{\"path\":\"6feb3c9b10fe0c0de7b6026aa154835874a5878f.css\",\"where\":\"client\",\"type\":\"css\",\"cacheable\":true,\"url\":\"/6feb3c9b10fe0c0de7b6026aa154835874a5878f.css\",\"sourceMap\":\"6feb3c9b10fe0c0de7b6026aa154835874a5878f.css.map\",\"sourceMapUrl\":\"/6feb3c9b10fe0c0de7b6026aa154835874a5878f.map\",\"size\":13548,\"hash\":\"6feb3c9b10fe0c0de7b6026aa154835874a5878f\"},{\"path\":\"packages/velocity_html-reporter/lib/velocity_logo.svg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/velocity_logo.svg\",\"size\":3723,\"hash\":\"bd19ecdc8eb1084f7bb562c298e4ce41f9cdc698\"},{\"path\":\"packages/velocity_html-reporter/lib/velocity_cog.svg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/velocity_cog.svg\",\"size\":987,\"hash\":\"6e74acfffcbd2bafdc8a95d9db7762ece07b1e81\"},{\"path\":\"packages/velocity_html-reporter/lib/icon-time.png\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/icon-time.png\",\"size\":2834,\"hash\":\"868f492022a4dab0f1522de6aae0773531bc6e85\"},{\"path\":\"app/header-image.jpg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/header-image.jpg\",\"size\":298850,\"hash\":\"f839b1754cf1794b46a60d7ab6a1be0bfef1eda2\"}],\"version\":\"034edcc9b1b510106007f9b15205f01b7cd25ee7\",\"PUBLIC_SETTINGS\":{\"book\":{\"title\":\"Letterpress by Xolv.io\",\"header\":{\"imageSrc\":\"/header-image.jpg\",\"imageCaption\":\"Write your own book with this WYSIWYG markdown powered book app\"}}}}"
+                  "value": "{\"manifest\":[{\"path\":\"packages/underscore.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/underscore.js?0a80a8623e1b40b5df5a05582f288ddd586eaa18\",\"sourceMap\":\"packages/underscore.js.map\",\"sourceMapUrl\":\"/packages/0a80a8623e1b40b5df5a05582f288ddd586eaa18.map\",\"size\":150686,\"hash\":\"0a80a8623e1b40b5df5a05582f288ddd586eaa18\"},{\"path\":\"packages/meteor.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/meteor.js?81e2f06cff198adaa81b3bc09fc4f3728b7370ec\",\"sourceMap\":\"packages/meteor.js.map\",\"sourceMapUrl\":\"/packages/81e2f06cff198adaa81b3bc09fc4f3728b7370ec.map\",\"size\":109437,\"hash\":\"81e2f06cff198adaa81b3bc09fc4f3728b7370ec\"},{\"path\":\"packages/json.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/json.js?e22856eae714c681199eabc5c0710b904b125554\",\"sourceMap\":\"packages/json.js.map\",\"sourceMapUrl\":\"/packages/e22856eae714c681199eabc5c0710b904b125554.map\",\"size\":58343,\"hash\":\"e22856eae714c681199eabc5c0710b904b125554\"},{\"path\":\"packages/base64.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/base64.js?1a63019243b73298e2964e6d4680f25bca657726\",\"sourceMap\":\"packages/base64.js.map\",\"sourceMapUrl\":\"/packages/1a63019243b73298e2964e6d4680f25bca657726.map\",\"size\":15685,\"hash\":\"1a63019243b73298e2964e6d4680f25bca657726\"},{\"path\":\"packages/ejson.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ejson.js?71047b64b5196348bdbe5fd5eea9ac97a5a9eb14\",\"sourceMap\":\"packages/ejson.js.map\",\"sourceMapUrl\":\"/packages/71047b64b5196348bdbe5fd5eea9ac97a5a9eb14.map\",\"size\":81471,\"hash\":\"71047b64b5196348bdbe5fd5eea9ac97a5a9eb14\"},{\"path\":\"packages/logging.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/logging.js?07e201b648f16be8435a4f666156995eeda0c750\",\"sourceMap\":\"packages/logging.js.map\",\"sourceMapUrl\":\"/packages/07e201b648f16be8435a4f666156995eeda0c750.map\",\"size\":27996,\"hash\":\"07e201b648f16be8435a4f666156995eeda0c750\"},{\"path\":\"packages/reload.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reload.js?da8974b7231dd8c0caccb5f322dcf97329d486d1\",\"sourceMap\":\"packages/reload.js.map\",\"sourceMapUrl\":\"/packages/da8974b7231dd8c0caccb5f322dcf97329d486d1.map\",\"size\":25926,\"hash\":\"da8974b7231dd8c0caccb5f322dcf97329d486d1\"},{\"path\":\"packages/tracker.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/tracker.js?517c8fe8ed6408951a30941e64a5383a7174bcfa\",\"sourceMap\":\"packages/tracker.js.map\",\"sourceMapUrl\":\"/packages/517c8fe8ed6408951a30941e64a5383a7174bcfa.map\",\"size\":68185,\"hash\":\"517c8fe8ed6408951a30941e64a5383a7174bcfa\"},{\"path\":\"packages/random.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/random.js?fe7b46080c91ce482acf6fc326afbc5b176f0502\",\"sourceMap\":\"packages/random.js.map\",\"sourceMapUrl\":\"/packages/fe7b46080c91ce482acf6fc326afbc5b176f0502.map\",\"size\":24099,\"hash\":\"fe7b46080c91ce482acf6fc326afbc5b176f0502\"},{\"path\":\"packages/retry.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/retry.js?1f1dd2c35d300110fdaba51ce4473583bc3bf031\",\"sourceMap\":\"packages/retry.js.map\",\"sourceMapUrl\":\"/packages/1f1dd2c35d300110fdaba51ce4473583bc3bf031.map\",\"size\":7245,\"hash\":\"1f1dd2c35d300110fdaba51ce4473583bc3bf031\"},{\"path\":\"packages/check.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/check.js?ac81167b8513b85b926c167bba423981b0c4cf9c\",\"sourceMap\":\"packages/check.js.map\",\"sourceMapUrl\":\"/packages/ac81167b8513b85b926c167bba423981b0c4cf9c.map\",\"size\":35647,\"hash\":\"ac81167b8513b85b926c167bba423981b0c4cf9c\"},{\"path\":\"packages/id-map.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/id-map.js?9ea6eaae8d74693ce2505a858d9a5e60cf191298\",\"sourceMap\":\"packages/id-map.js.map\",\"sourceMapUrl\":\"/packages/9ea6eaae8d74693ce2505a858d9a5e60cf191298.map\",\"size\":8584,\"hash\":\"9ea6eaae8d74693ce2505a858d9a5e60cf191298\"},{\"path\":\"packages/ordered-dict.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ordered-dict.js?bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37\",\"sourceMap\":\"packages/ordered-dict.js.map\",\"sourceMapUrl\":\"/packages/bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37.map\",\"size\":20395,\"hash\":\"bf8af2f26c8d96bf8b2e6b407d3ed69f23c2cd37\"},{\"path\":\"packages/geojson-utils.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/geojson-utils.js?81b79d5cf96d00b4b7a28987debcffb665c17526\",\"sourceMap\":\"packages/geojson-utils.js.map\",\"sourceMapUrl\":\"/packages/81b79d5cf96d00b4b7a28987debcffb665c17526.map\",\"size\":48339,\"hash\":\"81b79d5cf96d00b4b7a28987debcffb665c17526\"},{\"path\":\"packages/minimongo.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/minimongo.js?e8806aa7782b729b2517ebc0cd10b321667f1427\",\"sourceMap\":\"packages/minimongo.js.map\",\"sourceMapUrl\":\"/packages/e8806aa7782b729b2517ebc0cd10b321667f1427.map\",\"size\":455881,\"hash\":\"e8806aa7782b729b2517ebc0cd10b321667f1427\"},{\"path\":\"packages/ddp.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ddp.js?41b62dcceb3ce0de6ca79c6aed088cccde6a44d8\",\"sourceMap\":\"packages/ddp.js.map\",\"sourceMapUrl\":\"/packages/41b62dcceb3ce0de6ca79c6aed088cccde6a44d8.map\",\"size\":617153,\"hash\":\"41b62dcceb3ce0de6ca79c6aed088cccde6a44d8\"},{\"path\":\"packages/follower-livedata.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/follower-livedata.js?74156c6baa89da861fc4ddb58ef158eac71e58e0\",\"sourceMap\":\"packages/follower-livedata.js.map\",\"sourceMapUrl\":\"/packages/74156c6baa89da861fc4ddb58ef158eac71e58e0.map\",\"size\":1490,\"hash\":\"74156c6baa89da861fc4ddb58ef158eac71e58e0\"},{\"path\":\"packages/application-configuration.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/application-configuration.js?dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f\",\"sourceMap\":\"packages/application-configuration.js.map\",\"sourceMapUrl\":\"/packages/dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f.map\",\"size\":1485,\"hash\":\"dcbf1f0774460fccf098a4c9e8fad4c3a0f2952f\"},{\"path\":\"packages/mongo.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/mongo.js?052f30e968644b2b39a96605ffee73a7684ff37b\",\"sourceMap\":\"packages/mongo.js.map\",\"sourceMapUrl\":\"/packages/052f30e968644b2b39a96605ffee73a7684ff37b.map\",\"size\":147662,\"hash\":\"052f30e968644b2b39a96605ffee73a7684ff37b\"},{\"path\":\"packages/autoupdate.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/autoupdate.js?9a5ea03bf057815385bf569c7acc2c285c005491\",\"sourceMap\":\"packages/autoupdate.js.map\",\"sourceMapUrl\":\"/packages/9a5ea03bf057815385bf569c7acc2c285c005491.map\",\"size\":17152,\"hash\":\"9a5ea03bf057815385bf569c7acc2c285c005491\"},{\"path\":\"packages/meteor-platform.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/meteor-platform.js?499a2f8522e25820b1153c69a92751ccaae507b3\",\"sourceMap\":\"packages/meteor-platform.js.map\",\"sourceMapUrl\":\"/packages/499a2f8522e25820b1153c69a92751ccaae507b3.map\",\"size\":1384,\"hash\":\"499a2f8522e25820b1153c69a92751ccaae507b3\"},{\"path\":\"packages/less.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/less.js?7d1bf981a25a449d6270558bcfc983313c40cd26\",\"sourceMap\":\"packages/less.js.map\",\"sourceMapUrl\":\"/packages/7d1bf981a25a449d6270558bcfc983313c40cd26.map\",\"size\":1286,\"hash\":\"7d1bf981a25a449d6270558bcfc983313c40cd26\"},{\"path\":\"packages/coffeescript.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/coffeescript.js?969f68786bbc68e6cad299e74922a53af3d1404b\",\"sourceMap\":\"packages/coffeescript.js.map\",\"sourceMapUrl\":\"/packages/969f68786bbc68e6cad299e74922a53af3d1404b.map\",\"size\":1294,\"hash\":\"969f68786bbc68e6cad299e74922a53af3d1404b\"},{\"path\":\"packages/practicalmeteor_chai.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/practicalmeteor_chai.js?7fbbbec9a13f4adf082b394c5ddd7230d84afc48\",\"sourceMap\":\"packages/practicalmeteor_chai.js.map\",\"sourceMapUrl\":\"/packages/7fbbbec9a13f4adf082b394c5ddd7230d84afc48.map\",\"size\":570118,\"hash\":\"7fbbbec9a13f4adf082b394c5ddd7230d84afc48\"},{\"path\":\"packages/practicalmeteor_loglevel.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/practicalmeteor_loglevel.js?9185331dfa11fd235edfbef93838d4ca3244d638\",\"sourceMap\":\"packages/practicalmeteor_loglevel.js.map\",\"sourceMapUrl\":\"/packages/9185331dfa11fd235edfbef93838d4ca3244d638.map\",\"size\":28719,\"hash\":\"9185331dfa11fd235edfbef93838d4ca3244d638\"},{\"path\":\"packages/velocity_core.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_core.js?cecf2443254038195518d507d5fe0ecdc5dce435\",\"sourceMap\":\"packages/velocity_core.js.map\",\"sourceMapUrl\":\"/packages/cecf2443254038195518d507d5fe0ecdc5dce435.map\",\"size\":12238,\"hash\":\"cecf2443254038195518d507d5fe0ecdc5dce435\"},{\"path\":\"packages/velocity_shim.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_shim.js?14363d085a412115605c41536e4f2867425b89d5\",\"sourceMap\":\"packages/velocity_shim.js.map\",\"sourceMapUrl\":\"/packages/14363d085a412115605c41536e4f2867425b89d5.map\",\"size\":2905,\"hash\":\"14363d085a412115605c41536e4f2867425b89d5\"},{\"path\":\"packages/sanjo_jasmine.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/sanjo_jasmine.js?4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0\",\"sourceMap\":\"packages/sanjo_jasmine.js.map\",\"sourceMapUrl\":\"/packages/4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0.map\",\"size\":537001,\"hash\":\"4cf8155d69cc555ecebdf4d185c3648b1ee5d8a0\"},{\"path\":\"packages/jquery.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/jquery.js?dd8bac56f8fd3666d433d2285ae01e52597cc51a\",\"sourceMap\":\"packages/jquery.js.map\",\"sourceMapUrl\":\"/packages/dd8bac56f8fd3666d433d2285ae01e52597cc51a.map\",\"size\":1296513,\"hash\":\"dd8bac56f8fd3666d433d2285ae01e52597cc51a\"},{\"path\":\"packages/deps.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/deps.js?504589e1e9585dec8f9f6094e5a87b22de3783a1\",\"sourceMap\":\"packages/deps.js.map\",\"sourceMapUrl\":\"/packages/504589e1e9585dec8f9f6094e5a87b22de3783a1.map\",\"size\":1442,\"hash\":\"504589e1e9585dec8f9f6094e5a87b22de3783a1\"},{\"path\":\"packages/htmljs.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/htmljs.js?567eb96d5d22631c03d6aca6afa4c42f0d1295f2\",\"sourceMap\":\"packages/htmljs.js.map\",\"sourceMapUrl\":\"/packages/567eb96d5d22631c03d6aca6afa4c42f0d1295f2.map\",\"size\":60161,\"hash\":\"567eb96d5d22631c03d6aca6afa4c42f0d1295f2\"},{\"path\":\"packages/observe-sequence.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/observe-sequence.js?2fd807ea171ead273b9e6458607cb226012d9240\",\"sourceMap\":\"packages/observe-sequence.js.map\",\"sourceMapUrl\":\"/packages/2fd807ea171ead273b9e6458607cb226012d9240.map\",\"size\":30271,\"hash\":\"2fd807ea171ead273b9e6458607cb226012d9240\"},{\"path\":\"packages/reactive-var.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reactive-var.js?20335b7b37165980ddd9f23943b2e5b00aae1cc2\",\"sourceMap\":\"packages/reactive-var.js.map\",\"sourceMapUrl\":\"/packages/20335b7b37165980ddd9f23943b2e5b00aae1cc2.map\",\"size\":13963,\"hash\":\"20335b7b37165980ddd9f23943b2e5b00aae1cc2\"},{\"path\":\"packages/blaze.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/blaze.js?efa68f65e67544b5a05509804bf97e2c91ce75eb\",\"sourceMap\":\"packages/blaze.js.map\",\"sourceMapUrl\":\"/packages/efa68f65e67544b5a05509804bf97e2c91ce75eb.map\",\"size\":391530,\"hash\":\"efa68f65e67544b5a05509804bf97e2c91ce75eb\"},{\"path\":\"packages/templating.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/templating.js?599ba307216da826d8b335332ebcc9a497a369a0\",\"sourceMap\":\"packages/templating.js.map\",\"sourceMapUrl\":\"/packages/599ba307216da826d8b335332ebcc9a497a369a0.map\",\"size\":11910,\"hash\":\"599ba307216da826d8b335332ebcc9a497a369a0\"},{\"path\":\"packages/amplify.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/amplify.js?0943ecb804169b991257a319fa92b9e6f34e2d1b\",\"sourceMap\":\"packages/amplify.js.map\",\"sourceMapUrl\":\"/packages/0943ecb804169b991257a319fa92b9e6f34e2d1b.map\",\"size\":88428,\"hash\":\"0943ecb804169b991257a319fa92b9e6f34e2d1b\"},{\"path\":\"packages/velocity_html-reporter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_html-reporter.js?a615bf3410d795106d7a78c6a94379745879f7df\",\"sourceMap\":\"packages/velocity_html-reporter.js.map\",\"sourceMapUrl\":\"/packages/a615bf3410d795106d7a78c6a94379745879f7df.map\",\"size\":90264,\"hash\":\"a615bf3410d795106d7a78c6a94379745879f7df\"},{\"path\":\"packages/url.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/url.js?2312d739008b2ffa52f13c77c5d6fc59c9e17d56\",\"sourceMap\":\"packages/url.js.map\",\"sourceMapUrl\":\"/packages/2312d739008b2ffa52f13c77c5d6fc59c9e17d56.map\",\"size\":6642,\"hash\":\"2312d739008b2ffa52f13c77c5d6fc59c9e17d56\"},{\"path\":\"packages/http.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/http.js?9c5d152169ba9a5a57b6b8ec28e64bbd0d308077\",\"sourceMap\":\"packages/http.js.map\",\"sourceMapUrl\":\"/packages/9c5d152169ba9a5a57b6b8ec28e64bbd0d308077.map\",\"size\":37036,\"hash\":\"9c5d152169ba9a5a57b6b8ec28e64bbd0d308077\"},{\"path\":\"packages/velocity_test-proxy.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_test-proxy.js?420bfb10fd1714d91653c2a88df9138b42b52069\",\"sourceMap\":\"packages/velocity_test-proxy.js.map\",\"sourceMapUrl\":\"/packages/420bfb10fd1714d91653c2a88df9138b42b52069.map\",\"size\":21051,\"hash\":\"420bfb10fd1714d91653c2a88df9138b42b52069\"},{\"path\":\"packages/velocity_node-soft-mirror.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/velocity_node-soft-mirror.js?acf27a727fa9aa2f29f237ade3b2046fb9890e36\",\"sourceMap\":\"packages/velocity_node-soft-mirror.js.map\",\"sourceMapUrl\":\"/packages/acf27a727fa9aa2f29f237ade3b2046fb9890e36.map\",\"size\":11067,\"hash\":\"acf27a727fa9aa2f29f237ade3b2046fb9890e36\"},{\"path\":\"packages/xolvio_webdriver.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_webdriver.js?a75f4b698d287f338f30d1ff46380adf6a4ae82f\",\"sourceMap\":\"packages/xolvio_webdriver.js.map\",\"sourceMapUrl\":\"/packages/a75f4b698d287f338f30d1ff46380adf6a4ae82f.map\",\"size\":1301,\"hash\":\"a75f4b698d287f338f30d1ff46380adf6a4ae82f\"},{\"path\":\"packages/xolvio_cucumber.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_cucumber.js?d37dbaae8ea86ff03e815c0e3b0dd2f905331b88\",\"sourceMap\":\"packages/xolvio_cucumber.js.map\",\"sourceMapUrl\":\"/packages/d37dbaae8ea86ff03e815c0e3b0dd2f905331b88.map\",\"size\":1360,\"hash\":\"d37dbaae8ea86ff03e815c0e3b0dd2f905331b88\"},{\"path\":\"packages/email.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/email.js?911578310472ff10dca16a5306b7f455801d0f35\",\"sourceMap\":\"packages/email.js.map\",\"sourceMapUrl\":\"/packages/911578310472ff10dca16a5306b7f455801d0f35.map\",\"size\":1287,\"hash\":\"911578310472ff10dca16a5306b7f455801d0f35\"},{\"path\":\"packages/ui.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/ui.js?5a663333fd30f8fd913f110e0ef779e84f67c4b8\",\"sourceMap\":\"packages/ui.js.map\",\"sourceMapUrl\":\"/packages/5a663333fd30f8fd913f110e0ef779e84f67c4b8.map\",\"size\":1529,\"hash\":\"5a663333fd30f8fd913f110e0ef779e84f67c4b8\"},{\"path\":\"packages/iron_core.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_core.js?d966a1f70c94792fd94c8a155bdbef9bec5e0047\",\"sourceMap\":\"packages/iron_core.js.map\",\"sourceMapUrl\":\"/packages/d966a1f70c94792fd94c8a155bdbef9bec5e0047.map\",\"size\":32915,\"hash\":\"d966a1f70c94792fd94c8a155bdbef9bec5e0047\"},{\"path\":\"packages/iron_dynamic-template.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_dynamic-template.js?d425554c9847e4a80567f8ca55719cd6ae3f2722\",\"sourceMap\":\"packages/iron_dynamic-template.js.map\",\"sourceMapUrl\":\"/packages/d425554c9847e4a80567f8ca55719cd6ae3f2722.map\",\"size\":86389,\"hash\":\"d425554c9847e4a80567f8ca55719cd6ae3f2722\"},{\"path\":\"packages/iron_layout.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_layout.js?4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062\",\"sourceMap\":\"packages/iron_layout.js.map\",\"sourceMapUrl\":\"/packages/4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062.map\",\"size\":62058,\"hash\":\"4e65c46acdaf0ce6a8b1a479d7b9d0b5c0902062\"},{\"path\":\"packages/iron_url.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_url.js?6979e41649a22dcf609df30fc533e36037c7ae58\",\"sourceMap\":\"packages/iron_url.js.map\",\"sourceMapUrl\":\"/packages/6979e41649a22dcf609df30fc533e36037c7ae58.map\",\"size\":69302,\"hash\":\"6979e41649a22dcf609df30fc533e36037c7ae58\"},{\"path\":\"packages/iron_middleware-stack.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_middleware-stack.js?0e0f6983a838a6516556b08e62894f89720e2c44\",\"sourceMap\":\"packages/iron_middleware-stack.js.map\",\"sourceMapUrl\":\"/packages/0e0f6983a838a6516556b08e62894f89720e2c44.map\",\"size\":47239,\"hash\":\"0e0f6983a838a6516556b08e62894f89720e2c44\"},{\"path\":\"packages/iron_location.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_location.js?ca4f0f6672edbfb6cafab6e5c024208d9364eac9\",\"sourceMap\":\"packages/iron_location.js.map\",\"sourceMapUrl\":\"/packages/ca4f0f6672edbfb6cafab6e5c024208d9364eac9.map\",\"size\":52275,\"hash\":\"ca4f0f6672edbfb6cafab6e5c024208d9364eac9\"},{\"path\":\"packages/reactive-dict.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/reactive-dict.js?6b25309b1f0dcf775b44984324878d6f8ad1abc2\",\"sourceMap\":\"packages/reactive-dict.js.map\",\"sourceMapUrl\":\"/packages/6b25309b1f0dcf775b44984324878d6f8ad1abc2.map\",\"size\":19802,\"hash\":\"6b25309b1f0dcf775b44984324878d6f8ad1abc2\"},{\"path\":\"packages/iron_controller.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_controller.js?b02790701804563eafedb2e68c602154983ade06\",\"sourceMap\":\"packages/iron_controller.js.map\",\"sourceMapUrl\":\"/packages/b02790701804563eafedb2e68c602154983ade06.map\",\"size\":41091,\"hash\":\"b02790701804563eafedb2e68c602154983ade06\"},{\"path\":\"packages/iron_router.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/iron_router.js?a427868585af16bb88b7c9996b2449aebb8dbf51\",\"sourceMap\":\"packages/iron_router.js.map\",\"sourceMapUrl\":\"/packages/a427868585af16bb88b7c9996b2449aebb8dbf51.map\",\"size\":216733,\"hash\":\"a427868585af16bb88b7c9996b2449aebb8dbf51\"},{\"path\":\"packages/localstorage.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/localstorage.js?9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c\",\"sourceMap\":\"packages/localstorage.js.map\",\"sourceMapUrl\":\"/packages/9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c.map\",\"size\":7092,\"hash\":\"9ec7d68858d2e33aa807e5cfd5e12bb4d62fe00c\"},{\"path\":\"packages/accounts-base.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/accounts-base.js?88bb0577cebfbd40b522bb337f8ff8af92244c2f\",\"sourceMap\":\"packages/accounts-base.js.map\",\"sourceMapUrl\":\"/packages/88bb0577cebfbd40b522bb337f8ff8af92244c2f.map\",\"size\":109093,\"hash\":\"88bb0577cebfbd40b522bb337f8ff8af92244c2f\"},{\"path\":\"packages/oauth.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/oauth.js?7d11f8366dde05ebf22a1a391f7a39de023df59c\",\"sourceMap\":\"packages/oauth.js.map\",\"sourceMapUrl\":\"/packages/7d11f8366dde05ebf22a1a391f7a39de023df59c.map\",\"size\":31457,\"hash\":\"7d11f8366dde05ebf22a1a391f7a39de023df59c\"},{\"path\":\"packages/accounts-oauth.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/accounts-oauth.js?e601fdb200ebbc6aa49c1bcd52a0f898ab5eecf7\",\"sourceMap\":\"packages/accounts-oauth.js.map\",\"sourceMapUrl\":\"/packages/e601fdb200ebbc6aa49c1bcd52a0f898ab5eecf7.map\",\"size\":15783,\"hash\":\"e601fdb200ebbc6aa49c1bcd52a0f898ab5eecf7\"},{\"path\":\"packages/service-configuration.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/service-configuration.js?262da6fb1e9c97be84333c429c9a2929c80f8e3b\",\"sourceMap\":\"packages/service-configuration.js.map\",\"sourceMapUrl\":\"/packages/262da6fb1e9c97be84333c429c9a2929c80f8e3b.map\",\"size\":5082,\"hash\":\"262da6fb1e9c97be84333c429c9a2929c80f8e3b\"},{\"path\":\"packages/oauth1.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/oauth1.js?6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb\",\"sourceMap\":\"packages/oauth1.js.map\",\"sourceMapUrl\":\"/packages/6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb.map\",\"size\":1505,\"hash\":\"6c8a243dd3199e6507c7bb6bd1e711a90b27dbcb\"},{\"path\":\"packages/twitter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/twitter.js?130c4419c357fe8a79c7f8894b8fab4298559a97\",\"sourceMap\":\"packages/twitter.js.map\",\"sourceMapUrl\":\"/packages/130c4419c357fe8a79c7f8894b8fab4298559a97.map\",\"size\":11463,\"hash\":\"130c4419c357fe8a79c7f8894b8fab4298559a97\"},{\"path\":\"packages/accounts-twitter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/accounts-twitter.js?a1c5862c55c6bf951b845bee147062ac1d5fb3d4\",\"sourceMap\":\"packages/accounts-twitter.js.map\",\"sourceMapUrl\":\"/packages/a1c5862c55c6bf951b845bee147062ac1d5fb3d4.map\",\"size\":4910,\"hash\":\"a1c5862c55c6bf951b845bee147062ac1d5fb3d4\"},{\"path\":\"packages/session.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/session.js?e436deefadc999c21b6fd16e8e1ecce55c3c3a55\",\"sourceMap\":\"packages/session.js.map\",\"sourceMapUrl\":\"/packages/e436deefadc999c21b6fd16e8e1ecce55c3c3a55.map\",\"size\":6497,\"hash\":\"e436deefadc999c21b6fd16e8e1ecce55c3c3a55\"},{\"path\":\"packages/accounts-ui-unstyled.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/accounts-ui-unstyled.js?1ac0cc1f87f6e64d6cfbf5cab2e606405bb49183\",\"sourceMap\":\"packages/accounts-ui-unstyled.js.map\",\"sourceMapUrl\":\"/packages/1ac0cc1f87f6e64d6cfbf5cab2e606405bb49183.map\",\"size\":249920,\"hash\":\"1ac0cc1f87f6e64d6cfbf5cab2e606405bb49183\"},{\"path\":\"packages/accounts-ui.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/accounts-ui.js?1ff79db616cce9b320fe8aed6103eded31248467\",\"sourceMap\":\"packages/accounts-ui.js.map\",\"sourceMapUrl\":\"/packages/1ff79db616cce9b320fe8aed6103eded31248467.map\",\"size\":1346,\"hash\":\"1ff79db616cce9b320fe8aed6103eded31248467\"},{\"path\":\"packages/xolvio_twitter-stub.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_twitter-stub.js?578edc4f88607ed0a5c3d250a6afbdbd640c325f\",\"sourceMap\":\"packages/xolvio_twitter-stub.js.map\",\"sourceMapUrl\":\"/packages/578edc4f88607ed0a5c3d250a6afbdbd640c325f.map\",\"size\":1304,\"hash\":\"578edc4f88607ed0a5c3d250a6afbdbd640c325f\"},{\"path\":\"packages/xolvio_inverter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/xolvio_inverter.js?bf4709ddc0b262d7682a6af9bed08a078bb08467\",\"sourceMap\":\"packages/xolvio_inverter.js.map\",\"sourceMapUrl\":\"/packages/bf4709ddc0b262d7682a6af9bed08a078bb08467.map\",\"size\":8190,\"hash\":\"bf4709ddc0b262d7682a6af9bed08a078bb08467\"},{\"path\":\"packages/webapp.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/webapp.js?e1be090051b82f046484dccc2de7d747e50c7328\",\"sourceMap\":\"packages/webapp.js.map\",\"sourceMapUrl\":\"/packages/e1be090051b82f046484dccc2de7d747e50c7328.map\",\"size\":3106,\"hash\":\"e1be090051b82f046484dccc2de7d747e50c7328\"},{\"path\":\"packages/livedata.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/livedata.js?718526445deb4d9baacb6d92c551adea1d36c1e1\",\"sourceMap\":\"packages/livedata.js.map\",\"sourceMapUrl\":\"/packages/718526445deb4d9baacb6d92c551adea1d36c1e1.map\",\"size\":1413,\"hash\":\"718526445deb4d9baacb6d92c551adea1d36c1e1\"},{\"path\":\"packages/spacebars.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/spacebars.js?7f53771c84a2eafac2b561c9796dda0d8af8e7f5\",\"sourceMap\":\"packages/spacebars.js.map\",\"sourceMapUrl\":\"/packages/7f53771c84a2eafac2b561c9796dda0d8af8e7f5.map\",\"size\":42206,\"hash\":\"7f53771c84a2eafac2b561c9796dda0d8af8e7f5\"},{\"path\":\"packages/launch-screen.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/launch-screen.js?13e1092ebecdb7208762500188f1dc2dea5603e9\",\"sourceMap\":\"packages/launch-screen.js.map\",\"sourceMapUrl\":\"/packages/13e1092ebecdb7208762500188f1dc2dea5603e9.map\",\"size\":9707,\"hash\":\"13e1092ebecdb7208762500188f1dc2dea5603e9\"},{\"path\":\"packages/global-imports.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/packages/global-imports.js?c7ea5f4a8be59b9e7b877ab5bfd8db413d1625be\",\"size\":974,\"hash\":\"c7ea5f4a8be59b9e7b877ab5bfd8db413d1625be\"},{\"path\":\"app/client/chapters/template.chapter.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/chapters/template.chapter.js?741253495a206b8bbceb342a0af46bcf49970ba1\",\"size\":1172,\"hash\":\"741253495a206b8bbceb342a0af46bcf49970ba1\"},{\"path\":\"app/client/landing-page/template.landing-page.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/landing-page/template.landing-page.js?dc51e7f1c63a5d7157d93cd1e86e124efd31f562\",\"size\":2351,\"hash\":\"dc51e7f1c63a5d7157d93cd1e86e124efd31f562\"},{\"path\":\"app/client/template.main.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/template.main.js?5a1d4426af9ee9131bb0c4c221d5978bf5bbe8c7\",\"size\":206,\"hash\":\"5a1d4426af9ee9131bb0c4c221d5978bf5bbe8c7\"},{\"path\":\"app/client/chapters/chapters.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/chapters/chapters.js?1746fcd3f162d63c1957379844ab361e5cd96531\",\"size\":251,\"hash\":\"1746fcd3f162d63c1957379844ab361e5cd96531\"},{\"path\":\"app/client/landing-page/landing-page.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/landing-page/landing-page.js?7c10c67cdaae81d722c397ecc21e0207b2806c0d\",\"size\":1001,\"hash\":\"7c10c67cdaae81d722c397ecc21e0207b2806c0d\"},{\"path\":\"app/client/routes/chapters.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/routes/chapters.js?4cf6f82efceb826ddd06c98cc9dc85ea4bfe5982\",\"size\":519,\"hash\":\"4cf6f82efceb826ddd06c98cc9dc85ea4bfe5982\"},{\"path\":\"app/client/routes/landing-page.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/client/routes/landing-page.js?0b691b65a866f76d69cfe729632432f116653152\",\"size\":172,\"hash\":\"0b691b65a866f76d69cfe729632432f116653152\"},{\"path\":\"app/collections/chapters.js\",\"where\":\"client\",\"type\":\"js\",\"cacheable\":true,\"url\":\"/collections/chapters.js?475e0ebf8025cf9880407bd55552945966f416df\",\"size\":127,\"hash\":\"475e0ebf8025cf9880407bd55552945966f416df\"},{\"path\":\"eb83bbdae43f790d5f5458e422e688d7fec5a63f.css\",\"where\":\"client\",\"type\":\"css\",\"cacheable\":true,\"url\":\"/eb83bbdae43f790d5f5458e422e688d7fec5a63f.css\",\"sourceMap\":\"eb83bbdae43f790d5f5458e422e688d7fec5a63f.css.map\",\"sourceMapUrl\":\"/eb83bbdae43f790d5f5458e422e688d7fec5a63f.map\",\"size\":25115,\"hash\":\"eb83bbdae43f790d5f5458e422e688d7fec5a63f\"},{\"path\":\"packages/velocity_html-reporter/lib/velocity_logo.svg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/velocity_logo.svg\",\"size\":3723,\"hash\":\"bd19ecdc8eb1084f7bb562c298e4ce41f9cdc698\"},{\"path\":\"packages/velocity_html-reporter/lib/velocity_cog.svg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/velocity_cog.svg\",\"size\":987,\"hash\":\"6e74acfffcbd2bafdc8a95d9db7762ece07b1e81\"},{\"path\":\"packages/velocity_html-reporter/lib/icon-time.png\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/packages/velocity_html-reporter/lib/icon-time.png\",\"size\":2834,\"hash\":\"868f492022a4dab0f1522de6aae0773531bc6e85\"},{\"path\":\"app/header-image.jpg\",\"where\":\"client\",\"type\":\"asset\",\"cacheable\":false,\"url\":\"/header-image.jpg\",\"size\":298850,\"hash\":\"f839b1754cf1794b46a60d7ab6a1be0bfef1eda2\"}],\"version\":\"030a69800c6d10e5343a35a89cdbc7d62eff492f\",\"PUBLIC_SETTINGS\":{\"book\":{\"title\":\"Letterpress by Xolv.io\",\"header\":{\"imageSrc\":\"/header-image.jpg\",\"imageCaption\":\"Write your own book with this WYSIWYG markdown powered book app\"}}}}"
                 },
                 "type": {
                   "type": "constant",
@@ -8877,7 +9471,6 @@ var packageMetadata = {
       }
     }
   },
-  "autopublish": {},
   "callback-hook": {
     "Hook": {
       "type": "function",
@@ -9249,7 +9842,6 @@ var packageMetadata = {
       }
     }
   },
-  "insecure": {},
   "mongo": {
     "MongoTest": {
       "type": "object",
@@ -9392,11 +9984,11 @@ var packageMetadata = {
       "members": {
         "autoupdateVersion": {
           "type": "constant",
-          "value": "dPbbobhrTrgaBfxnF"
+          "value": "2DMmJBGHv2P85Jtse"
         },
         "autoupdateVersionRefreshable": {
           "type": "constant",
-          "value": "6a97525b7cc63d76f38c88ed68c1357f97d85d9a"
+          "value": "93ee49bcce2644bcf463280ce49947d4a293700b"
         },
         "autoupdateVersionCordova": {
           "type": "constant",
@@ -9410,6 +10002,7 @@ var packageMetadata = {
     }
   },
   "meteor-platform": {},
+  "less": {},
   "coffeescript": {},
   "practicalmeteor:loglevel": {
     "loglevel": {
@@ -9759,7 +10352,84 @@ var packageMetadata = {
                 },
                 "pid": {
                   "type": "constant",
-                  "value": 58921
+                  "value": 82967
+                },
+                "fout": {
+                  "type": "constant",
+                  "value": 38
+                },
+                "child": {
+                  "type": "object",
+                  "members": {
+                    "domain": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "signalCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "exitCode": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "pid": {
+                      "type": "constant",
+                      "value": 82967
+                    },
+                    "stdin": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdout": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stderr": {
+                      "type": "null",
+                      "value": null
+                    },
+                    "stdio": {
+                      "type": "array"
+                    },
+                    "spawn": {
+                      "type": "function"
+                    },
+                    "kill": {
+                      "type": "function"
+                    },
+                    "ref": {
+                      "type": "function"
+                    },
+                    "unref": {
+                      "type": "function"
+                    },
+                    "setMaxListeners": {
+                      "type": "function"
+                    },
+                    "emit": {
+                      "type": "function"
+                    },
+                    "addListener": {
+                      "type": "function",
+                      "refID": 17
+                    },
+                    "on": {
+                      "ref": 17
+                    },
+                    "once": {
+                      "type": "function"
+                    },
+                    "removeListener": {
+                      "type": "function"
+                    },
+                    "removeAllListeners": {
+                      "type": "function"
+                    },
+                    "listeners": {
+                      "type": "function"
+                    }
+                  }
                 },
                 "getTaskName": {
                   "type": "function"
@@ -9864,7 +10534,1210 @@ var packageMetadata = {
       "type": "object"
     }
   },
-  "less": {},
+  "email": {
+    "Email": {
+      "type": "object",
+      "members": {
+        "send": {
+          "type": "function"
+        }
+      }
+    },
+    "EmailTest": {
+      "type": "object",
+      "members": {
+        "overrideOutputStream": {
+          "type": "function"
+        },
+        "restoreOutputStream": {
+          "type": "function"
+        },
+        "hookSend": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "iron:core": {
+    "Iron": {
+      "type": "object",
+      "members": {
+        "utils": {
+          "type": "object",
+          "members": {
+            "assert": {
+              "type": "function"
+            },
+            "warn": {
+              "type": "function"
+            },
+            "defaultValue": {
+              "type": "function"
+            },
+            "inherits": {
+              "type": "function"
+            },
+            "extend": {
+              "type": "function"
+            },
+            "namespace": {
+              "type": "function"
+            },
+            "resolve": {
+              "type": "function"
+            },
+            "capitalize": {
+              "type": "function"
+            },
+            "classCase": {
+              "type": "function"
+            },
+            "camelCase": {
+              "type": "function"
+            },
+            "notifyDeprecated": {
+              "type": "function"
+            },
+            "withDeprecatedNotice": {
+              "type": "function"
+            },
+            "debug": {
+              "type": "function"
+            },
+            "get": {
+              "type": "function"
+            }
+          }
+        },
+        "DynamicTemplate": {
+          "type": "function",
+          "members": {
+            "getParentDataContext": {
+              "type": "function",
+              "refID": 31
+            },
+            "getDataContext": {
+              "type": "function",
+              "refID": 33
+            },
+            "getInclusionArguments": {
+              "type": "function",
+              "refID": 35
+            },
+            "args": {
+              "type": "function",
+              "refID": 37
+            },
+            "extend": {
+              "type": "function",
+              "refID": 39
+            },
+            "findFirstLookupHost": {
+              "type": "function",
+              "refID": 41
+            },
+            "findLookupHostWithProperty": {
+              "type": "function",
+              "refID": 43
+            },
+            "findLookupHostWithHelper": {
+              "type": "function",
+              "refID": 45
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "template": {
+                  "type": "function",
+                  "refID": 48
+                },
+                "defaultTemplate": {
+                  "type": "function",
+                  "refID": 50
+                },
+                "clear": {
+                  "type": "function"
+                },
+                "data": {
+                  "type": "function",
+                  "refID": 54
+                },
+                "create": {
+                  "type": "function",
+                  "refID": 56
+                },
+                "renderView": {
+                  "type": "function",
+                  "refID": 58
+                },
+                "destroy": {
+                  "type": "function",
+                  "refID": 60
+                },
+                "onViewCreated": {
+                  "type": "function",
+                  "refID": 62
+                },
+                "onViewReady": {
+                  "type": "function",
+                  "refID": 64
+                },
+                "onViewDestroyed": {
+                  "type": "function",
+                  "refID": 66
+                },
+                "events": {
+                  "type": "function",
+                  "refID": 68
+                },
+                "insert": {
+                  "type": "function",
+                  "refID": 70
+                }
+              }
+            }
+          }
+        },
+        "Layout": {
+          "type": "function",
+          "refID": 72,
+          "members": {
+            "DEFAULT_REGION": {
+              "type": "constant",
+              "value": "main"
+            },
+            "getParentDataContext": {
+              "ref": 31
+            },
+            "getDataContext": {
+              "ref": 33
+            },
+            "getInclusionArguments": {
+              "ref": 35
+            },
+            "args": {
+              "ref": 37
+            },
+            "extend": {
+              "ref": 39
+            },
+            "findFirstLookupHost": {
+              "ref": 41
+            },
+            "findLookupHostWithProperty": {
+              "ref": 43
+            },
+            "findLookupHostWithHelper": {
+              "ref": 45
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "constructor": {
+                  "ref": 72
+                },
+                "region": {
+                  "type": "function"
+                },
+                "destroyRegions": {
+                  "type": "function"
+                },
+                "render": {
+                  "type": "function"
+                },
+                "has": {
+                  "type": "function"
+                },
+                "regionKeys": {
+                  "type": "function"
+                },
+                "clear": {
+                  "type": "function"
+                },
+                "clearAll": {
+                  "type": "function"
+                },
+                "beginRendering": {
+                  "type": "function"
+                },
+                "onRegionCreated": {
+                  "type": "function"
+                },
+                "onRegionRendered": {
+                  "type": "function"
+                },
+                "onRegionDestroyed": {
+                  "type": "function"
+                },
+                "template": {
+                  "ref": 48
+                },
+                "defaultTemplate": {
+                  "ref": 50
+                },
+                "data": {
+                  "ref": 54
+                },
+                "create": {
+                  "ref": 56
+                },
+                "renderView": {
+                  "ref": 58
+                },
+                "destroy": {
+                  "ref": 60
+                },
+                "onViewCreated": {
+                  "ref": 62
+                },
+                "onViewReady": {
+                  "ref": 64
+                },
+                "onViewDestroyed": {
+                  "ref": 66
+                },
+                "events": {
+                  "ref": 68
+                },
+                "insert": {
+                  "ref": 70
+                }
+              }
+            }
+          }
+        },
+        "Url": {
+          "type": "function",
+          "members": {
+            "normalize": {
+              "type": "function"
+            },
+            "isSameOrigin": {
+              "type": "function"
+            },
+            "fromQueryString": {
+              "type": "function"
+            },
+            "toQueryString": {
+              "type": "function"
+            },
+            "parse": {
+              "type": "function"
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "test": {
+                  "type": "function"
+                },
+                "exec": {
+                  "type": "function"
+                },
+                "params": {
+                  "type": "function"
+                },
+                "resolve": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        },
+        "MiddlewareStack": {
+          "type": "function",
+          "members": {
+            "prototype": {
+              "type": "object",
+              "members": {
+                "findByName": {
+                  "type": "function"
+                },
+                "push": {
+                  "type": "function"
+                },
+                "append": {
+                  "type": "function"
+                },
+                "insertAt": {
+                  "type": "function"
+                },
+                "insertBefore": {
+                  "type": "function"
+                },
+                "insertAfter": {
+                  "type": "function"
+                },
+                "concat": {
+                  "type": "function"
+                },
+                "dispatch": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        },
+        "Controller": {
+          "type": "function",
+          "members": {
+            "extend": {
+              "type": "function",
+              "refID": 135
+            },
+            "events": {
+              "type": "function",
+              "refID": 137
+            },
+            "helpers": {
+              "type": "function",
+              "refID": 139
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "layout": {
+                  "type": "function",
+                  "refID": 142
+                },
+                "render": {
+                  "type": "function",
+                  "refID": 144
+                },
+                "beginRendering": {
+                  "type": "function",
+                  "refID": 146
+                },
+                "init": {
+                  "type": "function"
+                },
+                "wait": {
+                  "type": "function",
+                  "refID": 150
+                },
+                "ready": {
+                  "type": "function",
+                  "refID": 152
+                }
+              }
+            }
+          }
+        },
+        "RouteController": {
+          "type": "function",
+          "members": {
+            "extend": {
+              "ref": 135
+            },
+            "events": {
+              "ref": 137
+            },
+            "helpers": {
+              "ref": 139
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "constructor": {
+                  "type": "function"
+                },
+                "lookupOption": {
+                  "type": "function"
+                },
+                "configureFromUrl": {
+                  "type": "function"
+                },
+                "runHooks": {
+                  "type": "function"
+                },
+                "getParams": {
+                  "type": "function"
+                },
+                "setParams": {
+                  "type": "function"
+                },
+                "init": {
+                  "type": "function"
+                },
+                "dispatch": {
+                  "type": "function"
+                },
+                "layout": {
+                  "ref": 142
+                },
+                "render": {
+                  "ref": 144
+                },
+                "beginRendering": {
+                  "ref": 146
+                },
+                "wait": {
+                  "ref": 150
+                },
+                "ready": {
+                  "ref": 152
+                }
+              }
+            }
+          }
+        },
+        "Route": {
+          "type": "function",
+          "members": {
+            "prototype": {
+              "type": "object",
+              "members": {
+                "getName": {
+                  "type": "function"
+                },
+                "findControllerConstructor": {
+                  "type": "function"
+                },
+                "createController": {
+                  "type": "function"
+                },
+                "setControllerParams": {
+                  "type": "function"
+                },
+                "dispatch": {
+                  "type": "function"
+                },
+                "path": {
+                  "type": "function"
+                },
+                "url": {
+                  "type": "function"
+                },
+                "params": {
+                  "type": "function"
+                },
+                "get": {
+                  "type": "function"
+                },
+                "post": {
+                  "type": "function"
+                },
+                "put": {
+                  "type": "function"
+                },
+                "delete": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        },
+        "Router": {
+          "type": "function",
+          "members": {
+            "HOOK_TYPES": {
+              "type": "array"
+            },
+            "hooks": {
+              "type": "object",
+              "members": {
+                "loading": {
+                  "type": "function"
+                },
+                "dataNotFound": {
+                  "type": "function"
+                }
+              }
+            },
+            "plugins": {
+              "type": "object",
+              "members": {
+                "loading": {
+                  "type": "function"
+                },
+                "dataNotFound": {
+                  "type": "function"
+                }
+              }
+            },
+            "bodyParser": {
+              "type": "function",
+              "members": {
+                "json": {
+                  "type": "function"
+                },
+                "raw": {
+                  "type": "function"
+                },
+                "text": {
+                  "type": "function"
+                },
+                "urlencoded": {
+                  "type": "function"
+                }
+              }
+            },
+            "prototype": {
+              "type": "object",
+              "members": {
+                "init": {
+                  "type": "function"
+                },
+                "configure": {
+                  "type": "function"
+                },
+                "map": {
+                  "type": "function"
+                },
+                "route": {
+                  "type": "function"
+                },
+                "findFirstRoute": {
+                  "type": "function"
+                },
+                "path": {
+                  "type": "function"
+                },
+                "url": {
+                  "type": "function"
+                },
+                "createController": {
+                  "type": "function"
+                },
+                "setTemplateNameConverter": {
+                  "type": "function"
+                },
+                "setControllerNameConverter": {
+                  "type": "function"
+                },
+                "toTemplateName": {
+                  "type": "function"
+                },
+                "toControllerName": {
+                  "type": "function"
+                },
+                "addHook": {
+                  "type": "function"
+                },
+                "lookupHook": {
+                  "type": "function"
+                },
+                "getHooks": {
+                  "type": "function"
+                },
+                "onRun": {
+                  "type": "function"
+                },
+                "onRerun": {
+                  "type": "function"
+                },
+                "onBeforeAction": {
+                  "type": "function"
+                },
+                "onAfterAction": {
+                  "type": "function"
+                },
+                "onStop": {
+                  "type": "function"
+                },
+                "waitOn": {
+                  "type": "function"
+                },
+                "subscriptions": {
+                  "type": "function"
+                },
+                "load": {
+                  "type": "function"
+                },
+                "before": {
+                  "type": "function"
+                },
+                "after": {
+                  "type": "function"
+                },
+                "unload": {
+                  "type": "function"
+                },
+                "plugin": {
+                  "type": "function"
+                },
+                "configureBodyParsers": {
+                  "type": "function"
+                },
+                "start": {
+                  "type": "function"
+                },
+                "dispatch": {
+                  "type": "function"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "iron:dynamic-template": {},
+  "iron:layout": {},
+  "iron:url": {},
+  "iron:middleware-stack": {
+    "Handler": {
+      "type": "function",
+      "members": {
+        "prototype": {
+          "type": "object",
+          "members": {
+            "test": {
+              "type": "function"
+            },
+            "params": {
+              "type": "function"
+            },
+            "resolve": {
+              "type": "function"
+            },
+            "clone": {
+              "type": "function"
+            }
+          }
+        }
+      }
+    }
+  },
+  "iron:location": {},
+  "reactive-dict": {
+    "ReactiveDict": {
+      "type": "function",
+      "members": {
+        "prototype": {
+          "type": "object",
+          "members": {
+            "set": {
+              "type": "function"
+            },
+            "setDefault": {
+              "type": "function"
+            },
+            "get": {
+              "type": "function"
+            },
+            "equals": {
+              "type": "function"
+            }
+          }
+        }
+      }
+    }
+  },
+  "iron:controller": {},
+  "iron:router": {
+    "Router": {
+      "type": "function",
+      "members": {
+        "routes": {
+          "type": "array"
+        },
+        "options": {
+          "type": "object"
+        },
+        "init": {
+          "type": "function"
+        },
+        "configure": {
+          "type": "function"
+        },
+        "map": {
+          "type": "function"
+        },
+        "route": {
+          "type": "function"
+        },
+        "findFirstRoute": {
+          "type": "function"
+        },
+        "path": {
+          "type": "function"
+        },
+        "url": {
+          "type": "function"
+        },
+        "createController": {
+          "type": "function"
+        },
+        "setTemplateNameConverter": {
+          "type": "function"
+        },
+        "setControllerNameConverter": {
+          "type": "function"
+        },
+        "toTemplateName": {
+          "type": "function"
+        },
+        "toControllerName": {
+          "type": "function"
+        },
+        "addHook": {
+          "type": "function"
+        },
+        "lookupHook": {
+          "type": "function"
+        },
+        "getHooks": {
+          "type": "function"
+        },
+        "onRun": {
+          "type": "function"
+        },
+        "onRerun": {
+          "type": "function"
+        },
+        "onBeforeAction": {
+          "type": "function"
+        },
+        "onAfterAction": {
+          "type": "function"
+        },
+        "onStop": {
+          "type": "function"
+        },
+        "waitOn": {
+          "type": "function"
+        },
+        "subscriptions": {
+          "type": "function"
+        },
+        "load": {
+          "type": "function"
+        },
+        "before": {
+          "type": "function"
+        },
+        "after": {
+          "type": "function"
+        },
+        "unload": {
+          "type": "function"
+        },
+        "plugin": {
+          "type": "function"
+        },
+        "configureBodyParsers": {
+          "type": "function"
+        },
+        "start": {
+          "type": "function"
+        },
+        "dispatch": {
+          "type": "function"
+        }
+      }
+    },
+    "RouteController": {
+      "type": "function",
+      "members": {
+        "extend": {
+          "type": "function"
+        },
+        "events": {
+          "type": "function"
+        },
+        "helpers": {
+          "type": "function"
+        },
+        "prototype": {
+          "type": "object",
+          "members": {
+            "constructor": {
+              "type": "function"
+            },
+            "lookupOption": {
+              "type": "function"
+            },
+            "configureFromUrl": {
+              "type": "function"
+            },
+            "runHooks": {
+              "type": "function"
+            },
+            "getParams": {
+              "type": "function"
+            },
+            "setParams": {
+              "type": "function"
+            },
+            "init": {
+              "type": "function"
+            },
+            "dispatch": {
+              "type": "function"
+            },
+            "layout": {
+              "type": "function"
+            },
+            "render": {
+              "type": "function"
+            },
+            "beginRendering": {
+              "type": "function"
+            },
+            "wait": {
+              "type": "function"
+            },
+            "ready": {
+              "type": "function"
+            }
+          }
+        }
+      }
+    }
+  },
+  "accounts-base": {
+    "Accounts": {
+      "type": "object",
+      "members": {
+        "config": {
+          "type": "function"
+        },
+        "LoginCancelledError": {
+          "type": "function",
+          "members": {
+            "numericError": {
+              "type": "constant",
+              "value": 145546287
+            }
+          }
+        },
+        "validateLoginAttempt": {
+          "type": "function"
+        },
+        "onLogin": {
+          "type": "function"
+        },
+        "onLoginFailure": {
+          "type": "function"
+        },
+        "registerLoginHandler": {
+          "type": "function"
+        },
+        "destroyToken": {
+          "type": "function"
+        },
+        "onCreateUser": {
+          "type": "function"
+        },
+        "insertUserDoc": {
+          "type": "function"
+        },
+        "validateNewUser": {
+          "type": "function"
+        },
+        "updateOrCreateUserFromExternalService": {
+          "type": "function"
+        },
+        "addAutopublishFields": {
+          "type": "function"
+        },
+        "urls": {
+          "type": "object",
+          "members": {
+            "resetPassword": {
+              "type": "function"
+            },
+            "verifyEmail": {
+              "type": "function"
+            },
+            "enrollAccount": {
+              "type": "function"
+            }
+          }
+        },
+        "oauth": {
+          "type": "object",
+          "members": {
+            "registerService": {
+              "type": "function"
+            },
+            "serviceNames": {
+              "type": "function"
+            }
+          }
+        },
+        "loginServiceConfiguration": {
+          "type": "object",
+          "members": {
+            "find": {
+              "type": "function"
+            },
+            "findOne": {
+              "type": "function"
+            },
+            "insert": {
+              "type": "function"
+            },
+            "update": {
+              "type": "function"
+            },
+            "remove": {
+              "type": "function"
+            },
+            "upsert": {
+              "type": "function"
+            },
+            "allow": {
+              "type": "function"
+            },
+            "deny": {
+              "type": "function"
+            }
+          }
+        },
+        "ConfigError": {
+          "type": "function"
+        }
+      }
+    },
+    "AccountsTest": {
+      "type": "undefined"
+    }
+  },
+  "service-configuration": {
+    "ServiceConfiguration": {
+      "type": "object",
+      "members": {
+        "configurations": {
+          "type": "object",
+          "members": {
+            "find": {
+              "type": "function"
+            },
+            "findOne": {
+              "type": "function"
+            },
+            "insert": {
+              "type": "function"
+            },
+            "update": {
+              "type": "function"
+            },
+            "remove": {
+              "type": "function"
+            },
+            "upsert": {
+              "type": "function"
+            },
+            "allow": {
+              "type": "function"
+            },
+            "deny": {
+              "type": "function"
+            }
+          }
+        },
+        "ConfigError": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "localstorage": {},
+  "oauth": {
+    "OAuth": {
+      "type": "object",
+      "members": {
+        "registerService": {
+          "type": "function"
+        },
+        "retrieveCredential": {
+          "type": "function"
+        },
+        "sealSecret": {
+          "type": "function"
+        },
+        "openSecret": {
+          "type": "function"
+        },
+        "openSecrets": {
+          "type": "function"
+        }
+      }
+    },
+    "OAuthTest": {
+      "type": "object",
+      "members": {
+        "unregisterService": {
+          "type": "function"
+        },
+        "middleware": {
+          "type": "function"
+        }
+      }
+    },
+    "Oauth": {
+      "type": "object",
+      "members": {
+        "registerService": {
+          "type": "function"
+        },
+        "retrieveCredential": {
+          "type": "function"
+        },
+        "sealSecret": {
+          "type": "function"
+        },
+        "openSecret": {
+          "type": "function"
+        },
+        "openSecrets": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "accounts-oauth": {},
+  "oauth1": {
+    "OAuth1Binding": {
+      "type": "function",
+      "members": {
+        "prototype": {
+          "type": "object",
+          "members": {
+            "prepareRequestToken": {
+              "type": "function"
+            },
+            "prepareAccessToken": {
+              "type": "function"
+            },
+            "call": {
+              "type": "function"
+            },
+            "get": {
+              "type": "function"
+            },
+            "post": {
+              "type": "function"
+            }
+          }
+        }
+      }
+    },
+    "OAuth1Test": {
+      "type": "undefined"
+    }
+  },
+  "twitter": {
+    "Twitter": {
+      "type": "object",
+      "members": {
+        "whitelistedFields": {
+          "type": "array"
+        },
+        "retrieveCredential": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "accounts-twitter": {},
+  "accounts-ui": {},
+  "xolvio:http-interceptor": {
+    "HttpInterceptor": {
+      "type": "object",
+      "members": {
+        "Calls": {
+          "type": "object",
+          "members": {
+            "find": {
+              "type": "function"
+            },
+            "findOne": {
+              "type": "function"
+            },
+            "insert": {
+              "type": "function"
+            },
+            "update": {
+              "type": "function"
+            },
+            "remove": {
+              "type": "function"
+            },
+            "upsert": {
+              "type": "function"
+            },
+            "allow": {
+              "type": "function"
+            },
+            "deny": {
+              "type": "function"
+            }
+          }
+        },
+        "registerInterceptor": {
+          "type": "function"
+        },
+        "ignore": {
+          "type": "function"
+        },
+        "reset": {
+          "type": "function"
+        },
+        "restore": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "xolvio:twitter-stub": {
+    "TwitterStub": {
+      "type": "object",
+      "members": {
+        "fakeData": {
+          "type": "object",
+          "members": {
+            "oauthToken": {
+              "type": "constant",
+              "value": "C4fDpmAHHA7r0EZRBVJoIywoPMt64yMq"
+            },
+            "oauthVerifier": {
+              "type": "constant",
+              "value": "uE5YqPdfjh2hsMTR7L3MhDrEnzWKIRzE"
+            },
+            "oauthTokenSecret": {
+              "type": "constant",
+              "value": "Ct44BiqYSEt3vF2dBSkqVbviLIQMicIY"
+            },
+            "accessTokenOauthTokenSecret": {
+              "type": "constant",
+              "value": "K14oVfWunYuaqUPhEW6WkRkE7BKEAMO81qgh6tljrnIOb"
+            },
+            "accessTokenOauthToken": {
+              "type": "constant",
+              "value": "859186075-8RvREJv57qylZWN6UD3HyFAFxkTS6RPmMHnBN7tm"
+            },
+            "user": {
+              "type": "object",
+              "members": {
+                "id": {
+                  "type": "constant",
+                  "value": 123456789
+                },
+                "id_str": {
+                  "type": "constant",
+                  "value": "123456789"
+                },
+                "name": {
+                  "type": "constant",
+                  "value": "Fake User"
+                },
+                "screen_name": {
+                  "type": "constant",
+                  "value": "fake_user"
+                }
+              }
+            }
+          }
+        },
+        "init": {
+          "type": "function"
+        }
+      }
+    }
+  },
+  "xolvio:inverter": {},
   "session": {},
   "livedata": {
     "DDP": {

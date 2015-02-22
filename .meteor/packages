@@ -17,6 +17,5 @@ accounts-twitter
 accounts-ui
 service-configuration
 
-xolvio:twitter-fake
-#xolvio:http-interceptor
+xolvio:twitter-stub
 xolvio:inverter

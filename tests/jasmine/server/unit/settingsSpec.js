@@ -31,7 +31,7 @@ describe('The settings checker', function () {
       throw new Error('* * * An error message * * *');
     };
 
-    // EXCECUTE
+    // EXECUTE
     App.checkSettings();
 
     // VERIFY
@@ -45,7 +45,7 @@ describe('The settings checker', function () {
     // SETUP
     check = function () {};
 
-    // EXCECUTE
+    // EXECUTE
     App.checkSettings();
 
     // VERIFY

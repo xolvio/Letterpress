@@ -13,21 +13,21 @@ completion details*
 
 ##Features:
 
-* [ ] Landing Page (in progress)
-  * [ ] Configurable Content
+* [-] Landing Page (in progress)
+  * [x] Configurable Content
     * [x] Headings
     * [ ] Blurb
-    * [ ] Images
+    * [x] Image
   * [ ] Chapters Preview
   * [ ] Author(s) Information
   * [ ] Gumroad Integration
-  * [ ] Mailing List Signup
+  * [ ] Mailing List Signup *(IN PROGRESS)*
   * [ ] Meta Tags for SEO and Sharing
   * [ ] Configurable Social Media Links
 * [ ] Access Control
   * [ ] Login
     * [ ] Email
-    * [ ] Twitter
+    * [x] Twitter
     * [ ] Google
     * [ ] Facebook
   * [ ] Admin 
@@ -37,7 +37,7 @@ completion details*
 * [ ] Chapters
   * [ ] Add / Remove / Publish / Unpublish
   * [ ] Markdown Authoring
-  * [ ] Mark as Free, Paid or Premium
+  * [ ] Mark as Free, Paid or Premium *(IN PROGRESS)*
   * [ ] Disqus Integration
 * [ ] Downloadable Book Formats
   * [ ] PDF
