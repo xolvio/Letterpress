@@ -10,7 +10,6 @@ less
 
 sanjo:jasmine
 velocity:html-reporter
-xolvio:cucumber
 email
 iron:router
 accounts-twitter
@@ -19,3 +18,4 @@ service-configuration
 
 xolvio:twitter-stub
 xolvio:inverter
+xolvio:cucumber@0.3.10
