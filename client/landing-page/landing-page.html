@@ -1,7 +1,11 @@
-<body>
-<h1>{{bookTitle}}</h1>
-{{> header}}
-</body>
+<template name="landingPage">
+    <section class="landing-page">
+        <h1>{{bookTitle}}</h1>
+      {{> header}}
+      {{> chaptersPreview}}
+      {{> newsletter}}
+    </section>
+</template>
 
 <template name="header">
     <header>
@@ -10,4 +14,23 @@
             <figcaption>{{imageCaption}}</figcaption>
         </figure>
     </header>
+</template>
+
+<template name="chaptersPreview">
+    <main class="chapters-preview">
+      {{#each chapters}}
+          <summary>
+              <h2 class="chapter-preview-title"><a class="chapter-link" href="{{pathFor route='chapter'}}">{{title}}</a></h2>
+              <p class="chapter-preview-description">{{description}}</p>
+          </summary>
+      {{/each}}
+    </main>
+</template>
+
+<template name="newsletter">
+    <form>
+        <label for="newsletterEmail">Email</label>
+        <input id="newsletterEmail"/>
+        <button id="submitNewsletterEmail" type="button">Sign Up!</button>
+    </form>
 </template>

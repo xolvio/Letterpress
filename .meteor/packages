@@ -4,9 +4,19 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
+#autopublish
+#insecure
+less
+
 sanjo:jasmine
 velocity:html-reporter
 xolvio:cucumber
-less
+email
+iron:router
+accounts-twitter
+accounts-ui
+service-configuration
+
+xolvio:twitter-fake
+#xolvio:http-interceptor
+xolvio:inverter

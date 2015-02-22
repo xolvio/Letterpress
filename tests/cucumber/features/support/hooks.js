@@ -9,9 +9,20 @@
     this.Before(function () {
       var world = helper.world;
       var callback = arguments[arguments.length - 1];
-      world.browser.
-        init().
-        call(callback);
+
+      var connection = DDP.connect(helper.world.mirrorUrl);
+      connection.call('clearState', function () {
+
+        world.browser.
+          init().
+          setViewportSize({
+            width: 1280,
+            height: 1024
+          }).
+          timeoutsImplicitWait(1000).
+          call(callback);
+
+      });
     });
 
     this.After(function () {
@@ -23,6 +34,5 @@
     });
 
   };
-
 
 })();
