@@ -28,3 +28,43 @@ describe("The header", function () {
   });
 
 });
+
+describe("Header helpers", function () {
+  it("Should set the image source from Meteor settings", function () {
+
+    // SETUP
+    var expectedValue = Template.header.__helpers.get('imageSrc');
+
+    // EXECUTE
+    var actualValue = $('header figure img').attr("src");
+
+    // VERIFY
+    expect(actualValue).toBe(expectedValue);
+
+  });
+  it("should return the image source from Meteor settings object", function () {
+
+    // SETUP
+    var expectedValue = Meteor.settings.public.book.header.imageSrc;
+
+    // EXECUTE
+    var actualValue = Template.header.__helpers.get('imageSrc');
+
+    // VERIFY
+    expect(actualValue).toBe(expectedValue);
+
+  });
+
+  it("Should put the image source from Meteor settings object in the template", function () {
+
+    // SETUP
+    var expectedValue = Meteor.settings.public.book.header.imageSrc;
+
+    // EXECUTE
+    var actualValue = $('header figure img').attr("src");
+
+    // VERIFY
+    expect(actualValue).toBe(expectedValue);
+
+  });
+});

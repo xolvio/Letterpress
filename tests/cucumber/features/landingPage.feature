@@ -25,3 +25,8 @@ Feature: Authorable Landing Page
     Given I navigate to the landing page
     When I click on the chapter link
     Then I should be at the chapter preview page
+
+  Scenario: Visitors see an image on the landing page
+    Given I am a new visitor
+    When I navigate to the landing page
+    Then I see the image from "/header-image.jpg"

@@ -90,6 +90,14 @@
         });
     });
 
+    this.Then(/^I see the image from "([^"]*)"$/, function (expectedImageSource, callback) {
+      helper.world.browser.
+        getAttribute('header figure img', 'src', function(err, actualImageSource) {
+          assert(actualImageSource.match(expectedImageSource));
+          callback();
+        })
+    });
+
   };
 
 })();
