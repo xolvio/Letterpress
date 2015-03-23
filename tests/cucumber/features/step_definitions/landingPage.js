@@ -43,8 +43,8 @@
 
     this.Then(/^I receive a confirmation email from "([^"]*)"$/, function (fromEmailAddress, callback) {
       var HTTP = Package['http'].HTTP;
-      var sentEmail = HTTP.get(helper.world.mirrorUrl + 'fake/inbox').data[0];
       try {
+        var sentEmail = HTTP.get(helper.world.mirrorUrl + 'fake/inbox').data[0];
         assert.equal(sentEmail.to, helper.world.users['I'].emailAddress);
         assert.equal(fromEmailAddress, sentEmail.from);
         callback();

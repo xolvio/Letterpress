@@ -30,7 +30,7 @@ completion details*
     * [x] Twitter
     * [ ] Google
     * [ ] Facebook
-  * [ ] Admin 
+  * [ ] Admin
     * [ ] Invite User
     * [ ] Upgrade / Downgrade User
     * [ ] Revoke User
