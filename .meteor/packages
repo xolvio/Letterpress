@@ -18,4 +18,4 @@ service-configuration
 
 xolvio:twitter-stub
 xolvio:inverter
-xolvio:cucumber@0.3.10
+xolvio:cucumber
