@@ -21,8 +21,8 @@ dependencies:
   override:
 
     # Update to the latest chrome and remove default chromedrivers for safety if we are on v38*
-    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then UPDATE_CHROME=1; fi
-    - echo $UPDATE_CHROME
+    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then export UPDATE_CHROME=1; fi
+    - echo [$UPDATE_CHROME]
     - if [ "$UPDATE_CHROME" == "1" ]; then wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -; fi
     - if [ "$UPDATE_CHROME" == "1" ]; then sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'; fi
     - if [ "$UPDATE_CHROME" == "1" ]; then sudo apt-get update; fi
