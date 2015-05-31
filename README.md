@@ -1,7 +1,6 @@
-[![Circle CI](https://circleci.com/gh/xolvio/Letterpress.svg?style=svg)](https://circleci.com/gh/xolvio/Letterpress)
-
 Letterpress by Xolv.io
 ======================
+[![Circle CI](https://circleci.com/gh/xolvio/Letterpress.svg?style=svg)](https://circleci.com/gh/xolvio/Letterpress)
 
 Letterpress allows you to write and publish your own book online with a pretty live-preview
 WYSIWYG Markdown editor.
