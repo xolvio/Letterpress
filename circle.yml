@@ -39,5 +39,5 @@ test:
     # Start Meteor app
     - meteor --test:
         environment:
-          SELENIUM_BROWSER: chrome
+          SELENIUM_BROWSER: firefox
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
