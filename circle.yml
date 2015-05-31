@@ -18,12 +18,14 @@ machine:
     CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/results.cucumber"
 
 dependencies:
-  cache_directories:
-    - "~/.meteor"
-    - "~/.npm"
+#  cache_directories:
+#    - "~/.meteor"
+#    - "~/.npm"
 
   # Everything that should be cached must be installed here
   override:
+    # Remove the CircleCI chromedrivers
+    - sudo rm -rf /usr/local/bin/chromedriver*
     # Restore meteor symlink when Meteor was restored from the cache
     - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
     # Download Meteor if isn't already installed via the cache
