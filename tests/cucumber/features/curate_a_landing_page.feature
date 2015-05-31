@@ -8,4 +8,4 @@ Feature: Curate a Landing Page
   Scenario: Author the heading
     Given I have created a landing page with the heading "My Book"
     When a user navigates to the landing page
-    Then they see the heading "My Book"
+    Then they see the heading "My Books"
