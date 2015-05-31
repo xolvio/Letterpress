@@ -15,16 +15,18 @@ dependencies:
   cache_directories:
     - "~/.meteor"
     - "~/.npm"
+    - "/opt/google/chrome"
 
   # Everything that should be cached must be installed here
   override:
 
     # Update to the latest chrome and remove default chromedrivers for safety
-    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-    - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-    - sudo apt-get update
-    - sudo apt-get install google-chrome-stable
-    - sudo rm -rf /usr/local/bin/chromedriver*
+    - if [ ! -e /opt/google/chrome/chrome ]; then
+        wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -;
+        && sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list';
+        && sudo apt-get update;
+        && sudo apt-get install google-chrome-stable;
+        && sudo rm -rf /usr/local/bin/chromedriver*;
 
     # Restore meteor symlink when Meteor is restored from the cache or download and install meteor
     - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
