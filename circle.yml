@@ -1,0 +1,53 @@
+machine:
+
+  pre:
+    # Install NVM (Node version manager)
+    - curl https://raw.githubusercontent.com/creationix/nvm/v0.24.1/install.sh | bash
+
+  node:
+    version: 0.10.36
+
+  environment:
+    CIRCLE_ENV: test
+
+dependencies:
+  cache_directories:
+    - "~/.meteor"
+    - "~/.npm"
+
+  # Everything that should be cached must be installed here
+  override:
+    # Install JSHint
+    - npm install -g jshint
+    # Install Meteor Up
+    - npm install -g mup
+    # Restore meteor symlink when Meteor was restored from the cache
+    - if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
+    # Download Meteor if isn't already installed via the cache
+    - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+    # Download Cucumber support files dependencies
+    - npm install --production --no-optional:
+        pwd: tests/cucumber
+    # Install Oracle JDK 8
+    - if [ ! -e ~/build_exists ]; then brew install caskroom/cask/brew-cask; fi
+    - if [ ! -e ~/build_exists ]; then brew cask install java; fi
+
+test:
+  override:
+    # JSHint checks
+    - jshint .
+    # Start Meteor app
+    - meteor --test:
+        environment:
+          VELOCITY_CI: true
+          # Enable this line to run Velocity and test framewoeks in debug mode
+          VELOCITY_DEBUG: true
+    - copy .meteor/local/log/*.log $CIRCLE_ARTIFACTS
+
+
+## Customize deployment commands
+#deployment:
+#  staging:
+#    branch: ''
+#    commands:
+#      - mup deploy
