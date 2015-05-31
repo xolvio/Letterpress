@@ -21,13 +21,14 @@ dependencies:
   override:
 
     # Update to the latest chrome and remove default chromedrivers for safety if we are on v38*
-    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then export UPDATE_CHROME=1; fi
-    - echo [$UPDATE_CHROME]
-    - if [ "$UPDATE_CHROME" == "1" ]; then wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -; fi
-    - if [ "$UPDATE_CHROME" == "1" ]; then sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'; fi
-    - if [ "$UPDATE_CHROME" == "1" ]; then sudo apt-get update; fi
-    - if [ "$UPDATE_CHROME" == "1" ]; then sudo apt-get install google-chrome-stable; fi
-    - if [ "$UPDATE_CHROME" == "1" ]; then sudo rm -rf /usr/local/bin/chromedriver*; fi
+    - sudo rm /tmp/update-chrome
+    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then echo UPDATE_CHROME > /tmp/update-chrome; fi
+    - if [ ! -e /tmp/update-chrome ]; echo Older version of Chrome detected, upgrading...
+    - if [ ! -e /tmp/update-chrome ]; then wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -; fi
+    - if [ ! -e /tmp/update-chrome ]; then sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'; fi
+    - if [ ! -e /tmp/update-chrome ]; then sudo apt-get update; fi
+    - if [ ! -e /tmp/update-chrome ]; then sudo apt-get install google-chrome-stable; fi
+    - if [ ! -e /tmp/update-chrome ]; then sudo rm -rf /usr/local/bin/chromedriver*; fi
 
     # Restore meteor symlink when Meteor is restored from the cache or download and install meteor
     - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
