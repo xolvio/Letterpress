@@ -28,9 +28,6 @@ dependencies:
     # Download Cucumber support files dependencies
     - npm install --production:
         pwd: tests/cucumber
-    # Install Oracle JDK 8
-    - if [ ! -e ~/build_exists ]; then brew install caskroom/cask/brew-cask; fi
-    - if [ ! -e ~/build_exists ]; then brew cask install java; fi
 
 test:
   override:
@@ -39,6 +36,7 @@ test:
     # Start Meteor app
     - meteor --test:
         environment:
+          SELENIUM_BROWSER: chrome
           VELOCITY_CI: true
           # Enable this line to run Velocity and test framewoeks in debug mode
           VELOCITY_DEBUG: true
