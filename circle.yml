@@ -36,5 +36,4 @@ test:
 
           # Enable this line to run Velocity and test frameworks in debug mode
           VELOCITY_DEBUG: true
-    - ls -al
-    - copy .meteor/local/log/*.log $CIRCLE_ARTIFACTS
+    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
