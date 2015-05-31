@@ -24,12 +24,18 @@ dependencies:
 
   # Everything that should be cached must be installed here
   override:
-    # Remove the CircleCI chromedrivers
+
+    # Update to the latest chrome and remove default chromedrivers for safety
+    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - sudo apt-get update
+    - sudo apt-get install google-chrome-stable
     - sudo rm -rf /usr/local/bin/chromedriver*
-    # Restore meteor symlink when Meteor was restored from the cache
+
+    # Restore meteor symlink when Meteor is restored from the cache or download and install meteor
     - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
-    # Download Meteor if isn't already installed via the cache
     - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+
     # Download Cucumber support files dependencies
     - npm install --production:
         pwd: tests/cucumber
@@ -39,5 +45,5 @@ test:
     # Start Meteor app
     - meteor --test:
         environment:
-          SELENIUM_BROWSER: firefox
+          SELENIUM_BROWSER: chrome
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
