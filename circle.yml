@@ -7,6 +7,9 @@ machine:
   node:
     version: 0.10.36
 
+  java:
+    version: oraclejdk8
+
   environment:
 
 
@@ -35,5 +38,5 @@ test:
           #VELOCITY_DEBUG: true
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/results.cucumber"
-          #SELENIUM_BROWSER: chrome
+          SELENIUM_BROWSER: chrome
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
