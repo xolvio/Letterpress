@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/xolvio/Letterpress.svg?style=svg)](https://circleci.com/gh/xolvio/Letterpress)
+
 Letterpress by Xolv.io
 ======================
 
