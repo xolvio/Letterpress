@@ -26,7 +26,7 @@ dependencies:
     # Download Meteor if isn't already installed via the cache
     - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
     # Download Cucumber support files dependencies
-    - npm install --production --no-optional:
+    - npm install --production:
         pwd: tests/cucumber
     # Install Oracle JDK 8
     - if [ ! -e ~/build_exists ]; then brew install caskroom/cask/brew-cask; fi
