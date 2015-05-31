@@ -17,12 +17,8 @@ dependencies:
 
   # Everything that should be cached must be installed here
   override:
-    # Install JSHint
-    - npm install -g jshint
-    # Install Meteor Up
-    - npm install -g mup
     # Restore meteor symlink when Meteor was restored from the cache
-    - if [ -d ~/.meteor ]; then ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
+    - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
     # Download Meteor if isn't already installed via the cache
     - if [ ! -e $HOME/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
     # Download Cucumber support files dependencies
@@ -31,21 +27,13 @@ dependencies:
 
 test:
   override:
-    # JSHint checks
-    - jshint .
     # Start Meteor app
     - meteor --test:
         environment:
+          CUCUMBER_SCREENSHOTS_DIR: $CIRCLE_ARTIFACTS/screenshots
           SELENIUM_BROWSER: chrome
           VELOCITY_CI: true
+
           # Enable this line to run Velocity and test framewoeks in debug mode
           VELOCITY_DEBUG: true
     - copy .meteor/local/log/*.log $CIRCLE_ARTIFACTS
-
-
-## Customize deployment commands
-#deployment:
-#  staging:
-#    branch: ''
-#    commands:
-#      - mup deploy
