@@ -4,7 +4,9 @@ dependencies:
 
 test:
   override:
-    # Run meteor in Velocity test mode and capture all the artifacts
     - meteor --test:
         environment:
           VELOCITY_CI: true
+          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots"
+          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
+    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
