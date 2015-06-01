@@ -1,15 +1,52 @@
-dependencies:
-  override:
-    - curl https://install.meteor.com | sh
+machine:
 
+  java:
+    version: oraclejdk8
+
+  environment:
+    VELOCITY_CI: true
+
+dependencies:
+
+  cache_directories:
+    - "~/.meteor"
+    - "~/.npm"
+
+  override:
+
+    # Update to the latest chrome
+    - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    - sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+    - sudo apt-get update
+    - sudo apt-get install google-chrome-stable
+
+    # Restore the meteor symlink
+    - if [ -d ~/.meteor ]; then sudo ln -s ~/.meteor/meteor /usr/local/bin/meteor; fi
+    # Install Meteor if the cache didn't restore it
+    - if [ ! -e ~/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
+
+    # Install  package dependencies for Cucumber support files
     - npm install --production:
-        pwd: tests/cucumber
+      pwd: tests/cucumber
 
 test:
+
   override:
+
+    # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
     - meteor --test:
         environment:
-          VELOCITY_CI: true
-          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots"
+          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
-    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS
+          SELENIUM_BROWSER: chrome
+    - mkdir -p $CIRCLE_ARTIFACTS/chrome
+    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
+
+    # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
+    - meteor --test:
+        environment:
+          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
+          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"
+          SELENIUM_BROWSER: firefox
+    - mkdir -p $CIRCLE_ARTIFACTS/firefox
+    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
