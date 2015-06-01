@@ -5,6 +5,8 @@ machine:
 
   environment:
     VELOCITY_CI: true
+    # Enable this to debug builds
+    #VELOCITY_DEBUG: true
 
 dependencies:
 

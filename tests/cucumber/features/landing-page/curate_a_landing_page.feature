@@ -4,6 +4,7 @@ Feature: Curate a Landing Page
   I want to curate a landing page
   So that I can entice people to purchase my book
 
+  @dev
   Scenario: Author the heading
     Given I have created a landing page with the heading "My Book"
     When a user navigates to the landing page
