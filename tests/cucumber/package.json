@@ -4,6 +4,5 @@
   "description": "Dependencies for our Cucumber automation layer",
   "private": true,
   "dependencies": {
-    "underscore": "^1.8.3"
   }
 }
