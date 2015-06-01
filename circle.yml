@@ -2,6 +2,9 @@ dependencies:
   override:
     - curl https://install.meteor.com | sh
 
+    - npm install --production:
+      pwd: tests/cucumber
+
 test:
   override:
     - meteor --test:
