@@ -3,7 +3,7 @@ dependencies:
     - curl https://install.meteor.com | sh
 
     - npm install --production:
-      pwd: tests/cucumber
+        pwd: tests/cucumber
 
 test:
   override:
