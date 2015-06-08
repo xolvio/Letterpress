@@ -29,6 +29,8 @@ header.landing-page a {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
+
+    background-color: gray;
     color: white;
 }
 
