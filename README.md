@@ -6,8 +6,14 @@ Letterpress allows you to write and publish your own book online with a pretty l
 WYSIWYG Markdown editor.
 
 Letterpress is a Meteor application that has been built from scratch using ATDD (Acceptance Test 
-Driven Development). You can follow a step-by-step guide of how this was done in the
-[The Meteor Testing Manual](http://www.meteortesting.com/chapter/letterpress1).
+Driven Development). You can follow a step-by-step guide of how this was done in the book.
+
+#Get the Book
+To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=letterpress&utm_medium=banner&utm_campaign=letterpress).
+
+[![](http://www.meteortesting.com/img/tmtm.gif)](http://www.meteortesting.com/?utm_source=letterpress&utm_medium=banner&utm_campaign=letterpress)
+
+Your support helps us continue our work on Velocity and related frameworks.
 
 [Click here to see the demo site](http://letterpress.xolv.io) - *in progress, see below for
 completion details*
