@@ -1,0 +1,41 @@
+/* - - landing page - - */
+
+/* header */
+header.landing-page {
+    width: 100%;
+    text-align: center;
+}
+
+/* hero image */
+header.landing-page img {
+    width: 50%;
+}
+
+/* tag line */
+header.landing-page p {
+
+}
+
+/* buttons */
+header.landing-page a {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+
+    font-size: 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: white;
+}
+
+header.landing-page a[title="Try It"] {
+    background-color: gray;
+}
+
+header.landing-page a[title="Buy It"] {
+    background-color: orange;
+}

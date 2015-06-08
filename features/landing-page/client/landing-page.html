@@ -3,5 +3,7 @@
 </body>
 
 <template name="landingPage">
-    <h1>{{page.heading}}</h1>
+    <header class="landing-page">
+        {{#markdown}}{{page.markdown}}{{/markdown}}
+    </header>
 </template>
