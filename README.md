@@ -23,8 +23,8 @@ completion details*
 * [-] Landing Page
   * [x] Configurable Content
     * [x] Headings
-    * [ ] Blurb
-    * [ ] Image
+    * [x] Blurb
+    * [x] Image
   * [ ] Chapters Preview
   * [ ] Author(s) Information
   * [ ] Gumroad Integration
