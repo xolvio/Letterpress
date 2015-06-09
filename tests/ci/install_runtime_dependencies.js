@@ -3,7 +3,7 @@ var path = require('path');
 var fs = require('fs');
 
 var INTERVAL_SECONDS = 5,
-    TIMEOUT_SECONDS  = 60;
+    TIMEOUT_SECONDS  = 180;
 
 // we want velocity to run but only for cucumber so that all npm modules will be downloaded and
 // therefore cached
@@ -39,13 +39,15 @@ var timeoutCounter = TIMEOUT_SECONDS / INTERVAL_SECONDS;
 var interval = setInterval(function waitForMirrorToFinish () {
 
   if (--timeoutCounter === 0) {
-    console.error('ERROR: Timed out waiting for Meteor and Cucumber to download dependencies');
+    console.error('ERROR: Timed out waiting for Meteor and Cucumber to download dependencies ');
     clearInterval(interval);
     meteorProcess.kill('SIGINT');
+    process.exit(1);
     return;
   }
 
-  console.log('Waiting for xolvio:cucumber to download its dependencies');
+  console.log('Waiting for xolvio:cucumber to download its dependencies ' +
+    '(' + (TIMEOUT_SECONDS / INTERVAL_SECONDS - timeoutCounter) + '/' + (TIMEOUT_SECONDS / INTERVAL_SECONDS) + ')');
 
   fs.existsSync(cucumberLogFilePath) && fs.readFile(cucumberLogFilePath,
     function checkForMirrorStartedMessage (err, data) {
