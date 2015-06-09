@@ -45,7 +45,7 @@ dependencies:
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor and Cucumber related dependencies
-    - node ./ci/install_runtime_dependencies.js
+    - node ./tests/ci/install_runtime_dependencies.js
 
 test:
 
