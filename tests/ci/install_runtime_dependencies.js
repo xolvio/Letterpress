@@ -2,7 +2,8 @@ var spawn = require('child_process').spawn;
 var path = require('path');
 var fs = require('fs');
 
-var INTERVAL_SECONDS = 5,
+var DEBUG            = !!process.env.DEBUG,
+    INTERVAL_SECONDS = 5,
     TIMEOUT_SECONDS  = 180;
 
 // we want velocity to run but only for cucumber so that all npm modules will be downloaded and
@@ -14,12 +15,18 @@ process.env.JASMINE_CLIENT_INTEGRATION = 0;
 process.env.SELENIUM_BROWSER = 'chrome'; // tell cucumber to use chrome so it will download selenium
 process.env.CUCUMBER_TAGS = '@someTagThatDoesNotExists'; // cucumber should not run any scenarios
 
+var velocityMeteorRelease = 'velocity:METEOR@1.1.0.2_3';
+
 var appPath = path.resolve(__dirname, '../..');
+var cucumberLogFilePath = path.resolve(appPath, '.meteor', 'local', 'log', 'cucumber.log');
+// remove the cucumber log file before starting
+fs.existsSync(cucumberLogFilePath) && fs.unlinkSync(cucumberLogFilePath);
+
 var meteorProcess = spawn(
   'meteor',
   [
     '--release',
-    'velocity:METEOR@1.1.0.2_3'
+    velocityMeteorRelease
   ],
   {
     cwd: appPath,
@@ -27,39 +34,62 @@ var meteorProcess = spawn(
   }
 );
 
-meteorProcess.stdout.pipe(process.stdout);
-meteorProcess.stderr.pipe(process.stderr);
 
-var cucumberLogFilePath = path.resolve(appPath, '.meteor', 'local', 'log', 'cucumber.log');
+console.log('Waiting to for Meteor to download', velocityMeteorRelease);
 
-// remove the cucumber log file before starting
-fs.existsSync(cucumberLogFilePath) && fs.unlinkSync(cucumberLogFilePath);
+if (DEBUG) {
+  meteorProcess.stdout.pipe(process.stdout);
+  meteorProcess.stderr.pipe(process.stderr);
+}
 
-var timeoutCounter = TIMEOUT_SECONDS / INTERVAL_SECONDS;
-var interval = setInterval(function waitForMirrorToFinish () {
+meteorProcess.stdout.on('data', function (line) {
 
-  if (--timeoutCounter === 0) {
-    console.error('ERROR: Timed out waiting for Meteor and Cucumber to download dependencies ');
-    clearInterval(interval);
-    meteorProcess.kill('SIGINT');
-    process.exit(1);
-    return;
-  }
+  if (line.toString().indexOf('You can see the mirror logs') !== -1) {
 
-  console.log('Waiting for xolvio:cucumber to download its dependencies ' +
-    '(' + (TIMEOUT_SECONDS / INTERVAL_SECONDS - timeoutCounter) + '/' + (TIMEOUT_SECONDS / INTERVAL_SECONDS) + ')');
+    _waitForCucumberDeps(function (err) {
 
-  fs.existsSync(cucumberLogFilePath) && fs.readFile(cucumberLogFilePath,
-    function checkForMirrorStartedMessage (err, data) {
       if (err) {
         console.error(err);
-      } else if (data.toString().indexOf('0 scenarios\n0 steps') !== -1) {
+      } else {
         console.log('Success!');
-        clearInterval(interval);
-        meteorProcess.kill('SIGINT');
-        process.exit();
       }
 
-    });
+      meteorProcess.kill('SIGINT');
+      process.exit();
 
-}, INTERVAL_SECONDS * 1000);
+    });
+  }
+});
+
+function _waitForCucumberDeps (callback) {
+
+  console.log('Waiting for xolvio:cucumber to download its dependencies');
+
+  var timeoutCounter = TIMEOUT_SECONDS / INTERVAL_SECONDS;
+  var interval = setInterval(function waitForMirrorToFinish () {
+
+    if (--timeoutCounter === 0) {
+      clearInterval(interval);
+      callback('ERROR: Timed out waiting for Meteor and Cucumber to download dependencies');
+    }
+
+    fs.existsSync(cucumberLogFilePath) && fs.readFile(cucumberLogFilePath,
+      function checkForMirrorStartedMessage (err, data) {
+
+        if (DEBUG) {
+          console.log(data.toString());
+        }
+
+        if (err) {
+          clearInterval(interval);
+          callback(err)
+        } else if (data.toString().indexOf('0 scenarios\n0 steps') !== -1) {
+          clearInterval(interval);
+          callback();
+        }
+
+      });
+
+  }, INTERVAL_SECONDS * 1000);
+}
+
