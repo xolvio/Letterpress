@@ -1,23 +1,23 @@
 /* - - landing page - - */
 
 /* header */
-header.landing-page {
+.landing-page header {
     width: 100%;
     text-align: center;
 }
 
 /* hero image */
-header.landing-page img {
+.landing-page header img {
     width: 50%;
+    max-width: 500px;
 }
 
 /* tag line */
-header.landing-page p {
-
+.landing-page header p {
 }
 
 /* buttons */
-header.landing-page a {
+.landing-page header a {
     display: inline-block;
     width: 200px;
     margin: 20px;
@@ -34,10 +34,22 @@ header.landing-page a {
     color: white;
 }
 
-header.landing-page a[title="Try It"] {
+.landing-page header a[title="Try It"] {
     background-color: gray;
 }
 
-header.landing-page a[title="Buy It"] {
+.landing-page header a[title="Buy It"] {
     background-color: orange;
+}
+
+.landing-page .toc {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.landing-page .toc .chapter {
+    border: 0;
+    padding: 25px;
+    width: 400px;
+    float: left;
 }

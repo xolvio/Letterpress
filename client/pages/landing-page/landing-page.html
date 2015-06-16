@@ -1,0 +1,16 @@
+<template name="landing-page">
+
+    <header>
+        {{#markdown}}{{this.markdown}}{{/markdown}}
+    </header>
+
+    <section class="toc">
+        {{#each chapters}}
+            <div class="chapter">
+                <h3><a href="{{path}}" title="{{title}}">{{title}}</a></h3>
+                <p>{{description}}</p>
+            </div>
+        {{/each}}
+    </section>
+
+</template>

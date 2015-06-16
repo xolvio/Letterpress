@@ -4,7 +4,6 @@ machine:
     version: oraclejdk8
 
   environment:
-    VELOCITY_CI: true
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
 
@@ -39,20 +38,20 @@ dependencies:
     - if [ ! -e ~/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
 
     # -- CACHE CUCUMBER NPM MODULES --
+    # Install Meteor and Cucumber related dependencies
+    - node ./tests/ci/velocity.js
+
+    # -- CACHE CUCUMBER NPM MODULES --
     # Install package dependencies for Cucumber support files
     - npm install --production:
         pwd: tests/cucumber
-
-    # -- CACHE CUCUMBER NPM MODULES --
-    # Install Meteor and Cucumber related dependencies
-    - node ./tests/ci/install_runtime_dependencies.js
 
 test:
 
   override:
 
     # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
-    - meteor --test:
+    - node ./tests/ci/velocity.js:
         environment:
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
@@ -61,7 +60,7 @@ test:
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
 
     # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
-    - meteor --test:
+    - node ./tests/ci/velocity.js:
         environment:
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"

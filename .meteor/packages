@@ -5,7 +5,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 xolvio:cucumber
 chuangbo:marked
+sanjo:jasmine
+fixtures
+matb33:collection-hooks
+iron:router
