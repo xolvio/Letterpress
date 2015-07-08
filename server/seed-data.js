@@ -44,7 +44,8 @@ Meteor.startup(function () {
     markdown: '' +
     loremIpsumBacon() +
     '\n\n' +
-    '[Home](/ "Home")'
+    '[Home](/ "Home")',
+    order: 1
   });
 
   Pages.insert({
@@ -57,7 +58,8 @@ Meteor.startup(function () {
     markdown: '' +
     loremIpsumBacon() +
     '\n\n' +
-    '[Home](/ "Home")'
+    '[Home](/ "Home")',
+    order: 2
   });
 
   function loremIpsumBacon () {

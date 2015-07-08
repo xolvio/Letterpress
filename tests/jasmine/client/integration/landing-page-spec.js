@@ -22,10 +22,12 @@ describe('The landing page', function () {
             title: 'first',
             order: 1
           }
-        ], function () {
+        ], function (error) {
+
+          expect(error).toBe(undefined);
 
           var chapters = chapterHelper().fetch();
-
+          expect(chapters.length).toBe(2);
           expect(chapters[0].title).toBe('first');
           expect(chapters[1].title).toBe('second');
 

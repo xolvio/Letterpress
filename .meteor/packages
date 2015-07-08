@@ -7,7 +7,7 @@
 meteor-platform
 xolvio:cucumber
 chuangbo:marked
-sanjo:jasmine
 fixtures
+sanjo:jasmine
 matb33:collection-hooks
 iron:router

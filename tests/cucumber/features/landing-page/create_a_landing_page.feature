@@ -1,38 +1,38 @@
-Feature: Curate a Landing Page
+Feature: Create a Landing Page
 
   As an author
-  I want to curate a landing page
-  So that I can entice people to purchase my book
+  I want to create a landing page
+  So that I can entice people to purchase my content
 
   Scenario: Author the header with markdown
     Given I have created a landing page with the following header markdown
           """
-          #My Book
+          #My Content
 
           ![Cover](/cover.jpg "Cover")
 
-          *Learn how to write a book*
+          *Learn how to do something*
 
-          [Preview](/preview "Preview Chapter") [Buy](/buy "Buy Book")
+          [Preview](/preview "Preview Chapter") [Buy](/buy "Buy Content")
           """
     When  a user navigates to the landing page
-    Then  they see the heading "My Book"
+    Then  they see the heading "My Content"
     And   they see the cover image from "/cover.jpg"
-    And   they see the tag-line "Learn how to write a book"
+    And   they see the tag-line "Learn how to do something"
     And   they can navigate to "Preview Chapter" at "/preview"
-    And   they can navigate to "Buy Book" at "/buy"
+    And   they can navigate to "Buy Content" at "/buy"
 
   @dev
   Scenario: See the table of content
     Given I have created a landing page with the following header markdown
           """
-          #My Book
+          #My Content
 
           ![Cover](/cover.jpg "Cover")
 
-          *Learn how to write a book*
+          *Learn how to do something*
 
-          [Preview](/preview "Preview Chapter") [Buy](/buy "Buy Book")
+          [Preview](/preview "Preview Chapter") [Buy](/buy "Buy Content")
           """
     Given I have created a chapter called "Holistic Agencies" with the description
           """
