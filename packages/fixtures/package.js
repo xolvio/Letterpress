@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'fixtures',
+  name: 'letterpress:fixtures',
   version: '0.0.1',
   summary: '',
   debugOnly: true
