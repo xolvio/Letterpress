@@ -6,6 +6,7 @@ machine:
   environment:
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
+    SETTINGS_FILE: "settings.json"
 
 dependencies:
 
