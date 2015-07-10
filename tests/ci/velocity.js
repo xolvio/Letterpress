@@ -7,11 +7,8 @@ var args = [];
 args.push('--raw-logs');
 args.push('--release');
 args.push(velocityMeteorRelease);
-
 args.push('--settings');
 args.push(path.resolve(process.cwd(), process.env.SETTINGS_FILE));
-
-
 
 // Setting INSTALL_DEPENDENCIES downloads dependencies and exists. Used for build caching
 if (!!process.env.INSTALL_DEPENDENCIES) {
