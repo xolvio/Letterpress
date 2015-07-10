@@ -15,6 +15,7 @@ Feature: Pay using Stripe
     Then they see a confirmation screen of their subscription
     And receive a confirmation email of their subscription
 
+  @ignore
   Scenario: One-time purchase
     Given I have set my payment plan to be one-time purchase
     When a user pays using Stripe
