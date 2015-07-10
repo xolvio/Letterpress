@@ -5,9 +5,16 @@
   module.exports = function () {
 
     this.Before(function (callback) {
-      this.server.call('reset').then(callback);
+
+      var self = this;
+      self.server.call('fixtures/reset').then(function () {
+        self.server.call('emailStub/reset').then(function () {
+          self.server.call('emailStub/stub').then(callback);
+        });
+      });
+
     });
 
-  };
+  }
 
 })();

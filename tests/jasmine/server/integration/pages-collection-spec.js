@@ -1,7 +1,7 @@
 describe('Pages collection', function () {
 
   beforeEach(function (done) {
-    Meteor.call('reset', done);
+    Meteor.call('fixtures/reset', done);
   });
 
   it('should add a slug to chapters with spaces converted to dashes and all lowercase', function () {

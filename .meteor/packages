@@ -5,9 +5,22 @@
 # but you can also edit it by hand.
 
 meteor-platform
+email
+
+letterpress:core
+
+# Testing packages
 xolvio:cucumber
+xolvio:stripe-stub
+xolvio:email-stub
+letterpress:fixtures
+
+# Bug fixing package for IR. WTF! See here:
+# https://github.com/iron-meteor/iron-router/issues/606#issuecomment-59130479
+gwendall:body-events
+
 chuangbo:marked
-fixtures
 sanjo:jasmine
 matb33:collection-hooks
 iron:router
+mrgalaxy:stripe

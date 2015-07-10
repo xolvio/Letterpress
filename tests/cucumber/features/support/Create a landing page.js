@@ -2,7 +2,7 @@ module.exports = function () {
 
   this.Given(/^I have created a landing page with the following header markdown$/, function (markdown, callback) {
     this.server.call(
-      'page/create', {
+      'fixtures/page/create', {
         template: 'landing-page',
         path: '/',
         markdown: markdown
@@ -39,7 +39,7 @@ module.exports = function () {
 
   this.Given(/^I have created a chapter called "([^"]*)" with the description$/, function (title, text, callback) {
     this.server.call(
-      'page/create', {
+      'fixtures/page/create', {
         template: 'chapter',
         title: title,
         description: text

@@ -12,9 +12,10 @@ coffeescript@1.0.6
 ddp@1.1.0
 deps@1.0.7
 ejson@1.0.6
+email@1.0.6
 fastclick@1.0.3
-fixtures@0.0.1
 geojson-utils@1.0.3
+gwendall:body-events@0.1.6
 html-tools@1.0.4
 htmljs@1.0.4
 http@1.1.0
@@ -31,6 +32,8 @@ jquery@1.11.3_2
 json@1.0.3
 launch-screen@1.0.2
 less@1.0.14
+letterpress:core@0.0.0
+letterpress:fixtures@0.0.1
 livedata@1.0.13
 logging@1.0.7
 matb33:collection-hooks@0.7.13
@@ -40,6 +43,7 @@ minifiers@1.1.5
 minimongo@1.0.8
 mobile-status-bar@1.0.3
 mongo@1.1.0
+mrgalaxy:stripe@2.1.0
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 package-version-parser@3.0.3
@@ -64,12 +68,14 @@ tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
-velocity:chokidar@1.0.1_1
-velocity:core@0.7.0
+velocity:chokidar@1.0.3_1
+velocity:core@0.7.1
 velocity:html-reporter@0.6.2
 velocity:meteor-internals@1.1.0_7
 velocity:meteor-stubs@1.1.0
 velocity:shim@0.1.0
 webapp@1.2.0
 webapp-hashing@1.0.3
-xolvio:cucumber@0.9.3
+xolvio:cucumber@0.11.0
+xolvio:email-stub@0.2.0
+xolvio:stripe-stub@0.0.1

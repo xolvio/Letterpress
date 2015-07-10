@@ -22,7 +22,6 @@ Feature: Create a Landing Page
     And   they can navigate to "Preview Chapter" at "/preview"
     And   they can navigate to "Buy Content" at "/buy"
 
-  @dev
   Scenario: See the table of content
     Given I have created a landing page with the following header markdown
           """

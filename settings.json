@@ -1,0 +1,20 @@
+{
+  "public": {
+    "stripe": {
+      "publicKey": "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX"
+    }
+  },
+  "private": {
+    "paymentPlan": "xxxxx",
+    "stripe": {
+      "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1"
+    },
+    "emails": {
+      "from": "sam@xolv.io",
+      "subscription": {
+        "subject": "Welcome to the Velocity Sessions!",
+        "text": "You are now subscribed."
+      }
+    }
+  }
+}

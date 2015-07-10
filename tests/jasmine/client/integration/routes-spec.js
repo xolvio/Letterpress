@@ -19,7 +19,7 @@ describe('The router', function () {
 
     Router._isolator._routes['/(.*)'].action.apply({
       render: function (template) {
-        expect(template).toBe('404');
+        expect(template).toBe('404'); // WTF? ASK SANJO
         done();
       }
     });

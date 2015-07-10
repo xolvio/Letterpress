@@ -3,7 +3,7 @@ describe('The landing page', function () {
   describe('chapter helper', function () {
 
     beforeEach(function (done) {
-      Meteor.call('reset', done);
+      Meteor.call('fixtures/reset', done);
     });
 
     it('should return the chapters in the defined order', function (done) {
@@ -11,7 +11,7 @@ describe('The landing page', function () {
       var chapterHelper = Template['landing-page'].__helpers.get('chapters');
 
       Meteor.call(
-        'page/create', [
+        'fixtures/page/create', [
           {
             template: 'chapter',
             title: 'second',
