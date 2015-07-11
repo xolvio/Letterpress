@@ -1,3 +1,5 @@
+Letterpress.Subscriptions.pages = Meteor.subscribe('pages');
+
 Router.configure({
   layoutTemplate: 'layout'
 });
@@ -17,14 +19,14 @@ Router.route('/(.*)', {
   loadingTemplate: 'loading',
 
   waitOn: function () {
-    return Meteor.subscribe('pages');
+    return Letterpress.Subscriptions.pages;
   },
 
   action: function () {
 
     var currentUrl = RouterHelper.currentUrl();
 
-    var page = Pages.findOne({path: currentUrl});
+    var page = Letterpress.Collections.Pages.findOne({path: currentUrl});
     if (page) {
       this.render(page.template, {data: function () {return page;}});
     } else {

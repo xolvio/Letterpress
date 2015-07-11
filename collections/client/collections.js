@@ -1,1 +1,1 @@
-Pages = new Mongo.Collection('pages');
+Letterpress.Collections.Pages = new Mongo.Collection('pages');

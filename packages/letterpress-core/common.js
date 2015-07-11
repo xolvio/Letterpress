@@ -13,8 +13,6 @@ Letterpress = {
   Collections: {},
   // Domain specific logic.
   Services: {},
-  // Response handlers for 3rd party libraries
-  Handlers: {},
   Subscriptions: {}
 };
 
