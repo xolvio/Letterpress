@@ -8,8 +8,7 @@ describe('The landing page', function () {
 
     it('should return the chapters in the defined order', function (done) {
 
-      var chapterHelper = Template['landing-page'].__helpers.get('chapters');
-
+      // - - SETUP
       Meteor.call(
         'fixtures/page/create', [
           {
@@ -24,9 +23,13 @@ describe('The landing page', function () {
           }
         ], function (error) {
 
-          expect(error).toBe(undefined);
+          var chapterHelper = Template['landing-page'].__helpers.get('chapters');
 
+          // - - EXECUTE
           var chapters = chapterHelper().fetch();
+
+          // - - VERIFY
+          expect(error).toBe(undefined);
           expect(chapters.length).toBe(2);
           expect(chapters[0].title).toBe('first');
           expect(chapters[1].title).toBe('second');

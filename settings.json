@@ -1,19 +1,26 @@
 {
   "public": {
+    "price": "1000",
+    "currency": "usd",
     "stripe": {
       "publicKey": "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX"
     }
   },
   "private": {
-    "paymentPlan": "xxxxx",
+    "paymentPlan": "charge",
     "stripe": {
+      "planId": "velocitySessions",
       "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1"
     },
     "emails": {
       "from": "sam@xolv.io",
-      "subscription": {
+      "subscribe": {
         "subject": "Welcome to the Velocity Sessions!",
         "text": "You are now subscribed."
+      },
+      "charge": {
+        "subject": "Welcome to 8 days of Meteor!",
+        "text": "You have completed your purchase."
       }
     }
   }

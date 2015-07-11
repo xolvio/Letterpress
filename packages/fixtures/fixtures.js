@@ -23,6 +23,8 @@
       Meteor.settings.private.paymentPlan = plan;
     },
     'fixtures/seedData' : function() {
+      Letterpress.Collections.Pages.remove({});
+
       Letterpress.Collections.Pages.insert({
         path: '/',
         template: 'landing-page',
@@ -55,11 +57,21 @@
       });
 
       Letterpress.Collections.Pages.insert({
-        title: 'Confirmation',
+        title: 'Subscribe Confirmation',
         template: 'info',
-        path: '/subscription-confirmation',
+        path: '/subscribe-confirmation',
         markdown: '' +
         '##Thank you for your purchase. You are now subscribed' +
+        '\n\n' +
+        '[Home](/ "Home")'
+      });
+
+      Letterpress.Collections.Pages.insert({
+        title: 'Charge Confirmation',
+        template: 'info',
+        path: '/charge-confirmation',
+        markdown: '' +
+        '##Thank you for your purchase. You have completed your purchase' +
         '\n\n' +
         '[Home](/ "Home")'
       });

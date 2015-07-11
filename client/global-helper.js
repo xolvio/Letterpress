@@ -1,5 +1,6 @@
 UI.registerHelper('classes', function () {
-  var currentPage = Letterpress.Collections.Pages.findOne({path: window.location.pathname});
+
+  var currentPage = Letterpress.Collections.Pages.findOne({path: Iron.Location.get().path});
 
   if (!currentPage) {
     return '';

@@ -8,16 +8,14 @@ Feature: Pay using Stripe
     Given I have configured a Stripe account
     And   I have created content
 
-  @dev
   Scenario: Set up a subscription plan
-    Given I have set my payment plan to be subscription
+    Given I have setup a "subscribe" payment plan
     When a user pays using Stripe
-    Then they see a confirmation screen of their subscription
-    And receive a confirmation email of their subscription
+    Then they see a confirmation screen of their "subscribe" purchase
+    And receive a confirmation email of their "subscribe" purchase
 
-  @ignore
-  Scenario: One-time purchase
-    Given I have set my payment plan to be one-time purchase
+  Scenario: Setup a charge purchase
+    Given I have setup a "charge" payment plan
     When a user pays using Stripe
-    Then they see a confirmation screen of their one-time purchase
-    And they receive a confirmation email of their one-time purchase
+    Then they see a confirmation screen of their "charge" purchase
+    And receive a confirmation email of their "charge" purchase

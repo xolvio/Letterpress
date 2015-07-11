@@ -13,7 +13,8 @@ Letterpress = {
   Collections: {},
   // Domain specific logic.
   Services: {},
-  Subscriptions: {}
+  Subscriptions: {},
+  API: {}
 };
 
 var global = this;

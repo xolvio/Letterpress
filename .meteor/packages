@@ -1,26 +1,23 @@
-# Meteor packages used by this project, one per line.
-# Check this file (and the other files in this directory) into your repository.
-#
-# 'meteor add' and 'meteor remove' will edit this file for you,
-# but you can also edit it by hand.
-
+# - - MDG Packages
 meteor-platform
 email
 
+# - - Internal Packages
 letterpress:core
 
-# Testing packages
+# - - Testing packages
 xolvio:cucumber
 xolvio:stripe-stub
 xolvio:email-stub
 letterpress:fixtures
-
-# Bug fixing package for IR. WTF! See here:
-# https://github.com/iron-meteor/iron-router/issues/606#issuecomment-59130479
-gwendall:body-events
-
-chuangbo:marked
 sanjo:jasmine
+velocity:helpers
+
+# - - 3rd Party Packages
+chuangbo:marked
 matb33:collection-hooks
-iron:router
 mrgalaxy:stripe
+iron:router
+
+# Bug fixing package for IR - github.com/iron-meteor/iron-router/issues/606#issuecomment-59130479
+gwendall:body-events
