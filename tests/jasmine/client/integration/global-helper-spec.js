@@ -15,7 +15,7 @@ describe('Global helpers', function () {
       var classes = UI._globalHelpers['classes']();
 
       // - - VERIFY
-      expect(Letterpress.Collections.Pages.findOne).toHaveBeenCalledWith({path: window.location.pathname});
+      expect(Letterpress.Collections.Pages.findOne).toHaveBeenCalledWith({path: Iron.Location.get().path});
       expect(classes).toBe('the-template some-page');
 
     });
