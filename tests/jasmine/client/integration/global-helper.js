@@ -4,7 +4,7 @@ describe('Global helpers', function () {
 
     it('should return the template and path of a page without the forward slash', function () {
 
-      spyOn(Pages, 'findOne').and.returnValue({
+      spyOn(Letterpress.Collections.Pages, 'findOne').and.returnValue({
         _id: 'someId',
         template: 'the-template',
         path: '/some-page'
@@ -12,14 +12,14 @@ describe('Global helpers', function () {
 
       var classes = UI._globalHelpers['classes']();
 
-      expect(Pages.findOne).toHaveBeenCalledWith({path: window.location.pathname});
+      expect(Letterpress.Collections.Pages.findOne).toHaveBeenCalledWith({path: window.location.pathname});
       expect(classes).toBe('the-template some-page');
 
     });
 
     it('should return an empty string if no page is found', function () {
 
-      spyOn(Pages, 'findOne').and.returnValue(null);
+      spyOn(Letterpress.Collections.Pages, 'findOne').and.returnValue(null);
 
       var classes = UI._globalHelpers['classes']();
 

@@ -4,7 +4,7 @@
 
   Meteor.methods({
     'fixtures/reset': function () {
-      Pages.remove({});
+      Letterpress.Collections.Pages.remove({});
     },
     'fixtures/page/create': function (pages) {
 
@@ -13,7 +13,7 @@
 
       // then create all pages
       for (var i=0; i < pages.length; i++) {
-        Pages.insert(pages[i]);
+        Letterpress.Collections.Pages.insert(pages[i]);
       }
     },
     'fixtures/getSettings' : function() {
@@ -23,7 +23,7 @@
       Meteor.settings.private.paymentPlan = plan;
     },
     'fixtures/seedData' : function() {
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         path: '/',
         template: 'landing-page',
         markdown: '' +
@@ -34,7 +34,7 @@
         '[Try it](/try "Try It") [Buy It](# "Buy It")'
       });
 
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         title: 'Try',
         template: 'info',
         path: '/try',
@@ -44,7 +44,7 @@
         '[Home](/ "Home")'
       });
 
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         title: 'Buy',
         template: 'info',
         path: '/buy',
@@ -54,7 +54,7 @@
         '[Home](/ "Home")'
       });
 
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         title: 'Confirmation',
         template: 'info',
         path: '/subscription-confirmation',
@@ -64,7 +64,7 @@
         '[Home](/ "Home")'
       });
 
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         title: 'Chapter 1',
         template: 'chapter',
         description: 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
@@ -79,7 +79,7 @@
         order: 1
       });
 
-      Pages.insert({
+      Letterpress.Collections.Pages.insert({
         title: 'Chapter 2',
         template: 'chapter',
         description: 'Id pork loin fatback, fugiat pancetta tri-tip leberkas pork belly frankfurter ' +

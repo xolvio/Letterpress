@@ -1,5 +1,5 @@
 Template['landing-page'].helpers({
   chapters: function () {
-    return Pages.find({template: 'chapter'}, {sort: {order: 1}});
+    return Letterpress.Collections.Pages.find({template: 'chapter'}, {sort: {order: 1}});
   }
 });
