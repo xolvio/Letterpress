@@ -2,7 +2,7 @@ describe('Stripe', function () {
 
   beforeEach(function () {
     // spy on the Meteor.call method that we will use to create a customer
-    spyOn(Meteor, 'call').and.callThrough();
+    spyOn(Meteor, 'call');
   });
 
   describe('successful payments', function () {
@@ -34,7 +34,8 @@ describe('Stripe', function () {
     Letterpress.Handlers.stripeTokenHandler();
 
     // grab the most recent meteor method (createCustomer) and grab the callback
-    var callback = Meteor.call.calls.mostRecent().args.pop();
+    var args = Meteor.call.calls.mostRecent().args;
+    var callback = args[args.length - 1];
 
     // - - EXECUTE
     // mimic a callback from the server without errors
