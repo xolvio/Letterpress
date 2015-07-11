@@ -15,43 +15,9 @@ To learn more about testing with Meteor, consider purchasing our book [The Meteo
 
 Your support helps us continue our work on Velocity and related frameworks.
 
-[Click here to see the demo site](http://letterpress.xolv.io) - *in progress, see below for
-completion details*
-
-##Features:
-
-* [-] Landing Page
-  * [x] Configurable Content
-    * [x] Headings
-    * [x] Blurb
-    * [x] Image
-  * [ ] Chapters Preview
-  * [ ] Author(s) Information
-  * [ ] Gumroad Integration
-  * [ ] Mailing List Signup
-  * [ ] Meta Tags for SEO and Sharing
-  * [ ] Configurable Social Media Links
-* [ ] Access Control
-  * [ ] Login
-    * [ ] Email
-    * [ ] Twitter
-    * [ ] Google
-    * [ ] Facebook
-  * [ ] Admin
-    * [ ] Invite User
-    * [ ] Upgrade / Downgrade User
-    * [ ] Revoke User
-* [ ] Chapters
-  * [ ] Add / Remove / Publish / Unpublish
-  * [ ] Markdown Authoring
-  * [ ] Mark as Free, Paid or Premium
-  * [ ] Disqus Integration
-* [ ] Downloadable Book Formats
-  * [ ] PDF
-  * [ ] ePub
 
 ##Usage
 
 To run Letterpress, clone this repo and type:
 
-`meteor`
+`meteor --settings settings.json`
