@@ -10,7 +10,7 @@ describe('The layout', function () {
     });
   });
 
-  fit('should set the classes of the template and path', function () {
+  it('should set the classes of the template and path', function () {
 
     // SETUP
     // spyOn in the before section is the setup
