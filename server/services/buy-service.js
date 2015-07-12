@@ -4,17 +4,25 @@ Letterpress.Services.BuyService = {};
 
 Letterpress.Services.BuyService.subscribe = function (token) {
 
-  Stripe.customers.create({
+  var request = {
     source: token.id,
     plan: Meteor.settings.private.stripe.planId,
     email: token.email
-  }, Meteor.bindEnvironment(function (err, customer) {
-
-    // XXX we should store this customer & token objects for audit purposes
+  };
+  Stripe.customers.create(request, Meteor.bindEnvironment(function (err, response) {
 
     // XXX handle errors
+    console.log('here')
 
-    Letterpress.Services.AccountService.createAccount(customer.email);
+    Letterpress.Collections.Audit.insert({
+      email: token.email,
+      origin: 'Stripe.customers.create',
+      token: token,
+      request: request,
+      response: response
+    });
+
+    Letterpress.Services.AccountService.createAccount(response.email);
 
   }));
 
@@ -22,15 +30,22 @@ Letterpress.Services.BuyService.subscribe = function (token) {
 
 Letterpress.Services.BuyService.charge = function (token) {
 
-  Stripe.charges.create({
+  var request = {
     source: token.id,
     amount: Meteor.settings.public.price,
     currency: Meteor.settings.public.currency
-  }, Meteor.bindEnvironment(function (err, charge) {
-
-    // XXX we should store this charge & token objects for audit purposes
+  };
+  Stripe.charges.create(request, Meteor.bindEnvironment(function (err, response) {
 
     // XXX handle errors
+
+    Letterpress.Collections.Audit.insert({
+      email: token.email,
+      origin: 'Stripe.charges.create',
+      token: token,
+      request: request,
+      response: response
+    });
 
     Letterpress.Services.AccountService.createAccount(token.email);
 

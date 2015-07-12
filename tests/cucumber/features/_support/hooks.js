@@ -13,7 +13,7 @@
             // go to the page first so we have access to the Meteor object
             self.browser.url(process.env.ROOT_URL).
               executeAsync(function (done) {
-                Meteor.call('stripeStub/stub', {email: 'me@example.com'}, done);
+                Meteor.call('stripeStub/stub', {id: 'randomId', email: 'me@example.com'}, done);
               }).
               call(callback);
           });

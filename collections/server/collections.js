@@ -9,3 +9,6 @@ Letterpress.Collections.Pages.before.insert(function (userId, doc) {
 Meteor.publish("pages", function () {
   return Letterpress.Collections.Pages.find();
 });
+
+
+Letterpress.Collections.Audit = new Mongo.Collection('audit');

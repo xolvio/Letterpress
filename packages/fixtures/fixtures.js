@@ -4,10 +4,11 @@
 
   Meteor.methods({
 
-    'fixtures/seedData' : Letterpress.Utils.seedData,
+    'fixtures/seedData': Letterpress.Utils.seedData,
 
     'fixtures/reset': function () {
       Meteor.users.remove({});
+      Letterpress.Collections.Audit.remove({});
       Letterpress.Collections.Pages.remove({});
     },
 
@@ -17,20 +18,24 @@
       pages = [].concat(pages);
 
       // then create all pages
-      for (var i=0; i < pages.length; i++) {
+      for (var i = 0; i < pages.length; i++) {
         Letterpress.Collections.Pages.insert(pages[i]);
       }
     },
 
-    'fixtures/getSettings' : function() {
+    'fixtures/findAudit': function (query) {
+      return Letterpress.Collections.Audit.find(query).fetch();
+    },
+
+    'fixtures/getSettings': function () {
       return Meteor.settings;
     },
 
-    'fixtures/setPaymentPlan' : function(plan) {
+    'fixtures/setPaymentPlan': function (plan) {
       Meteor.settings.private.paymentPlan = plan;
     },
 
-    'fixtures/createAccount' : function(user) {
+    'fixtures/createAccount': function (user) {
       Accounts.createUser(user);
     }
 

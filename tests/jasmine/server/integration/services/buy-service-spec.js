@@ -20,22 +20,35 @@ describe('Buy Service', function () {
 
     });
 
-    it('creates an account on successful subscription', function () {
+    it('creates an account on successful subscription and stores an audit entry', function () {
 
       // - - SETUP
       spyOn(Stripe.customers, 'create').and.callThrough();
-      Letterpress.Services.BuyService.subscribe({id: 'notNull'});
+      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'me@example.com'});
       var args = Stripe.customers.create.calls.mostRecent().args;
       var callback = args[args.length - 1];
       spyOn(Letterpress.Services.AccountService, 'createAccount');
+      spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
       callback(null, {email: 'me@example.com'});
 
       // - - VERIFY
       expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
+      expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
+        email: 'me@example.com',
+        origin: 'Stripe.customers.create',
+        token: {id: 'notNull', email: 'me@example.com'},
+        request: {
+          source: 'notNull',
+          plan: Meteor.settings.private.stripe.planId,
+          email: 'me@example.com'
+        },
+        response: {email: 'me@example.com'}
+      });
 
     });
+
   });
 
   describe('charge', function () {
@@ -66,12 +79,24 @@ describe('Buy Service', function () {
       var args = Stripe.charges.create.calls.mostRecent().args;
       var callback = args[args.length - 1];
       spyOn(Letterpress.Services.AccountService, 'createAccount');
+      spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
       callback(null, {email: 'me@example.com'});
 
       // - - VERIFY
       expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
+      expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
+        email: 'me@example.com',
+        origin: 'Stripe.charges.create',
+        token: {id: 'notNull', email: 'me@example.com'},
+        request: {
+          source: 'notNull',
+          amount: Meteor.settings.public.price,
+          currency: Meteor.settings.public.currency
+        },
+        response: {email: 'me@example.com'}
+      });
 
     });
 
