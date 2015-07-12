@@ -1,7 +1,7 @@
 module.exports = function () {
 
-  this.Given(/^I just paid for content and received a confirmation email$/, function (callback) {
-    // purchase a charge using the api (charge payment plan has been set in settings.json)
+  this.Given(/^I just paid for content and received an enrollment email$/, function (callback) {
+    // purchase a charge using the api
     this.server.call('purchase', {id: 'notNull', email: 'me@example.com'}).then(function () {
       callback();
     });
@@ -36,7 +36,6 @@ module.exports = function () {
   });
 
   this.Then(/^I am able to create my account$/, function (callback) {
-
 
     this.browser.
       waitForExist('#enroll-account-password').
