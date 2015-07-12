@@ -14,7 +14,6 @@ Feature: Create account
     Then I am able to create my account
     And I am able to access my content
 
-  @dev
   Scenario: Login after enrollment
     Given I have already created an account
     When I login with my username and password
