@@ -11,16 +11,20 @@ Letterpress.Services.BuyService.subscribe = function (token) {
   };
   Stripe.customers.create(request, Meteor.bindEnvironment(function (err, response) {
 
-    // XXX handle errors
-    console.log('here')
-
     Letterpress.Collections.Audit.insert({
       email: token.email,
       origin: 'Stripe.customers.create',
       token: token,
       request: request,
-      response: response
+      response: response,
+      err: err
     });
+
+    if (err) {
+      throw Meteor.Error(500, err);
+    }
+
+    // TODO handle strange response codes from Stripe
 
     Letterpress.Services.AccountService.createAccount(response.email);
 
@@ -37,15 +41,20 @@ Letterpress.Services.BuyService.charge = function (token) {
   };
   Stripe.charges.create(request, Meteor.bindEnvironment(function (err, response) {
 
-    // XXX handle errors
-
     Letterpress.Collections.Audit.insert({
       email: token.email,
       origin: 'Stripe.charges.create',
       token: token,
       request: request,
-      response: response
+      response: response,
+      err: err
     });
+
+    if (err) {
+      throw Meteor.Error(500, err);
+    }
+
+    // TODO handle strange response codes from Stripe
 
     Letterpress.Services.AccountService.createAccount(token.email);
 
