@@ -17,12 +17,6 @@ module.exports = function () {
 
     this.browser.
 
-      // go to the page first
-      url(process.env.ROOT_URL).
-
-      // stub the client & server stubs
-      executeAsync(function (done) {Meteor.call('stripeStub/stub', {email: 'me@example.com'}, done)}).
-
       // click the buy button
       waitForExist('a[title="Buy It"]').
       click('a[title="Buy It"]').
@@ -55,8 +49,8 @@ module.exports = function () {
       self.server.call('emailStub/getEmails').then(function (emails) {
         global.expect(emails[0].to).to.equal('me@example.com');
         global.expect(emails[0].from).to.equal(settings.private.emails.from);
-        global.expect(emails[0].subject).to.equal(settings.private.emails[plan].subject);
-        global.expect(emails[0].text).to.equal(settings.private.emails[plan].text);
+        global.expect(emails[0].subject).to.equal(settings.private.emails.subject);
+        global.expect(emails[0].text).to.equal(settings.private.emails.text);
         callback();
       });
     });

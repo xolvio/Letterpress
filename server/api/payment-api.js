@@ -10,15 +10,17 @@ Meteor.methods({
 
       case 'subscribe':
         Letterpress.Services.BuyService.subscribe(token);
-        return 'subscribe';
+        break;
 
       case 'charge':
         Letterpress.Services.BuyService.charge(token);
-        return 'charge';
+        break;
 
       default:
         throw Meteor.Error('501', 'Invalid payment plan ' + paymentPlan);
     }
+
+    return paymentPlan;
 
   }
 

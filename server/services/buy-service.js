@@ -14,7 +14,7 @@ Letterpress.Services.BuyService.subscribe = function (token) {
 
     // XXX handle errors
 
-    Letterpress.Services.EmailService.sendConfirmation(customer.email, 'subscribe');
+    Letterpress.Services.AccountService.createAccount(customer.email);
 
   }));
 
@@ -32,7 +32,7 @@ Letterpress.Services.BuyService.charge = function (token) {
 
     // XXX handle errors
 
-    Letterpress.Services.EmailService.sendConfirmation(token.email, 'charge');
+    Letterpress.Services.AccountService.createAccount(token.email);
 
   }));
 

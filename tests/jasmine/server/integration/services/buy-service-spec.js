@@ -20,20 +20,20 @@ describe('Buy Service', function () {
 
     });
 
-    it('sends an email on successful subscription', function () {
+    it('creates an account on successful subscription', function () {
 
       // - - SETUP
       spyOn(Stripe.customers, 'create').and.callThrough();
       Letterpress.Services.BuyService.subscribe({id: 'notNull'});
       var args = Stripe.customers.create.calls.mostRecent().args;
       var callback = args[args.length - 1];
-      spyOn(Letterpress.Services.EmailService, 'sendConfirmation');
+      spyOn(Letterpress.Services.AccountService, 'createAccount');
 
       // - - EXECUTE
       callback(null, {email: 'me@example.com'});
 
       // - - VERIFY
-      expect(Letterpress.Services.EmailService.sendConfirmation).toHaveBeenCalledWith('me@example.com', 'subscribe');
+      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
 
     });
   });
@@ -58,20 +58,20 @@ describe('Buy Service', function () {
 
     });
 
-    it('sends an email on successful charge', function () {
+    it('creates an account on successful charge', function () {
 
       // - - SETUP
       spyOn(Stripe.charges, 'create').and.callThrough();
       Letterpress.Services.BuyService.charge({id: 'notNull', email: 'me@example.com'});
       var args = Stripe.charges.create.calls.mostRecent().args;
       var callback = args[args.length - 1];
-      spyOn(Letterpress.Services.EmailService, 'sendConfirmation');
+      spyOn(Letterpress.Services.AccountService, 'createAccount');
 
       // - - EXECUTE
       callback(null, {email: 'me@example.com'});
 
       // - - VERIFY
-      expect(Letterpress.Services.EmailService.sendConfirmation).toHaveBeenCalledWith('me@example.com', 'charge');
+      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
 
     });
 

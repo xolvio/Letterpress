@@ -4,6 +4,7 @@
 
   Meteor.methods({
     'fixtures/reset': function () {
+      Meteor.users.remove({});
       Letterpress.Collections.Pages.remove({});
     },
     'fixtures/page/create': function (pages) {

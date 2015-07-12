@@ -1,6 +1,8 @@
 # - - MDG Packages
 meteor-platform
 email
+accounts-password
+accounts-ui
 
 # - - Internal Packages
 letterpress:core

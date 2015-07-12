@@ -1,3 +1,7 @@
+accounts-base@1.2.0
+accounts-password@1.1.1
+accounts-ui@1.1.5
+accounts-ui-unstyled@1.1.7
 amplify@1.0.0
 autoupdate@1.2.1
 base64@1.0.3
@@ -36,6 +40,7 @@ less@1.0.14
 letterpress:core@0.0.0
 letterpress:fixtures@0.0.1
 livedata@1.0.13
+localstorage@1.0.3
 logging@1.0.7
 matb33:collection-hooks@0.7.13
 meteor@1.1.6
@@ -45,6 +50,7 @@ minimongo@1.0.8
 mobile-status-bar@1.0.3
 mongo@1.1.0
 mrgalaxy:stripe@2.1.0
+npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 package-version-parser@3.0.3
@@ -61,9 +67,12 @@ sanjo:karma@1.5.1
 sanjo:long-running-child-process@1.1.1
 sanjo:meteor-files-helpers@1.1.0_6
 sanjo:meteor-version@1.0.0
+service-configuration@1.0.4
 session@1.1.0
+sha@1.0.3
 spacebars@1.0.6
 spacebars-compiler@1.0.6
+srp@1.0.3
 templating@1.1.1
 tracker@1.0.7
 ui@1.0.6

@@ -7,21 +7,15 @@
     }
   },
   "private": {
-    "paymentPlan": "charge",
+    "paymentPlan": "subscribe",
     "stripe": {
       "planId": "velocitySessions",
       "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1"
     },
     "emails": {
-      "from": "sam@xolv.io",
-      "subscribe": {
-        "subject": "Welcome to the Velocity Sessions!",
-        "text": "You are now subscribed."
-      },
-      "charge": {
-        "subject": "Welcome to 8 days of Meteor!",
-        "text": "You have completed your purchase."
-      }
+      "from": "Sam Hatoum <sam@xolv.io>",
+      "subject": "Welcome to the Velocity Sessions!",
+      "text" : "You are now subscribed. To access your content, simply click the link below:"
     }
   }
 }
