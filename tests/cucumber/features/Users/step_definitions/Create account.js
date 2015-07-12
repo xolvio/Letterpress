@@ -1,5 +1,9 @@
 module.exports = function () {
 
+  this.Given(/^An author has created content$/, function (callback) {
+    this.server.call('fixtures/seedData').then(callback);
+  });
+
   this.Given(/^I just paid for content and received an enrollment email$/, function (callback) {
     // purchase a charge using the api
     this.server.call('purchase', {id: 'notNull', email: 'me@example.com'}).then(function () {
@@ -36,7 +40,6 @@ module.exports = function () {
   });
 
   this.Then(/^I am able to create my account$/, function (callback) {
-
     this.browser.
       waitForExist('#enroll-account-password').
       setValue('#enroll-account-password', 'letme1n').
@@ -45,10 +48,17 @@ module.exports = function () {
   });
 
   this.Then(/^I am able to access my content$/, function (callback) {
-    // Write code here that turns the phrase above into concrete actions
-
     // TODO check here that the private content is visible
+    callback.pending();
+  });
 
+  this.Given(/^I have already created an account$/, function (callback) {
+    this.server.call('fixtures/createAccount', {email: 'me@example.com', password: 'letme1n'}).
+      then(callback);
+  });
+
+  this.When(/^I login with my username and password$/, function (callback) {
+    // TODO need a login form to login with
     callback.pending();
   });
 

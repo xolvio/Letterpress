@@ -28,7 +28,12 @@
 
     'fixtures/setPaymentPlan' : function(plan) {
       Meteor.settings.private.paymentPlan = plan;
+    },
+
+    'fixtures/createAccount' : function(user) {
+      Accounts.createUser(user);
     }
+
   });
 
 })();
