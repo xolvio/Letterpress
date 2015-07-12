@@ -1,5 +1,6 @@
+@ignore
 Feature: View a video page
-  
+
   As a user
   I want to view a page with a video
   So that I can visually learn
