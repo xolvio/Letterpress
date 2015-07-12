@@ -50,7 +50,7 @@ module.exports = function () {
         global.expect(emails[0].to).to.equal('me@example.com');
         global.expect(emails[0].from).to.equal(settings.private.emails.from);
         global.expect(emails[0].subject).to.equal(settings.private.emails.subject);
-        global.expect(emails[0].text).to.equal(settings.private.emails.text);
+        global.expect(emails[0].text).to.contain(settings.private.emails.text);
         callback();
       });
     });
