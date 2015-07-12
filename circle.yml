@@ -40,7 +40,8 @@ dependencies:
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor and Cucumber related dependencies
-    - node ./tests/ci/velocity.js
+    - node ./tests/ci/velocity.js:
+      - INSTALL_DEPENDENCIES: true
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install package dependencies for Cucumber support files
