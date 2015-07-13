@@ -20,6 +20,7 @@ chuangbo:marked
 matb33:collection-hooks
 mrgalaxy:stripe
 iron:router
+simple:json-routes
 
 # Bug fixing package for IR - github.com/iron-meteor/iron-router/issues/606#issuecomment-59130479
 gwendall:body-events

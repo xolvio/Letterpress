@@ -2,10 +2,27 @@ describe('Buy Service', function () {
 
   describe('subscribe', function () {
 
+    var customer = {
+      id: 'cust_0011',
+      email: 'someone@example.com',
+      subscriptions: {
+        data: [{
+          current_period_start: 1436716844,
+          current_period_end: 1436716844
+        }]
+      }
+    };
+
+    beforeEach(function () {
+      spyOn(Stripe.customers, 'create').and.callFake(function () {
+        // this is needed for the Meteor.wrapAsync to immediately callback
+        arguments[arguments.length - 1](null, customer);
+      });
+    });
+
     it('creates a customer on Stripe and subscribes them to the set plan', function () {
 
       // - - SETUP
-      spyOn(Stripe.customers, 'create');
       Meteor.settings.private.stripe.planId = 'myPlan';
 
       // - - EXECUTE
@@ -15,65 +32,49 @@ describe('Buy Service', function () {
       expect(Stripe.customers.create).toHaveBeenCalledWith({
         source: 'notNull',
         plan: 'myPlan',
-        email: 'me@example.com'
+        email: 'me@example.com',
       }, jasmine.any(Function));
 
     });
 
-    it('creates an account on successful subscription and stores an audit entry', function () {
+    it('creates an account on successful subscription', function () {
 
       // - - SETUP
-      var callback = _getStripeCallback('customers', 'subscribe');
       spyOn(Letterpress.Services.AccountService, 'createAccount');
-      spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
-      callback(null, {email: 'me@example.com'});
+      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'not used'});
 
       // - - VERIFY
-      expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
-        email: 'me@example.com',
-        origin: 'Stripe.customers.create',
-        token: {id: 'notNull', email: 'me@example.com'},
-        request: {
-          source: 'notNull',
-          plan: Meteor.settings.private.stripe.planId,
-          email: 'me@example.com'
-        },
-        response: {email: 'me@example.com'},
-        err: null
+      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('someone@example.com', {
+        stripeCustomerId: 'cust_0011',
+        periodStart: 1436716844,
+        periodEnd: 1436716844
       });
-      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
-
 
     });
 
-    it('fails an account on erroneous subscription and stores an audit entry', function () {
+    it('stores an audit entry on successful subscription', function () {
 
       // - - SETUP
-      var callback = _getStripeCallback('customers', 'subscribe');
       spyOn(Letterpress.Services.AccountService, 'createAccount');
       spyOn(Letterpress.Collections.Audit, 'insert');
-      spyOn(Meteor, 'Error');
 
       // - - EXECUTE
-      callback({'some': 'error'});
+      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'token@email.com'});
 
       // - - VERIFY
       expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
-        email: 'me@example.com',
+        email: 'token@email.com',
         origin: 'Stripe.customers.create',
-        token: {id: 'notNull', email: 'me@example.com'},
+        token: {id: 'notNull', email: 'token@email.com'},
         request: {
           source: 'notNull',
           plan: Meteor.settings.private.stripe.planId,
-          email: 'me@example.com'
+          email: 'token@email.com'
         },
-        response: undefined,
-        err: {'some': 'error'}
+        response: customer
       });
-      expect(Meteor.Error).toHaveBeenCalledWith(500, {'some': 'error'});
-      expect(Letterpress.Services.AccountService.createAccount).not.toHaveBeenCalled();
 
     });
 
@@ -81,10 +82,21 @@ describe('Buy Service', function () {
 
   describe('charge', function () {
 
+    var charge = {
+      'charge': 'data'
+    };
+
+    beforeEach(function () {
+      spyOn(Stripe.charges, 'create').and.callFake(function () {
+        // this is needed for the Meteor.wrapAsync to immediately callback
+        arguments[arguments.length - 1](null, charge);
+      });
+    });
+
+
     it('creates a charge on Stripe and charges the the set amount and currency', function () {
 
       // - - SETUP
-      spyOn(Stripe.charges, 'create');
       Meteor.settings.public.price = '499';
       Meteor.settings.public.currency = 'gbp';
 
@@ -103,12 +115,11 @@ describe('Buy Service', function () {
     it('creates an account on successful charge and stores an audit entry', function () {
 
       // - - SETUP
-      var callback = _getStripeCallback('charges', 'charge');
       spyOn(Letterpress.Services.AccountService, 'createAccount');
       spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
-      callback(null, {email: 'me@example.com'});
+      Letterpress.Services.BuyService.charge({id: 'notNull', email: 'me@example.com'});
 
       // - - VERIFY
       expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
@@ -120,49 +131,50 @@ describe('Buy Service', function () {
           amount: Meteor.settings.public.price,
           currency: Meteor.settings.public.currency
         },
-        response: {email: 'me@example.com'},
-        err: null
+        response: charge
       });
       expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
 
     });
 
-    it('fails an account on erroneous charge and stores an audit entry', function () {
+  });
 
-      // - - SETUP
-      var callback = _getStripeCallback('charges', 'charge');
-      spyOn(Letterpress.Services.AccountService, 'createAccount');
-      spyOn(Letterpress.Collections.Audit, 'insert');
-      spyOn(Meteor, 'Error');
+  describe('handleEvent', function () {
 
-      // - - EXECUTE
-      callback({'some': 'error'});
+    describe('invoice.payment_failed events', function () {
 
-      // - - VERIFY
-      expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
-        email: 'me@example.com',
-        origin: 'Stripe.charges.create',
-        token: {id: 'notNull', email: 'me@example.com'},
-        request: {
-          source: 'notNull',
-          amount: Meteor.settings.public.price,
-          currency: Meteor.settings.public.currency
-        },
-        response: undefined,
-        err: {'some': 'error'}
+      beforeEach(function (done) {
+        Meteor.call('fixtures/reset', done);
       });
-      expect(Meteor.Error).toHaveBeenCalledWith(500, {'some': 'error'});
-      expect(Letterpress.Services.AccountService.createAccount).not.toHaveBeenCalled();
 
+      it('it finds the relevant user and sends them a warning email', function () {
+
+        // - - SETUP
+        var userId = Meteor.call('fixtures/createAccount', {
+          email: 'me@example.com',
+          password: 'letme1n',
+          profile: {stripeCustomerId: 'cust_1234'}
+        });
+        spyOn(Letterpress.Services.AccountService, 'sendPaymentEmail');
+
+        // - - EXECUTE
+        var event = {
+          type: 'invoice.payment_failed',
+          data: {
+            object: {
+              customer: 'cust_1234'
+            }
+          }
+        };
+        Letterpress.Services.BuyService.handleEvent(event);
+
+        // - - VERIFY
+        expect(Letterpress.Services.AccountService.sendPaymentEmail).toHaveBeenCalledWith(Meteor.users.findOne(userId));
+
+      });
     });
 
   });
 
-  function _getStripeCallback (type, plan) {
-    spyOn(Stripe[type], 'create');
-    Letterpress.Services.BuyService[plan]({id: 'notNull', email: 'me@example.com'});
-    var args = Stripe[type].create.calls.mostRecent().args;
-    return args[args.length - 1];
-  }
-
-});
+})
+;

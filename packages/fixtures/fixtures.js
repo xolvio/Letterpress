@@ -36,7 +36,7 @@
     },
 
     'fixtures/createAccount': function (user) {
-      Accounts.createUser(user);
+      return Accounts.createUser(user);
     }
 
   });

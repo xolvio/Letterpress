@@ -10,12 +10,21 @@
     "paymentPlan": "subscribe",
     "stripe": {
       "planId": "velocitySessions",
-      "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1"
+      "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1",
+      "webhookEndpoint": "GmkW9P8EgQmRXm7D8"
     },
     "emails": {
-      "from": "Sam Hatoum <sam@xolv.io>",
-      "subject": "Welcome to the Velocity Sessions!",
-      "text" : "You are now subscribed. To access your content, simply click the link below:"
+      "welcome": {
+        "siteName": "The Velocity Sessions",
+        "from": "Sam Hatoum <sam@xolv.io>",
+        "subject": "Welcome to the Velocity Sessions!",
+        "text": "You are now subscribed. To access your content, simply click the link below:"
+      },
+      "failedPayment": {
+        "from": "Sam Hatoum <sam@xolv.io>",
+        "subject": "There was a problem with your payment",
+        "text": "Looks like there was an issue with your payment. Don't worry we'll retry 3 times. You might want to check your Stripe account."
+      }
     }
   }
 }

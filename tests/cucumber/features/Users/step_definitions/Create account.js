@@ -54,7 +54,9 @@ module.exports = function () {
 
   this.Given(/^I have already created an account$/, function (callback) {
     this.server.call('fixtures/createAccount', {email: 'me@example.com', password: 'letme1n'}).
-      then(callback);
+      then(function() {
+        callback();
+      });
   });
 
   this.When(/^I login with my username and password$/, function (callback) {

@@ -4,5 +4,6 @@
   "description": "Dependencies for our Cucumber automation layer",
   "private": true,
   "dependencies": {
+    "request": "2.58.0"
   }
 }

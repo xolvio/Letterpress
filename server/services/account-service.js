@@ -1,8 +1,17 @@
-Letterpress.Services.AccountService = {};
+Letterpress.Services.AccountService = {
 
-Letterpress.Services.AccountService.createAccount = function (to) {
+  createAccount: function (email, profile) {
+    var newUserId = Accounts.createUser({email: email, profile: profile});
+    Accounts.sendEnrollmentEmail(newUserId);
+  },
 
-  var newUserId = Accounts.createUser({email: to});
-  Accounts.sendEnrollmentEmail(newUserId);
+  sendPaymentEmail: function (user) {
+    Email.send({
+      to: user.emails[0].address,
+      from: Meteor.settings.private.emails.failedPayment.from,
+      subject: Meteor.settings.private.emails.failedPayment.subject,
+      text: Meteor.settings.private.emails.failedPayment.text
+    });
+  }
 
 };

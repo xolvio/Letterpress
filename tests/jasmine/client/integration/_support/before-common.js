@@ -1,4 +1,7 @@
 beforeAll(function () {
+
+  VelocityHelpers.exportGlobals();
+
   var self = this;
 
   self.deferAfterFlush = function (callback) {
