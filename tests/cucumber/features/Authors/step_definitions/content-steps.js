@@ -5,7 +5,7 @@ module.exports = function () {
       'fixtures/page/create', {
         template: 'landing-page',
         path: '/',
-        markdown: markdown
+        content: markdown
       }).then(callback);
   });
 
@@ -42,7 +42,7 @@ module.exports = function () {
       'fixtures/page/create', {
         template: 'chapter',
         title: title,
-        description: text
+        content: text
       }).then(callback);
   });
 

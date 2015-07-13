@@ -1,7 +1,5 @@
 accounts-base@1.2.0
 accounts-password@1.1.1
-accounts-ui@1.1.5
-accounts-ui-unstyled@1.1.7
 amplify@1.0.0
 autoupdate@1.2.1
 base64@1.0.3
@@ -79,6 +77,8 @@ tracker@1.0.7
 ui@1.0.6
 underscore@1.0.3
 url@1.0.4
+useraccounts:core@1.11.1
+useraccounts:unstyled@1.11.1
 velocity:chokidar@1.0.3_1
 velocity:core@0.7.1
 velocity:helpers@0.1.0

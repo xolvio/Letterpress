@@ -1,8 +1,16 @@
 <template name="chapter">
 
+  <div class="chapter">
     <h1>{{this.title}}</h1>
 
-    <p>{{this.description}}</p>
-    {{#markdown}}{{this.markdown}}{{/markdown}}
+    {{#markdown}}{{this.content}}{{/markdown}}
 
+    {{#if currentUser}}
+      {{#markdown}}{{this.premiumContent}}{{/markdown}}
+    {{else}}
+      <p>
+        Already have an account? <a class="sign-in-link" href="/sign-in">Sign In</a>
+      </p>
+    {{/if}}
+  </div>
 </template>
