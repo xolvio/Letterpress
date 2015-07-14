@@ -10,7 +10,7 @@ module.exports = function () {
 
   this.Given(/^I have have registered$/, function (callback) {
     this.server.call('fixtures/createAccount',
-                    {username: "user@test.com", password: "password1"}
+                    {email: "user@test.com", password: "password1"}
       ).then(callback);
   });
 
@@ -23,7 +23,7 @@ module.exports = function () {
 
   this.When(/^I navigate to the video page$/, function (callback) {
     this.client.
-      url(process.env.ROOT_URL+ "/file-structure").
+      url(process.env.ROOT_URL+ "file-structure").
       waitForExist('body *').
       waitForVisible('body *').
       call(callback);
@@ -40,8 +40,8 @@ module.exports = function () {
 
   this.Then(/^I can access my premium video content$/, function (callback) {
     this.client.
-      waitForVisible('iframe').
-      isVisible('iframe').should.become(true).
+      waitForVisible('iframe#youtube-video').
+      isVisible('iframe#youtube-video').should.become(true).
       and.notify(callback);
   });
 };

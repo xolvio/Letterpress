@@ -10,7 +10,7 @@ Feature: View a video page
       """
       #File Structure
 
-      <iframe width="420" height="315" src="https://www.youtube.com/embed/khfVWrzznOo" frameborder="0" allowfullscreen></iframe>
+      <iframe id="youtube-video" width="420" height="315" src="https://www.youtube.com/embed/khfVWrzznOo" frameborder="0" allowfullscreen></iframe>
 
       Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeyeleberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate. Doner venison nulla in excepteur alcatra magna ground round turkey veniam ullamco tri-tip in meatball. Landjaeger voluptate commodo minim, pariatur pig kielbasa biltong nulla sint beef cillum.
       """
