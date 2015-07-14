@@ -1,4 +1,3 @@
-@dev
 Feature: Setup a one-time charge
 
   As an author
