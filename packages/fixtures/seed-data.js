@@ -82,7 +82,9 @@ Letterpress.Utils.seedData = function() {
   });
 
   function loremIpsumBacon () {
-    return 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
+    return '###Premuium Content' +
+      '\n\n' +
+      'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
       'proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeye ' +
       'leberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate. ' +
       'Doner venison nulla in excepteur alcatra magna ground round turkey veniam ullamco tri-tip ' +

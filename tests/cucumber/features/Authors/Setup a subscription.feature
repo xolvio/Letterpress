@@ -14,6 +14,7 @@ Feature: Setup a subscription
     Then they see a confirmation screen of their "subscribe" purchase
     And receive a confirmation email of their "subscribe" purchase
 
+
   Scenario: Warn user of unpaid subscription
     Given a user is subscribed
     When a subscription payment error is received from Stripe

@@ -1,38 +1,27 @@
-@josh
-Feature: View a video page
+Feature: View premium content
 
   As a user
-  I want to view a page with a video
-  So that I can visually learn
+  I want to view a page with private content
+  So that I can get what I paid for
 
   Background: Author created a page
-    Given An author has created a video page with the following header markdown
-      """
-      <iframe id="youtube-video" width="420" height="315" src="https://www.youtube.com/embed/khfVWrzznOo" frameborder="0" allowfullscreen></iframe>
-      """
+    Given An author has created content
 
-  @dev
   Scenario: authenticated user can view a video page
-    Given I have have registered
-    And I have authenticated
-    When I navigate to the video page
-    Then I can see the heading of this video
-    And I read the video description
-    And I can access my premium video content
-    And I can join the discussion about this video
-
-  Scenario: unregistered users can purchase a subscription
-    Given I am not logged in
-    When I navigate to the video page
-    Then I can see the heading of this video
-    And I read the video description
-    And I see a "buy" button
-    And I cannot not see a video
-    And I cannot join the discussion about this video
+    Given I have have signed up
+    And I have logged in
+    When I navigate to the private content page
+    And I can see my premium content
 
   Scenario: registered users can login to see private content
-    Given I have have registered
+    Given I have have signed up
     And I am not logged in
-    When I navigate to the video page
+    When I navigate to the private content page
     And I login
-    Then I can access my premium video content
+
+  # XXX The value of the content not being shown belongs to the author. This should move to another feature
+  Scenario: unregistered users can purchase a subscription
+    Given I am not logged in
+    When I navigate to the private content page
+    And I see a "buy" button
+    And I cannot not see premium content
