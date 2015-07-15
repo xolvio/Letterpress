@@ -3,18 +3,25 @@ describe("Pages publication", function() {
     Meteor.call('fixtures/reset', done);
   });
 
-  it('should not return premiumContent when a user is not logged in', function() {
+  it('should return regular data but not premiumContent when a user is not logged in', function() {
     //Setup
     Letterpress.Collections.Pages.insert({
       _id: 'myId',
       title: 'My Title with Spaces and Cases',
       content: 'My preview content',
-      premiumContent: 'My premium content that you need to login for'
+      premiumContent: 'My premium content that you need to login for',
+      order: 1,
+      path: '/content'
     });
     //Execute
-    var cursor = Meteor.server.publish_handlers["pages"]();
+    var cursor = Meteor.server.publish_handlers.pages();
     //Verify
-    expect(cursor.fetch()[0].premiumContent).toBeUndefined;
+    data = cursor.fetch()[0];
+    expect(data.premiumContent).toBeUndefined;
+    expect(data.content).toBe('My preview content');
+    expect(data.title).toBe('My Title with Spaces and Cases');
+    expect(data.order).toBe(1);
+    expect(data.path).toBe("/content");
   });
 
   it('should return premiumContent when a user is logged in', function() {
