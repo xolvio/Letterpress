@@ -2,6 +2,7 @@
   "public": {
     "price": "1000",
     "currency": "usd",
+    "disqus": "letterpresssite",
     "stripe": {
       "publicKey": "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX"
     }

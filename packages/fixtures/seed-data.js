@@ -4,7 +4,7 @@ Letterpress.Utils.seedData = function() {
   Letterpress.Collections.Pages.insert({
     path: '/',
     template: 'landing-page',
-    markdown: '' +
+    content: '' +
     '![Cover](/cover.jpg "Cover")' +
     '\n\n' +
     '*Write your own book with this WYSIWYG markdown powered book app*' +
@@ -16,7 +16,7 @@ Letterpress.Utils.seedData = function() {
     title: 'Try',
     template: 'info',
     path: '/try',
-    markdown: '' +
+    content: '' +
     '##Coming soon' +
     '\n\n' +
     '[Home](/ "Home")'
@@ -26,7 +26,7 @@ Letterpress.Utils.seedData = function() {
     title: 'Buy',
     template: 'info',
     path: '/buy',
-    markdown: '' +
+    content: '' +
     '##Coming soon' +
     '\n\n' +
     '[Home](/ "Home")'
@@ -36,7 +36,7 @@ Letterpress.Utils.seedData = function() {
     title: 'Subscribe Confirmation',
     template: 'info',
     path: '/subscribe-confirmation',
-    markdown: '' +
+    content: '' +
     '##Thank you for your purchase. You are now subscribed' +
     '\n\n' +
     '[Home](/ "Home")'
@@ -46,7 +46,7 @@ Letterpress.Utils.seedData = function() {
     title: 'Charge Confirmation',
     template: 'info',
     path: '/charge-confirmation',
-    markdown: '' +
+    content: '' +
     '##Thank you for your purchase. You have completed your purchase' +
     '\n\n' +
     '[Home](/ "Home")'
@@ -55,12 +55,12 @@ Letterpress.Utils.seedData = function() {
   Letterpress.Collections.Pages.insert({
     title: 'Chapter 1',
     template: 'chapter',
-    description: 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
+    content: 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
     'proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeye ' +
     'leberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate. ' +
     'Doner venison nulla in excepteur alcatra magna ground round turkey veniam ullamco tri-tip ' +
     'in meatball. Landjaeger voluptate.',
-    markdown: '' +
+    premiumContent: '' +
     loremIpsumBacon() +
     '\n\n' +
     '[Home](/ "Home")',
@@ -70,11 +70,11 @@ Letterpress.Utils.seedData = function() {
   Letterpress.Collections.Pages.insert({
     title: 'Chapter 2',
     template: 'chapter',
-    description: 'Id pork loin fatback, fugiat pancetta tri-tip leberkas pork belly frankfurter ' +
+    content: 'Id pork loin fatback, fugiat pancetta tri-tip leberkas pork belly frankfurter ' +
     'proident. Non cupim ex, sunt doner tail strip steak. Do tempor pork belly short loin, chuck ' +
     'pork ground round frankfurter corned beef. Salami voluptate in et, cillum duis tri-tip ' +
     'swine bresaola eu t-bone ribeye adipisicing.',
-    markdown: '' +
+    premiumContent: '' +
     loremIpsumBacon() +
     '\n\n' +
     '[Home](/ "Home")',
@@ -82,7 +82,9 @@ Letterpress.Utils.seedData = function() {
   });
 
   function loremIpsumBacon () {
-    return 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
+    return '###Premuium Content' +
+      '\n\n' +
+      'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
       'proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeye ' +
       'leberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate. ' +
       'Doner venison nulla in excepteur alcatra magna ground round turkey veniam ullamco tri-tip ' +

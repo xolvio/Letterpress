@@ -5,52 +5,49 @@ module.exports = function () {
       'fixtures/page/create', {
         template: 'landing-page',
         path: '/',
-        markdown: markdown
+        content: markdown
       }).then(callback);
   });
 
-  this.When(/^a user navigates to the landing page$/, function (callback) {
-    this.client.
+  this.When(/^a user navigates to the landing page$/, function () {
+    return this.client.
       url(process.env.ROOT_URL).
       waitForExist('body *').
-      waitForVisible('body *').
-      call(callback);
+      waitForVisible('body *');
   });
 
-  this.Then(/^they see the heading "([^"]*)"$/, function (heading, callback) {
-    this.client.
-      getText('header h1').should.become(heading).and.notify(callback);
+  this.Then(/^they see the heading "([^"]*)"$/, function (heading) {
+    return this.client.getText('header h1').should.become(heading);
   });
 
-  this.Then(/^they see the cover image from "([^"]*)"$/, function (source, callback) {
-    this.client.
-      getAttribute('header img', 'src').should.eventually.contain(source).and.notify(callback);
+  this.Then(/^they see the cover image from "([^"]*)"$/, function (source) {
+    return this.client.
+      getAttribute('header img', 'src').should.eventually.contain(source);
   });
 
-  this.Then(/^they see the tag-line "([^"]*)"$/, function (tagline, callback) {
-    this.client.
-      getText('header p em').should.become(tagline).and.notify(callback);
+  this.Then(/^they see the tag-line "([^"]*)"$/, function (tagline) {
+    return this.client.
+      getText('header p em').should.become(tagline);
   });
 
-  this.Then(/^they can navigate to "([^"]*)" at "([^"]*)"$/, function (location, source, callback) {
-    this.client.
-      getAttribute('a[title="' + location + '"]', 'href').should.eventually.contain(source).and.notify(callback);
+  this.Then(/^they can navigate to "([^"]*)" at "([^"]*)"$/, function (location, source) {
+    return this.client.
+      getAttribute('a[title="' + location + '"]', 'href').should.eventually.contain(source);
   });
 
-  this.Given(/^I have created a chapter called "([^"]*)" with the description$/, function (title, text, callback) {
-    this.server.call(
+  this.Given(/^I have created a chapter called "([^"]*)" with the description$/, function (title, text) {
+    return this.server.call(
       'fixtures/page/create', {
         template: 'chapter',
         title: title,
-        description: text
-      }).then(callback);
+        content: text
+      });
   });
 
-  this.Then(/^they see the chapter "([^"]*)" in the table of contents with the description$/, function (title, text, callback) {
-    this.client.
+  this.Then(/^they see the chapter "([^"]*)" in the table of contents with the description$/, function (title, text) {
+    return this.client.
       isExisting('//*[@class="chapter"]//a[contains(text(), "' + title + '")]').should.become(true).
-      isExisting('//*[@class="chapter"]//p[contains(text(), "' + text + '")]').should.become(true).
-      and.notify(callback);
+      isExisting('//*[@class="chapter"]//p[contains(text(), "' + text + '")]').should.become(true);
   });
 
 };

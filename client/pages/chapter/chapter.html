@@ -1,8 +1,27 @@
 <template name="chapter">
 
-    <h1>{{this.title}}</h1>
+    <div class="chapter">
+        <h1>{{this.title}}</h1>
 
-    <p>{{this.description}}</p>
-    {{#markdown}}{{this.markdown}}{{/markdown}}
+        <div class="description">
+            {{#markdown}}{{this.content}}{{/markdown}}
+        </div>
 
+        {{#if currentUser}}
+            {{#markdown}}{{this.premiumContent}}{{/markdown}}
+
+            {{> disqusThread}}
+
+        {{else}}
+            <a>Buy Now</a>
+
+            <p>
+                Already have an account? <a class="sign-in-link" href="/sign-in">Sign In</a>
+            </p>
+        {{/if}}
+    </div>
+</template>
+
+<template name="disqusThread">
+    <div id="disqus_thread"></div>
 </template>
