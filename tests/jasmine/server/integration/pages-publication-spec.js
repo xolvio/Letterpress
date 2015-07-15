@@ -14,10 +14,10 @@ describe("Pages publication", function() {
     //Execute
     var cursor = Meteor.server.publish_handlers["pages"]();
     //Verify
-    expect(cursor.fetch().premiumContent).toBeUndefined;
+    expect(cursor.fetch()[0].premiumContent).toBeUndefined;
   });
 
-  xit('should return premiumContent when a user is logged in', function() {
+  it('should return premiumContent when a user is logged in', function() {
     //Setup
     Letterpress.Collections.Pages.insert({
       _id: 'myId',
@@ -26,9 +26,8 @@ describe("Pages publication", function() {
       premiumContent: 'My premium content that you need to login for'
     });
     //Execute
-    var cursor = Meteor.server.publish_handlers.pages();
-    console.log(Meteor.server.sessions);
+    var cursor = Meteor.server.publish_handlers.pages.apply({userId: '123'});
     //Verify
-    expect(cursor.fetch().premiumContent).toBe('My premium content that you need to login for');
+    expect(cursor.fetch()[0].premiumContent).toBe('My premium content that you need to login for');
   });
 });
