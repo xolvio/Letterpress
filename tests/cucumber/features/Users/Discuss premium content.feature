@@ -8,7 +8,7 @@ Feature: Discuss premium content
     Given An author has created content
 
   Scenario: authenticated user can view a video page
-    Given I have have signed up
+    Given I have signed up
     And I have logged in
     When I navigate to the private content page
     And I can join the discussion about the private content

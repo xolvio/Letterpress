@@ -38,7 +38,7 @@ module.exports = function () {
     this.browser.
       waitForExist('.' + plan + '-confirmation').
       url().should.eventually.have.property('value').that.contains('/' + plan + '-confirmation').
-      getText('div').should.eventually.contain(message).
+      getText('body').should.eventually.contain(message).
       and.notify(callback);
   });
 

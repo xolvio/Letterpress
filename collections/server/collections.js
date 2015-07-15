@@ -7,7 +7,7 @@ Letterpress.Collections.Pages.before.insert(function (userId, doc) {
 });
 
 Meteor.publish("pages", function () {
-  var fields = {title: 1, path: 1, template: 1, content: 1};
+  var fields = {title: 1, path: 1, template: 1, content: 1, order: 1};
   if (this.userId)
     fields.premiumContent = 1;
   return Letterpress.Collections.Pages.find({}, {fields: fields});

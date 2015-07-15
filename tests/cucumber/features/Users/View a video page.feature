@@ -8,13 +8,13 @@ Feature: View premium content
     Given An author has created content
 
   Scenario: authenticated user can view a video page
-    Given I have have signed up
+    Given I have signed up
     And I have logged in
     When I navigate to the private content page
     And I can see my premium content
 
   Scenario: registered users can login to see private content
-    Given I have have signed up
+    Given I have signed up
     And I am not logged in
     When I navigate to the private content page
     And I login

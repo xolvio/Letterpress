@@ -1,6 +1,6 @@
 module.exports = function () {
 
-  this.Given(/^I have have signed up$/, function (callback) {
+  this.Given(/^I have signed up$/, function (callback) {
     this.server.call('fixtures/createAccount',
       {email: 'user@test.com', password: 'password1'}
     ).then(function() {callback()});
