@@ -4,10 +4,8 @@ module.exports = function () {
   var customerEmail = 'me@example.com';
   var tokenId = 'someId';
 
-  this.Given(/^a customer made a purchase$/, function (callback) {
-    this.server.call('purchase', {id: tokenId, email: customerEmail}).then(function () {
-      callback();
-    });
+  this.Given(/^a customer made a purchase$/, function () {
+    return this.server.call('purchase', {id: tokenId, email: customerEmail});
   });
 
   // XXX it's likely this step will change to a better admin screen in the future

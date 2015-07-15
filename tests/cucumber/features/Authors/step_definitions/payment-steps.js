@@ -7,24 +7,21 @@ module.exports = function () {
     callback();
   });
 
-  this.Given(/^I have created content$/, function (callback) {
-    this.server.call('fixtures/seedData').then(callback);
+  this.Given(/^I have created content$/, function () {
+    return this.server.call('fixtures/seedData');
   });
 
-  this.Given(/^I have setup a "([^"]*)" payment plan$/, function (plan, callback) {
-    this.server.call('fixtures/setPaymentPlan', plan).then(callback)
+  this.Given(/^I have setup a "([^"]*)" payment plan$/, function (plan) {
+    return this.server.call('fixtures/setPaymentPlan', plan);
   });
 
-  this.When(/^a user pays using Stripe$/, function (callback) {
-    this.browser.
-      // click the buy button
+  this.When(/^a user pays using Stripe$/, function () {
+    return this.browser.
       waitForExist('a[title="Buy It"]').
-      click('a[title="Buy It"]').
-      // tell cucumber we're done
-      call(callback);
+      click('a[title="Buy It"]');
   });
 
-  this.Then(/^they see a confirmation screen of their "([^"]*)" purchase$/, function (plan, callback) {
+  this.Then(/^they see a confirmation screen of their "([^"]*)" purchase$/, function (plan) {
     var message;
     switch (plan) {
       case 'subscribe':
@@ -35,11 +32,10 @@ module.exports = function () {
         break;
     }
     // need a delay here
-    this.browser.
+    return this.browser.
       waitForExist('.' + plan + '-confirmation').
       url().should.eventually.have.property('value').that.contains('/' + plan + '-confirmation').
-      getText('body').should.eventually.contain(message).
-      and.notify(callback);
+      getText('body').should.eventually.contain(message);
   });
 
   this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function (plan, callback) {
