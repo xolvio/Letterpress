@@ -56,3 +56,7 @@ meteorProcess.stdout.on('data', function (data) {
   }
 
 });
+
+meteorProcess.on('exit', function(code) {
+  process.exit(code);
+});
