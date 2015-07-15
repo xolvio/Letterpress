@@ -35,6 +35,7 @@ module.exports = function () {
 
   this.Then(/^I can see my premium content$/, function (callback) {
     this.client.
+      waitForExist('#premuium-content').
       isVisible('#premuium-content').should.become(true).
       and.notify(callback);
   });
@@ -48,6 +49,7 @@ module.exports = function () {
 
   this.Then(/^I cannot not see premium content$/, function (callback) {
     this.client.
+      waitForExist('#premuium-content', true).
       isVisible('#premuium-content').should.become(false).
       and.notify(callback);
   });
