@@ -176,5 +176,4 @@ describe('Buy Service', function () {
 
   });
 
-})
-;
+});

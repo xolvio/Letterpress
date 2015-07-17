@@ -7,13 +7,14 @@
             {{#markdown}}{{this.content}}{{/markdown}}
         </div>
 
-        {{#if currentUser}}
+        {{#if subscribed}}
             {{#markdown}}{{this.premiumContent}}{{/markdown}}
 
             {{> disqusThread}}
 
         {{else}}
-            <a>Buy Now</a>
+            <a href="/">Home</a>
+            <a href="#">Buy Now</a>
 
             <p>
                 Already have an account? <a class="sign-in-link" href="/sign-in">Sign In</a>

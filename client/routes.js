@@ -26,6 +26,10 @@ Router.route('/(.*)', {
 
     var currentUrl = RouterHelper.currentUrl();
 
+    if (currentUrl === '/#') {
+      currentUrl = '/';
+    }
+
     var page = Letterpress.Collections.Pages.findOne({path: currentUrl});
     if (page) {
       this.render(page.template, {data: function () {return page;}});

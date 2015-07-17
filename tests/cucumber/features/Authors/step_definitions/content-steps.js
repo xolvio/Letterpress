@@ -17,21 +17,26 @@ module.exports = function () {
   });
 
   this.Then(/^they see the heading "([^"]*)"$/, function (heading) {
-    return this.client.getText('header h1').should.become(heading);
+    return this.client.
+      waitForExist('header h1').
+      getText('header h1').should.become(heading);
   });
 
   this.Then(/^they see the cover image from "([^"]*)"$/, function (source) {
     return this.client.
+      waitForExist('header img').
       getAttribute('header img', 'src').should.eventually.contain(source);
   });
 
   this.Then(/^they see the tag-line "([^"]*)"$/, function (tagline) {
     return this.client.
+      waitForExist('header p').
       getText('header p em').should.become(tagline);
   });
 
   this.Then(/^they can navigate to "([^"]*)" at "([^"]*)"$/, function (location, source) {
     return this.client.
+      waitForExist('a[title="' + location + '"]').
       getAttribute('a[title="' + location + '"]', 'href').should.eventually.contain(source);
   });
 
@@ -46,8 +51,8 @@ module.exports = function () {
 
   this.Then(/^they see the chapter "([^"]*)" in the table of contents with the description$/, function (title, text) {
     return this.client.
-      isExisting('//*[@class="chapter"]//a[contains(text(), "' + title + '")]').should.become(true).
-      isExisting('//*[@class="chapter"]//p[contains(text(), "' + text + '")]').should.become(true);
+      waitForExist('//*[@class="chapter"]//a[contains(text(), "' + title + '")]').
+      waitForExist('//*[@class="chapter"]//p[contains(text(), "' + text + '")]');
   });
 
 };

@@ -9,6 +9,7 @@
   },
   "private": {
     "paymentPlan": "subscribe",
+    "subscriptionDurationMonths" : 1,
     "stripe": {
       "planId": "velocitySessions",
       "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1",

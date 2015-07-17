@@ -1,4 +1,3 @@
-@ignore
 Feature: Create account
   
   As a paying user
@@ -6,7 +5,7 @@ Feature: Create account
   So that I can access the content I paid for
 
   Background: a site has been configured
-    And   An author has created content
+    Given An author has created content
 
   Scenario: Receive link after payment
     Given I just paid for content and received an enrollment email

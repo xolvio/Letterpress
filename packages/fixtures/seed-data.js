@@ -43,11 +43,31 @@ Letterpress.Utils.seedData = function() {
   });
 
   Letterpress.Collections.Pages.insert({
+    title: 'Subscription Expired',
+    template: 'info',
+    path: '/subscription-expired',
+    content: '' +
+    '##You need to resubscribe to access this content. ' +
+    '\n\n' +
+    '[Home](/ "Home") [Buy It](# "Buy It")'
+  });
+
+  Letterpress.Collections.Pages.insert({
     title: 'Charge Confirmation',
     template: 'info',
     path: '/charge-confirmation',
     content: '' +
     '##Thank you for your purchase. You have completed your purchase' +
+    '\n\n' +
+    '[Home](/ "Home")'
+  });
+
+  Letterpress.Collections.Pages.insert({
+    title: 'Yikes!',
+    template: 'info',
+    path: '/error',
+    content: '' +
+    '##Looks like something went wrong' +
     '\n\n' +
     '[Home](/ "Home")'
   });
@@ -82,7 +102,7 @@ Letterpress.Utils.seedData = function() {
   });
 
   function loremIpsumBacon () {
-    return '###Premuium Content' +
+    return '###Premium Content' +
       '\n\n' +
       'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
       'proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeye ' +

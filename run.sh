@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# export VELOCITY_DEBUG=1
+#export VELOCITY_DEBUG=0
 
 # these are about to get canned
 export JASMINE_CLIENT_UNIT=0

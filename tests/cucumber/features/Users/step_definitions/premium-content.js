@@ -1,21 +1,18 @@
 module.exports = function () {
 
   this.Given(/^I have signed up$/, function () {
-    return this.server.call('fixtures/createAccount',
-      {email: 'user@test.com', password: 'password1'}
-    );
+    var periodEnd = Math.floor(new Date().getTime() / 1000) + ( 7 * 24 * 60 * 60 );
+    return this.Authentication.createAccount({
+      periodEnd: periodEnd
+    });
   });
 
   this.Given(/^I have logged in$/, function () {
-    return this.client.executeAsync(function (done) {
-      Meteor.loginWithPassword("user@test.com", "password1", done);
-    });
+    return this.Authentication.login();
   });
 
   this.Given(/^I am not logged in$/, function () {
-    return this.client.executeAsync(function (done) {
-      Meteor.logout(done);
-    });
+    return this.Authentication.logout();
   });
 
   this.When(/^I navigate to the private content page$/, function () {
@@ -23,17 +20,13 @@ module.exports = function () {
   });
 
   this.When(/^I login$/, function () {
-    return this.client.waitForExist('a#login-sign-in-link')
-      .click('a#login-sign-in-link')
-      .setValue('#login-email', 'user@test.com')
-      .setValue('#login-password', 'password1')
-      .click('.login-button-form-submit');
+    return this.Authentication.login();
   });
 
   this.Then(/^I can see my premium content$/, function () {
     return this.client.
-      waitForExist('#premuium-content').
-      isVisible('#premuium-content').should.become(true);
+      waitForExist('#premium-content').
+      isVisible('#premium-content').should.become(true);
   });
 
   this.Then(/^I see a "([^"]*)" button$/, function (button) {

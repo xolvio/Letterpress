@@ -20,8 +20,7 @@ Feature: View premium content
     And I login
     Then I can see my premium content
 
-  # XXX The value of the content not being shown belongs to the author. This should move to another feature
-  Scenario: unregistered users can purchase a subscription
+  Scenario: registered users can repurchase a subscription
     Given I am not logged in
     When I navigate to the private content page
     And I see a "Buy Now" button

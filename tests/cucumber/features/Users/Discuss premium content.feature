@@ -7,7 +7,6 @@ Feature: Discuss premium content
   Background: Author created a page
     Given An author has created content
 
-  @dev
   Scenario: authenticated user can view a discussion
     Given I have signed up
     And I have logged in

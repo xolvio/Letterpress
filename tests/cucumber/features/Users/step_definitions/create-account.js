@@ -9,7 +9,7 @@ module.exports = function () {
     return this.server.call('purchase', {id: 'notNull', email: 'me@example.com'});
   });
 
-  this.When(/^I open the account creation link in my email$/, function () {
+  this.When(/^I open the account creation link in my email$/, function (callback) {
 
     var self = this;
     self.server.call('emailStub/getEmails').then(function (emails) {
@@ -27,34 +27,39 @@ module.exports = function () {
       var confirmationLink = message.match(enrollmentLinkRegex)[0];
 
       // visit the enrollment link in the browser
-      return self.browser.
-        url(confirmationLink).
+      self.client.
         // FIXME weird bug where you have to go to the URL twice for enrollment links
-        url(confirmationLink);
+        url('about:blank').
+        url(confirmationLink).then(function () {
+          callback();
+        });
 
     });
 
   });
 
   this.Then(/^I am able to create my account$/, function () {
-    return this.browser.
+    return this.client.
       waitForExist('#enroll-account-password').
       setValue('#enroll-account-password', 'letme1n').
-      click('#login-buttons-enroll-account-button');
+      click('#login-buttons-enroll-account-button').
+      waitForExist('#login-name-link').
+      isVisible('#login-name-link').should.become(true);
   });
 
-  this.Then(/^I am able to access my content$/, function (callback) {
-    // TODO check here that the private content is visible
-    callback.pending();
+  this.Then(/^I am able to access my content$/, function () {
+    return this.client.
+      url(process.env.ROOT_URL + 'chapter-1').
+      waitForExist('#premium-content').
+      isVisible('#premium-content').should.become(true);
   });
 
   this.Given(/^I have already created an account$/, function () {
-    return this.server.call('fixtures/createAccount', {email: 'me@example.com', password: 'letme1n'});
+    return this.Authentication.createAccount();
   });
 
-  this.When(/^I login with my username and password$/, function (callback) {
-    // TODO need a login form to login with
-    callback.pending();
+  this.When(/^I login with my username and password$/, function () {
+    return this.Authentication.login();
   });
 
 };

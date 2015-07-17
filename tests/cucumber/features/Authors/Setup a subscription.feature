@@ -14,20 +14,13 @@ Feature: Setup a subscription
     Then they see a confirmation screen of their "subscribe" purchase
     And receive a confirmation email of their "subscribe" purchase
 
-
   Scenario: Warn user of unpaid subscription
     Given a user is subscribed
     When a subscription payment error is received from Stripe
     Then the user receives a repayment information email
 
-#  @ignore
-#  Scenario: Give user a graceful period to to fix payments
-#    Given a user subscription has expired
-#    When the user logs 7 days past their due date
-#    Then the user is able to see my content
-#
-#  @ignore
-#  Scenario: Revoke access for an unpaid subscription after graceful period
-#    Given a user subscription has expired
-#    When the user logs 8 days past their due date
-#    Then the user is not able to see my content
+  Scenario: Revoke access for an unpaid subscription
+    Given a user subscription expired 2 month(s) ago
+    When the user logs in
+    Then they are informed of their expired subscription
+    And the user is not able to see my content

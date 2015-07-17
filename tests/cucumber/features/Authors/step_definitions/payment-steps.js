@@ -51,17 +51,11 @@ module.exports = function () {
     });
   });
 
-  this.Given(/^a user is subscribed$/, function (callback) {
-    this.server.call('fixtures/createAccount', {
-      email: 'me@example.com',
-      password: 'letme1n',
-      profile: {
-        stripeCustomerId: 'cust_0011',
-        periodStart: 1436716844,
-        periodEnd: 1436716844
-      }
-    }).then(function () {
-      callback();
+  this.Given(/^a user is subscribed$/, function () {
+    return this.Authentication.createAccount({
+      stripeCustomerId: 'cust_0011',
+      periodStart: 1436716844,
+      periodEnd: 1436716844
     });
   });
 
@@ -90,6 +84,50 @@ module.exports = function () {
         callback();
       });
     });
+  });
+
+
+  this.Given(/^a user subscription expired (\d+) month\(s\) ago$/, function (months, callback) {
+
+    var date = new Date();
+    date.setMonth(date.getMonth() - months);
+    var periodEnd = Math.floor(date.getTime() / 1000);
+
+    return this.Authentication.createAccount({
+      periodEnd: periodEnd
+    });
+
+  });
+
+  this.When(/^the user logs in$/, function () {
+    return this.client.waitForExist('a#login-sign-in-link').
+      click('a#login-sign-in-link').
+      setValue('#login-email', 'me@example.com').
+      setValue('#login-password', 'letme1n').
+      click('.login-button-form-submit').
+      waitForExist('#login-name-link');
+  });
+
+  this.Then(/^the user is able to see my content$/, function () {
+    return this.client.
+      url(process.env.ROOT_URL + 'chapter-1').
+      waitForExist('#premuium-content').
+      isVisible('#premuium-content').should.become(true);
+  });
+
+  this.Then(/^they are informed of their expired subscription$/, function () {
+    return this.client.
+      waitForExist('.subscription-expired').
+      isVisible('.subscription-expired').should.become(true);
+  });
+
+  this.Then(/^the user is not able to see my content$/, function () {
+    return this.client.
+      click('a*=Home').
+      waitForExist('a*=Chapter 1').
+      click('a*=Chapter 1').
+      waitForExist('.description').
+      isVisible('#premium-content').should.become(false);
   });
 
 };

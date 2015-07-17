@@ -9,3 +9,9 @@ UI.registerHelper('classes', function () {
   return currentPage.template + ' ' + currentPage.path.substring(1);
 
 });
+
+UI.registerHelper('subscribed', function () {
+
+  return Session.get('subscribed');
+
+});

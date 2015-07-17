@@ -8,6 +8,7 @@ Letterpress.Services.BuyService = {
       source: token.id,
       plan: Meteor.settings.private.stripe.planId,
       email: token.email
+      //,trial_end: Math.floor(Date.now() / 1000) + 60 // use this for testing
     };
 
     var stripeCustomersCreateSync = Meteor.wrapAsync(Stripe.customers.create, Stripe.customers);
