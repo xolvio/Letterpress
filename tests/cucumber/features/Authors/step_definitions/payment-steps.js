@@ -38,16 +38,15 @@ module.exports = function () {
       getText('body').should.eventually.contain(message);
   });
 
-  this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function (plan, callback) {
+  this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function () {
     var self = this;
-    self.server.call('fixtures/getSettings').then(function (settings) {
-      self.server.call('emailStub/getEmails').then(function (emails) {
+    return self.server.call('fixtures/getSettings').then(function (settings) {
+      return self.server.call('emailStub/getEmails').then(function (emails) {
         global.expect(emails[0].to).to.equal('me@example.com');
         global.expect(emails[0].from).to.equal(settings.private.emails.welcome.from);
         global.expect(emails[0].subject).to.equal(settings.private.emails.welcome.subject);
         global.expect(emails[0].text).to.contain(settings.private.emails.welcome.text);
-        callback();
-      }).catch(callback);
+      });
     });
   });
 
@@ -73,15 +72,14 @@ module.exports = function () {
     });
   });
 
-  this.Then(/^the user receives a repayment information email$/, function (callback) {
+  this.Then(/^the user receives a repayment information email$/, function () {
     var self = this;
-    self.server.call('fixtures/getSettings').then(function (meteorSettings) {
-      self.server.call('emailStub/getEmails').then(function (emails) {
+    return self.server.call('fixtures/getSettings').then(function (meteorSettings) {
+      return self.server.call('emailStub/getEmails').then(function (emails) {
         global.chai.expect(emails.length).to.equal(1, 'Expected to see an email');
         global.chai.expect(emails[0].from).to.equal(meteorSettings.private.emails.failedPayment.from);
         global.chai.expect(emails[0].subject).to.equal(meteorSettings.private.emails.failedPayment.subject);
         global.chai.expect(emails[0].text).to.equal(meteorSettings.private.emails.failedPayment.text);
-        callback();
       });
     });
   });

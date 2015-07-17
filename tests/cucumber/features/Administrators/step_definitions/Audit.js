@@ -9,10 +9,9 @@ module.exports = function () {
   });
 
   // XXX it's likely this step will change to a better admin screen in the future
-  this.When(/^I search for the transaction by their email$/, function (callback) {
-    this.server.call('fixtures/findAudit', {email: customerEmail}).then(function (audit) {
+  this.When(/^I search for the transaction by their email$/, function () {
+    return this.server.call('fixtures/findAudit', {email: customerEmail}).then(function (audit) {
       transactionDetails = audit;
-      callback();
     });
   });
 

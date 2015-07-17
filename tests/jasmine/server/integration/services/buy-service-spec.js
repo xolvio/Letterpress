@@ -2,21 +2,23 @@ describe('Buy Service', function () {
 
   describe('subscribe', function () {
 
-    var customer = {
-      id: 'cust_0011',
-      email: 'someone@example.com',
-      subscriptions: {
-        data: [{
-          current_period_start: 1436716844,
-          current_period_end: 1436716844
-        }]
-      }
-    };
+    function getCustomer () {
+      return {
+        id: 'cust_0011',
+        email: 'someone@example.com',
+        subscriptions: {
+          data: [{
+            current_period_start: 1436716844,
+            current_period_end: 1436716844
+          }]
+        }
+      };
+    }
 
     beforeEach(function () {
       spyOn(Stripe.customers, 'create').and.callFake(function () {
         // this is needed for the Meteor.wrapAsync to immediately callback
-        arguments[arguments.length - 1](null, customer);
+        arguments[arguments.length - 1](null, getCustomer());
       });
     });
 
@@ -32,7 +34,7 @@ describe('Buy Service', function () {
       expect(Stripe.customers.create).toHaveBeenCalledWith({
         source: 'notNull',
         plan: 'myPlan',
-        email: 'me@example.com',
+        email: 'me@example.com'
       }, jasmine.any(Function));
 
     });
@@ -73,7 +75,7 @@ describe('Buy Service', function () {
           plan: Meteor.settings.private.stripe.planId,
           email: 'token@email.com'
         },
-        response: customer
+        response: getCustomer()
       });
 
     });

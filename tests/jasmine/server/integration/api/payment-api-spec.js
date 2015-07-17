@@ -1,9 +1,5 @@
 describe('Payment API', function () {
 
-  beforeAll(function () {
-    VelocityHelpers.exportGlobals();
-  });
-
   describe('purchase', function () {
 
     it('subscribes the user when the payment plan is subscribe and informs the user', function () {

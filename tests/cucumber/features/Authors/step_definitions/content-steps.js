@@ -1,12 +1,12 @@
 module.exports = function () {
 
   this.Given(/^I have created a landing page with the following header markdown$/, function (markdown, callback) {
-    this.server.call(
+    return this.server.call(
       'fixtures/page/create', {
         template: 'landing-page',
         path: '/',
         content: markdown
-      }).then(callback);
+      });
   });
 
   this.When(/^a user navigates to the landing page$/, function () {
