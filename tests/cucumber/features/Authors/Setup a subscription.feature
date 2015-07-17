@@ -14,11 +14,13 @@ Feature: Setup a subscription
     Then they see a confirmation screen of their "subscribe" purchase
     And receive a confirmation email of their "subscribe" purchase
 
+  @ignore
   Scenario: Warn user of unpaid subscription
     Given a user is subscribed
     When a subscription payment error is received from Stripe
     Then the user receives a repayment information email
 
+  @ignore
   Scenario: Revoke access for an unpaid subscription
     Given a user subscription expired 2 month(s) ago
     When the user logs in
