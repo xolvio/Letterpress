@@ -1,4 +1,4 @@
-Letterpress.Services.AccountService = {
+Letterpress.Services.Account = {
   onLogin: function () {
     Meteor.call('isSubscribed', function (err, isSubscribed) {
 
@@ -17,4 +17,4 @@ Letterpress.Services.AccountService = {
   }
 };
 
-Accounts.onLogin(Letterpress.Services.AccountService.onLogin);
+Accounts.onLogin(Letterpress.Services.Account.onLogin);

@@ -1,6 +1,6 @@
-Letterpress.Services.BuyService = {};
+Letterpress.Services.Buy = {};
 
-Letterpress.Services.BuyService.purchase = function () {
+Letterpress.Services.Buy.purchase = function () {
 
   StripeCheckout.open({
     key: Meteor.settings.public.stripe.publicKey,

@@ -28,7 +28,7 @@ describe('Buy Service', function () {
       Meteor.settings.private.stripe.planId = 'myPlan';
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'me@example.com'});
+      Letterpress.Services.Buy.subscribe({id: 'notNull', email: 'me@example.com'});
 
       // - - VERIFY
       expect(Stripe.customers.create).toHaveBeenCalledWith({
@@ -42,13 +42,13 @@ describe('Buy Service', function () {
     it('creates an account on successful subscription', function () {
 
       // - - SETUP
-      spyOn(Letterpress.Services.AccountService, 'createAccount');
+      spyOn(Letterpress.Services.Account, 'createAccount');
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'not used'});
+      Letterpress.Services.Buy.subscribe({id: 'notNull', email: 'not used'});
 
       // - - VERIFY
-      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('someone@example.com', {
+      expect(Letterpress.Services.Account.createAccount).toHaveBeenCalledWith('someone@example.com', {
         stripeCustomerId: 'cust_0011',
         periodStart: 1436716844,
         periodEnd: 1436716844
@@ -59,11 +59,11 @@ describe('Buy Service', function () {
     it('stores an audit entry on successful subscription', function () {
 
       // - - SETUP
-      spyOn(Letterpress.Services.AccountService, 'createAccount');
+      spyOn(Letterpress.Services.Account, 'createAccount');
       spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.subscribe({id: 'notNull', email: 'token@email.com'});
+      Letterpress.Services.Buy.subscribe({id: 'notNull', email: 'token@email.com'});
 
       // - - VERIFY
       expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
@@ -103,7 +103,7 @@ describe('Buy Service', function () {
       Meteor.settings.public.currency = 'gbp';
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.charge({id: 'notNull', email: 'me@example.com'});
+      Letterpress.Services.Buy.charge({id: 'notNull', email: 'me@example.com'});
 
       // - - VERIFY
       expect(Stripe.charges.create).toHaveBeenCalledWith({
@@ -117,11 +117,11 @@ describe('Buy Service', function () {
     it('creates an account on successful charge and stores an audit entry', function () {
 
       // - - SETUP
-      spyOn(Letterpress.Services.AccountService, 'createAccount');
+      spyOn(Letterpress.Services.Account, 'createAccount');
       spyOn(Letterpress.Collections.Audit, 'insert');
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.charge({id: 'notNull', email: 'me@example.com'});
+      Letterpress.Services.Buy.charge({id: 'notNull', email: 'me@example.com'});
 
       // - - VERIFY
       expect(Letterpress.Collections.Audit.insert).toHaveBeenCalledWith({
@@ -135,7 +135,7 @@ describe('Buy Service', function () {
         },
         response: charge
       });
-      expect(Letterpress.Services.AccountService.createAccount).toHaveBeenCalledWith('me@example.com');
+      expect(Letterpress.Services.Account.createAccount).toHaveBeenCalledWith('me@example.com');
 
     });
 
@@ -157,7 +157,7 @@ describe('Buy Service', function () {
           password: 'letme1n',
           profile: {stripeCustomerId: 'cust_1234'}
         });
-        spyOn(Letterpress.Services.AccountService, 'sendPaymentEmail');
+        spyOn(Letterpress.Services.Account, 'sendPaymentEmail');
 
         // - - EXECUTE
         var event = {
@@ -168,10 +168,10 @@ describe('Buy Service', function () {
             }
           }
         };
-        Letterpress.Services.BuyService.handleEvent(event);
+        Letterpress.Services.Buy.handleEvent(event);
 
         // - - VERIFY
-        expect(Letterpress.Services.AccountService.sendPaymentEmail).toHaveBeenCalledWith(Meteor.users.findOne(userId));
+        expect(Letterpress.Services.Account.sendPaymentEmail).toHaveBeenCalledWith(Meteor.users.findOne(userId));
 
       });
     });

@@ -5,7 +5,7 @@ describe('Webhooks API', function () {
     it('delegates event handling to the buy service and responds with 200 on success', function () {
 
       // - - SETUP
-      spyOn(Letterpress.Services.BuyService, 'handleEvent');
+      spyOn(Letterpress.Services.Buy, 'handleEvent');
       spyOn(JsonRoutes, 'sendResult');
 
       var handler = JsonRoutes._isolator._routes['post' + '/' + Meteor.settings.private.stripe.webhookEndpoint];
@@ -16,7 +16,7 @@ describe('Webhooks API', function () {
       handler(req, res);
 
       // - - VERIFY
-      expect(Letterpress.Services.BuyService.handleEvent).toHaveBeenCalledWith('theEvent');
+      expect(Letterpress.Services.Buy.handleEvent).toHaveBeenCalledWith('theEvent');
       expect(JsonRoutes.sendResult).toHaveBeenCalledWith(res, 200);
 
     });

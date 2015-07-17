@@ -10,7 +10,7 @@ Meteor.publish("pages", function () {
   var fields = {title: 1, path: 1, template: 1, content: 1, order: 1};
 
   var user = Meteor.users.findOne(this.userId);
-  var isSubscribed = Letterpress.Services.AccountService.isSubscribed(user);
+  var isSubscribed = Letterpress.Services.Account.isSubscribed(user);
 
   if (this.userId && isSubscribed) {
     fields.premiumContent = 1;

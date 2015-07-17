@@ -6,13 +6,13 @@ describe('Payment API', function () {
 
       // - - SETUP
       Meteor.settings.private.paymentPlan = 'subscribe';
-      spyOn(Letterpress.Services.BuyService, 'subscribe');
+      spyOn(Letterpress.Services.Buy, 'subscribe');
 
       // - - EXECUTE
       var retVal = Meteor.call('purchase');
 
       // - - VERIFY
-      expect(Letterpress.Services.BuyService.subscribe).toHaveBeenCalled();
+      expect(Letterpress.Services.Buy.subscribe).toHaveBeenCalled();
       expect(retVal).toBe('subscribe');
 
     });
@@ -21,13 +21,13 @@ describe('Payment API', function () {
 
       // - - SETUP
       Meteor.settings.private.paymentPlan = 'charge';
-      spyOn(Letterpress.Services.BuyService, 'charge');
+      spyOn(Letterpress.Services.Buy, 'charge');
 
       // - - EXECUTE
       var retVal = Meteor.call('purchase');
 
       // - - VERIFY
-      expect(Letterpress.Services.BuyService.charge).toHaveBeenCalled();
+      expect(Letterpress.Services.Buy.charge).toHaveBeenCalled();
       expect(retVal).toBe('charge');
 
     });
@@ -47,7 +47,7 @@ describe('Payment API', function () {
 
       // - - SETUP
       Meteor.settings.private.paymentPlan = 'charge';
-      spyOn(Letterpress.Services.BuyService, 'charge');
+      spyOn(Letterpress.Services.Buy, 'charge');
       var spy = jasmine.createSpy('spy');
 
       // - - EXECUTE

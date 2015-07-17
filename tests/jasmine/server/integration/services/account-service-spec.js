@@ -7,7 +7,7 @@ describe('Account Service', function () {
       spyOn(Accounts, 'createUser').and.returnValue('someId');
       spyOn(Accounts, 'sendEnrollmentEmail');
 
-      Letterpress.Services.AccountService.createAccount('me@example.com', {stripeCustomerId: 'cust_00001'});
+      Letterpress.Services.Account.createAccount('me@example.com', {stripeCustomerId: 'cust_00001'});
 
       expect(Accounts.createUser).toHaveBeenCalledWith({
         email: 'me@example.com',
@@ -25,7 +25,7 @@ describe('Account Service', function () {
 
       Meteor.settings.private.paymentPlan = 'notSubscribe';
 
-      var result = Letterpress.Services.AccountService.isSubscribed();
+      var result = Letterpress.Services.Account.isSubscribed();
 
       expect(result).toBe(true);
 
@@ -37,7 +37,7 @@ describe('Account Service', function () {
 
       Meteor.settings.private.subscriptionDurationMonths = 1;
 
-      var result = Letterpress.Services.AccountService.isSubscribed({
+      var result = Letterpress.Services.Account.isSubscribed({
         profile: {periodEnd: getExpiredSubscriptionDate()}
       });
 
@@ -51,7 +51,7 @@ describe('Account Service', function () {
 
       Meteor.settings.private.subscriptionDurationMonths = 1;
 
-      var result = Letterpress.Services.AccountService.isSubscribed({
+      var result = Letterpress.Services.Account.isSubscribed({
         profile: {periodEnd: getEdgeSubscriptionDate()}
       });
 

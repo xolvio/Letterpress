@@ -9,11 +9,11 @@ Meteor.methods({
     switch (paymentPlan) {
 
       case 'subscribe':
-        Letterpress.Services.BuyService.subscribe(token);
+        Letterpress.Services.Buy.subscribe(token);
         break;
 
       case 'charge':
-        Letterpress.Services.BuyService.charge(token);
+        Letterpress.Services.Buy.charge(token);
         break;
 
       default:

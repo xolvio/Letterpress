@@ -11,7 +11,7 @@ describe('Account service', function () {
       spyOn(Router, 'go');
 
       // EXECUTE
-      Letterpress.Services.AccountService.onLogin();
+      Letterpress.Services.Account.onLogin();
 
       // VERIFY
       expect(Meteor.call).toHaveBeenCalledWith('isSubscribed', jasmine.any(Function));
@@ -28,7 +28,7 @@ describe('Account service', function () {
       spyOn(Router, 'go');
 
       // EXECUTE
-      Letterpress.Services.AccountService.onLogin();
+      Letterpress.Services.Account.onLogin();
 
       // VERIFY
       expect(Meteor.call).toHaveBeenCalledWith('isSubscribed', jasmine.any(Function));
@@ -45,7 +45,7 @@ describe('Account service', function () {
       spyOn(Router, 'go');
 
       // EXECUTE
-      Letterpress.Services.AccountService.onLogin();
+      Letterpress.Services.Account.onLogin();
 
       // VERIFY
       expect(Meteor.call).toHaveBeenCalledWith('isSubscribed', jasmine.any(Function));

@@ -1,6 +1,6 @@
 Stripe = StripeAPI(Meteor.settings.private.stripe.secretKey);
 
-Letterpress.Services.BuyService = {
+Letterpress.Services.Buy = {
 
   subscribe: function (token) {
 
@@ -29,7 +29,7 @@ Letterpress.Services.BuyService = {
 
     var subscription = customer.subscriptions.data[0];
 
-    Letterpress.Services.AccountService.createAccount(customer.email, {
+    Letterpress.Services.Account.createAccount(customer.email, {
       stripeCustomerId: customer.id,
       periodStart: subscription.current_period_start,
       periodEnd: subscription.current_period_end
@@ -61,7 +61,7 @@ Letterpress.Services.BuyService = {
       response: charge
     });
 
-    Letterpress.Services.AccountService.createAccount(token.email);
+    Letterpress.Services.Account.createAccount(token.email);
 
   },
 
@@ -71,7 +71,7 @@ Letterpress.Services.BuyService = {
     switch (event.type) {
       case 'invoice.payment_failed': // when recurring payment fails
         var user = Meteor.users.findOne({'profile.stripeCustomerId': event.data.object.customer});
-        Letterpress.Services.AccountService.sendPaymentEmail(user);
+        Letterpress.Services.Account.sendPaymentEmail(user);
         break;
       //case 'charge.failed': // if due to a decline
       //  break;

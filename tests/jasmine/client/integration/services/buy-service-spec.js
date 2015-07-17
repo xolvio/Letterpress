@@ -17,7 +17,7 @@ describe('Buy service', function () {
       // relies on beforeEach for setup
 
       // - - EXECUTE
-      Letterpress.Services.BuyService.purchase();
+      Letterpress.Services.Buy.purchase();
 
       // - - VERIFY
       // make sure the createCustomer method was called on the server with the token
@@ -34,7 +34,7 @@ describe('Buy service', function () {
     spyOn(Router, 'go');
 
     // trigger the stripe token handler, which will call the Meteor method
-    Letterpress.Services.BuyService.purchase();
+    Letterpress.Services.Buy.purchase();
 
     // grab the most recent meteor method (createCustomer) and grab the callback
     var args = Meteor.call.calls.mostRecent().args;
