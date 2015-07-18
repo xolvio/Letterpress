@@ -5,6 +5,7 @@ accounts-password
 
 # - - Internal Packages
 letterpress:core
+xolvio:aws-cloudfront-sign
 
 # - - Testing packages
 xolvio:cucumber
@@ -20,6 +21,7 @@ matb33:collection-hooks
 mrgalaxy:stripe
 iron:router
 simple:json-routes
+momentjs:moment
 
 # Bug fixing package for IR - github.com/iron-meteor/iron-router/issues/606#issuecomment-59130479
 gwendall:body-events

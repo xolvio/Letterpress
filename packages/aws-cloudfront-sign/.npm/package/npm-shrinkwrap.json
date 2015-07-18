@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "aws-cloudfront-sign": {
+      "version": "2.0.1",
+      "dependencies": {
+        "lodash": {
+          "version": "3.10.0"
+        }
+      }
+    }
+  }
+}

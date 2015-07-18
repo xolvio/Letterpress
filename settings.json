@@ -9,7 +9,7 @@
   },
   "private": {
     "paymentPlan": "subscribe",
-    "subscriptionDurationMonths" : 1,
+    "subscriptionDurationMonths": 1,
     "stripe": {
       "planId": "velocitySessions",
       "secretKey": "sk_test_hVLc1KClkixAjB20ImK7sTU1",
@@ -27,6 +27,11 @@
         "subject": "There was a problem with your payment",
         "text": "Looks like there was an issue with your payment. Don't worry we'll retry 3 times. You might want to check your Stripe account."
       }
+    },
+    "aws": {
+      "cfnDistribution": "d20im1j7iedr4x.cloudfront.net",
+      "keypairId" : "'APKAI6S56DROMMGID6BA'",
+      "privateKeyPath": "/Users/sam/pk-APKAI6S56DROMMGID6BA.pem"
     }
   }
 }
