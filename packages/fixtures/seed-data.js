@@ -1,4 +1,4 @@
-Letterpress.Utils.seedData = function() {
+Letterpress.Utils.seedData = function () {
   Letterpress.Collections.Pages.remove({});
 
   Letterpress.Collections.Pages.insert({
@@ -9,7 +9,10 @@ Letterpress.Utils.seedData = function() {
     '\n\n' +
     '*Write your own book with this WYSIWYG markdown powered book app*' +
     '\n\n' +
-    '[Try it](/try "Try It") [Buy It](# "Buy It")'
+    '[Try it](/try "Try It") [Buy It](# "Buy It")',
+    premiumContent: '#Welcome to Letterpress' +
+    '\n\n' +
+    ''
   });
 
   Letterpress.Collections.Pages.insert({
@@ -38,6 +41,8 @@ Letterpress.Utils.seedData = function() {
     path: '/subscribe-confirmation',
     description: '' +
     '##Thank you for your purchase. You are now subscribed' +
+    '\n\n' +
+    'Please check your email and click on your confirmation link to sign in.' +
     '\n\n' +
     '[Home](/ "Home")'
   });
@@ -77,9 +82,7 @@ Letterpress.Utils.seedData = function() {
     template: 'chapter',
     description: 'Bacon ipsum dolor amet do jerky chuck reprehenderit pork chop tempor ball tip ' +
     'proident tail velit pariatur jowl. Labore hamburger nisi, andouille meatball aute ribeye ' +
-    'leberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate. ' +
-    'Doner venison nulla in excepteur alcatra magna ground round turkey veniam ullamco tri-tip ' +
-    'in meatball. Landjaeger voluptate.',
+    'leberkas cupidatat. Dolore pastrami ball tip tenderloin ullamco nisi elit voluptate.',
     premiumContent: '' +
     loremIpsumBacon() +
     '\n\n' +
@@ -93,7 +96,7 @@ Letterpress.Utils.seedData = function() {
     description: 'Id pork loin fatback, fugiat pancetta tri-tip leberkas pork belly frankfurter ' +
     'proident. Non cupim ex, sunt doner tail strip steak. Do tempor pork belly short loin, chuck ' +
     'pork ground round frankfurter corned beef. Salami voluptate in et, cillum duis tri-tip ' +
-    'swine bresaola eu t-bone ribeye adipisicing.',
+    'swine bresaola.',
     premiumContent: '' +
     loremIpsumBacon() +
     '\n\n' +
@@ -106,7 +109,7 @@ Letterpress.Utils.seedData = function() {
     template: 'video-chapter',
     description: 'This is a video chapter that has nothing to do with bacon.',
     previewVideo: 'http://www.w3schools.com/html/mov_bbb.mp4',
-    premiumVideo: 'the-premium.mp4',
+    premiumVideo: '/meteor-testing/sample.mp4',
     premiumContent: '' +
     '[Home](/ "Home")',
     order: 3
