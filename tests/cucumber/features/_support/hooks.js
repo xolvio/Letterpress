@@ -16,6 +16,9 @@
           return self.server.call('emailStub/stub');
         })
         .then(function () {
+          return self.server.call('fixtures/stubCloudFrontClient');
+        })
+        .then(function () {
           // go to the page first so we have access to the Meteor object
           return self.browser
             .url(process.env.ROOT_URL)
@@ -31,6 +34,7 @@
                   }]
                 }
               };
+              // this call will stub stripe both on the client and server
               Meteor.call('stripeStub/stub', customer, done);
             });
 
