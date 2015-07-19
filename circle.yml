@@ -65,6 +65,7 @@ test:
     # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
     - node ./tests/ci/velocity.js:
         environment:
+          JASMINE_SERVER_INTEGRATION: 0
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"
           SELENIUM_BROWSER: firefox
