@@ -1,7 +1,7 @@
-Feature: Create content
+Feature: Create content page
 
   As an author
-  I want to create content
+  I want to create a content page
   So that I sell it
 
   Scenario: Create a chapter
