@@ -6,8 +6,12 @@
 
     'fixtures/seedData': Letterpress.Utils.seedData,
 
-    'fixtures/reset': function () {
-      Meteor.users.remove({});
+    'fixtures/reset': function (noResetUsers) {
+
+      if (!noResetUsers) {
+        Meteor.users.remove({});
+      }
+
       Letterpress.Collections.Audit.remove({});
       Letterpress.Collections.Pages.remove({});
     },
