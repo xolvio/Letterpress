@@ -5,11 +5,10 @@ describe('Video Chapter Template', function () {
     it('sets the videoLocation to the preview video when the premium video is not available', function () {
 
       // SETUP
+      spyOn(Letterpress.Collections.Pages, 'findOne').and.returnValue({});
       var thisContext = {
-        data: {
-          previewVideo: 'someLocation',
-          premiumVideo: null
-        }
+        data: {previewVideo: 'someLocation'},
+        autorun: function (immediateCallback) { immediateCallback(); }
       };
 
       // EXECUTE
@@ -23,11 +22,12 @@ describe('Video Chapter Template', function () {
     it('sets the videoLocation to the signed URL when the premium video is available', function () {
 
       // SETUP
+      spyOn(Letterpress.Collections.Pages, 'findOne').and.returnValue({
+        premiumVideo: 'aNonSignedUrl'
+      });
       var thisContext = {
-        data: {
-          previewVideo: null,
-          premiumVideo: 'someLocation'
-        }
+        data: {previewVideo: null},
+        autorun: function (immediateCallback) { immediateCallback(); }
       };
       spyOn(Meteor, 'call').and.callFake(function (method, url, callback) {
         var fakeError    = null,
@@ -77,7 +77,7 @@ describe('Video Chapter Template', function () {
         });
 
         spyOn(window, '$').and.returnValue([{
-          load: function() {
+          load: function () {
             // VERIFY (if the load isn't called, this test will timeout)
             done();
           }

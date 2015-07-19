@@ -2,19 +2,24 @@ Template.videoChapter.created = function () {
 
   var self = this;
 
-  self.videoLocation = new ReactiveVar();
+  self.autorun(function () {
 
-  if (!self.data.premiumVideo) {
-    self.videoLocation.set(self.data.previewVideo);
-    return;
-  }
+    self.videoLocation = new ReactiveVar();
 
-  Meteor.call('getSignedUrl', self.data.premiumVideo, function (err, url) {
-    if (err) {
-      console.error(err);
-    } else {
-      self.videoLocation.set(url);
+    var premiumVideo = Letterpress.Collections.Pages.findOne(self.data._id).premiumVideo;
+
+    if (!premiumVideo) {
+      self.videoLocation.set(self.data.previewVideo);
+      return;
     }
+
+    Meteor.call('getSignedUrl', premiumVideo, function (err, url) {
+      if (err) {
+        console.error(err);
+      } else {
+        self.videoLocation.set(url);
+      }
+    });
   });
 
 };
