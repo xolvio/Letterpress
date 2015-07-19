@@ -1,0 +1,1 @@
+Meteor.settings.public.disqus = null;
