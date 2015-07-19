@@ -51,7 +51,7 @@ module.exports = function () {
   });
 
   this.Given(/^a user is subscribed$/, function () {
-    return this.Authentication.createAccount({
+    return this.AuthenticationHelper.createAccount({
       stripeCustomerId: 'cust_0011',
       periodStart: 1436716844,
       periodEnd: 1436716844
@@ -91,7 +91,7 @@ module.exports = function () {
     date.setMonth(date.getMonth() - months);
     var periodEnd = Math.floor(date.getTime() / 1000);
 
-    return this.Authentication.createAccount({
+    return this.AuthenticationHelper.createAccount({
       periodEnd: periodEnd
     });
 

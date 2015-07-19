@@ -1,14 +1,14 @@
 <template name="landing-page">
 
     <header>
-        {{#markdown}}{{this.content}}{{/markdown}}
+        {{#markdown}}{{this.description}}{{/markdown}}
     </header>
 
     <section class="toc">
         {{#each chapters}}
             <div class="chapter">
                 <h3><a href="{{path}}" title="{{title}}">{{title}}</a></h3>
-                {{#markdown}}{{content}}{{/markdown}}
+                {{#markdown}}{{description}}{{/markdown}}
             </div>
         {{/each}}
     </section>

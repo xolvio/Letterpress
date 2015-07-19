@@ -23,7 +23,7 @@ Meteor.methods({
 
   'getSignedUrl': function(requestedResource) {
   
-    if (!this.user) {
+    if (!this.userId) {
       throw new Meteor.error('403', 'You are not authorized to access this content');
     }
     

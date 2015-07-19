@@ -1,0 +1,28 @@
+<template name="videoChapter">
+
+    <div class="video-chapter">
+        <h1>{{this.title}}</h1>
+
+        <video width="80%" poster="/poster.png" controls>
+            <source src="{{videoUrl}}" type="video/mp4">
+        </video>
+
+        <div class="description">
+            {{#markdown}}{{this.description}}{{/markdown}}
+        </div>
+
+        {{#if subscribed}}
+            {{#markdown}}{{this.premiumContent}}{{/markdown}}
+
+            {{> disqusThread}}
+
+        {{else}}
+            <a href="/">Home</a>
+            <a href="#">Buy Now</a>
+
+            <p>
+                Already have an account? <a class="sign-in" href="#">Sign In</a>
+            </p>
+        {{/if}}
+    </div>
+</template>

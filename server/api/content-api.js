@@ -16,7 +16,7 @@ Meteor.methods({
       expireTime: moment().add(1, 'hour'),
 
       cfnDistribution: Meteor.settings.private.aws.cfnDistribution,
-      keypairId: Meteor.settings.private.aws.cfnDistribution.keypairId,
+      keypairId: Meteor.settings.private.aws.keypairId,
       privateKeyPath: Meteor.settings.private.aws.privateKeyPath
       // privateKeyString: process.env.CFN_PRIVATE_KEY
     });

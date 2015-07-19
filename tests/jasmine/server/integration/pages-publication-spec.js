@@ -5,10 +5,12 @@ describe("Pages publication", function () {
       Letterpress.Collections.Pages.insert({
         _id: 'myId',
         title: 'My Title with Spaces and Cases',
-        content: 'My preview content',
-        premiumContent: 'My premium content that you need to login for',
+        description: 'My description',
+        path: '/content',
         order: 1,
-        path: '/content'
+        previewVideo: 'http://cdn.com/a/preview.mp4',
+        premiumVideo: 'http://cdn.com/a/video.mp4',
+        premiumContent: 'My premium content that you need to login for'
       }, done);
     });
   });
@@ -24,10 +26,13 @@ describe("Pages publication", function () {
     // VERIFY
     data = cursor.fetch()[0];
     expect(data.premiumContent).toBeUndefined();
-    expect(data.content).toBe(page.content);
+    expect(data.premiumVideo).toBeUndefined();
+    expect(data.previewVideo).toBe(page.previewVideo);
+    expect(data.description).toBe(page.description);
     expect(data.title).toBe(page.title);
     expect(data.order).toBe(page.order);
     expect(data.path).toBe(page.path);
+
   });
 
   it('should return premiumContent when a user is logged in', function () {
@@ -45,6 +50,7 @@ describe("Pages publication", function () {
 
     // VERIFY
     expect(cursor.fetch()[0].premiumContent).toBe(page.premiumContent);
+    expect(cursor.fetch()[0].video).toBe(page.video);
   });
 
 
@@ -64,7 +70,9 @@ describe("Pages publication", function () {
     // VERIFY
     data = cursor.fetch()[0];
     expect(data.premiumContent).toBeUndefined();
-    expect(data.content).toBe(page.content);
+    expect(data.premiumVideo).toBeUndefined();
+    expect(data.previewVideo).toBe(page.previewVideo);
+    expect(data.description).toBe(page.description);
     expect(data.title).toBe(page.title);
     expect(data.order).toBe(page.order);
     expect(data.path).toBe(page.path);

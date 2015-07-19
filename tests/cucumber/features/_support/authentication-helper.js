@@ -4,7 +4,7 @@ module.exports = function () {
     var client = this.client;
     var server = this.server;
 
-    this.Authentication = {
+    this.AuthenticationHelper = {
 
       login: function () {
         return client.waitForExist('a#login-sign-in-link').
@@ -31,7 +31,15 @@ module.exports = function () {
           password: 'letme1n',
           profile: profile
         });
+      },
+
+      createAccountAndLogin : function(profile) {
+        var self = this;
+        return self.createAccount(profile).then(function() {
+          return self.login();
+        });
       }
+
     };
 
     done();

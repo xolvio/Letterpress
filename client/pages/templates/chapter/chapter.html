@@ -4,7 +4,7 @@
         <h1>{{this.title}}</h1>
 
         <div class="description">
-            {{#markdown}}{{this.content}}{{/markdown}}
+            {{#markdown}}{{this.description}}{{/markdown}}
         </div>
 
         {{#if subscribed}}
@@ -17,12 +17,8 @@
             <a href="#">Buy Now</a>
 
             <p>
-                Already have an account? <a class="sign-in-link" href="/sign-in">Sign In</a>
+                Already have an account? <a class="sign-in" href="#">Sign In</a>
             </p>
         {{/if}}
     </div>
-</template>
-
-<template name="disqusThread">
-    <div id="disqus_thread"></div>
 </template>

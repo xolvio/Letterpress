@@ -53,11 +53,11 @@ module.exports = function () {
   });
 
   this.Given(/^I have already created an account$/, function () {
-    return this.Authentication.createAccount();
+    return this.AuthenticationHelper.createAccount();
   });
 
   this.When(/^I login with my username and password$/, function () {
-    return this.Authentication.login();
+    return this.AuthenticationHelper.login();
   });
 
 };

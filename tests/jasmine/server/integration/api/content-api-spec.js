@@ -30,6 +30,9 @@ describe('Content API', function () {
     it('gets a signed to the given content if the user is subscribed', function () {
 
       // SETUP
+      Meteor.settings.private.aws.cfnDistribution = 'distro';
+      Meteor.settings.private.aws.keypairId = 'keypair';
+      Meteor.settings.private.aws.privateKeyPath = 'privateKey';
       spyOn(CloudFront, 'sign');
       spyOn(Letterpress.Services.Account, 'isSubscribed').and.returnValue(true);
       moment = function () {return {add: function () {return -1}}};
@@ -42,9 +45,9 @@ describe('Content API', function () {
       expect(CloudFront.sign).toHaveBeenCalledWith({
         s3ObjectPath: requestedResource,
         expireTime: -1,
-        cfnDistribution: Meteor.settings.private.aws.cfnDistribution,
-        keypairId: Meteor.settings.private.aws.cfnDistribution.keypairId,
-        privateKeyPath: Meteor.settings.private.aws.privateKeyPath
+        cfnDistribution: 'distro',
+        keypairId: 'keypair',
+        privateKeyPath: 'privateKey'
       });
 
     });
