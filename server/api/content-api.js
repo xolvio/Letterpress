@@ -11,15 +11,21 @@ Meteor.methods({
       throw new Meteor.Error('403', 'You are not authorized to access this content');
     }
 
-    return CloudFront.sign({
+    var options = {
       s3ObjectPath: requestedResource,
       expireTime: moment().add(1, 'hour'),
 
       cfnDistribution: Meteor.settings.private.aws.cfnDistribution,
       keypairId: Meteor.settings.private.aws.keypairId,
-      privateKeyPath: Meteor.settings.private.aws.privateKeyPath
-      // privateKeyString: process.env.CFN_PRIVATE_KEY
-    });
+    };
+
+    if (process.env.CF_PRIVATE_KEY) {
+      options.privateKeyString = process.env.CF_PRIVATE_KEY
+    } else {
+      options.privateKeyPath = Meteor.settings.private.aws.privateKeyPath
+    }
+
+    return CloudFront.sign(options);
 
   }
 
