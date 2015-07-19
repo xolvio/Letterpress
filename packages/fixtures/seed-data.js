@@ -9,20 +9,10 @@ Letterpress.Utils.seedData = function () {
     '\n\n' +
     '*Write your own book with this WYSIWYG markdown powered book app*' +
     '\n\n' +
-    '[Try it](/try "Try It") [Buy It](# "Buy It")',
+    '[Buy It](# "Buy It")',
     premiumContent: '#Welcome to Letterpress' +
     '\n\n' +
     ''
-  });
-
-  Letterpress.Collections.Pages.insert({
-    title: 'Try',
-    template: 'info',
-    path: '/try',
-    description: '' +
-    '##Coming soon' +
-    '\n\n' +
-    '[Home](/ "Home")'
   });
 
   Letterpress.Collections.Pages.insert({
