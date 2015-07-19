@@ -32,7 +32,6 @@ Feature: Create content page
     When a visitor navigates to the page
     Then they should see the preview video in the video player
 
-  @dev
   Scenario: Create a premium video chapter
     Given I uploaded a premium video called "/meteor-testing/day2.mp4"
     And I created a "video-chapter" called "My Cast" at "/cast-x" with the following markdown
