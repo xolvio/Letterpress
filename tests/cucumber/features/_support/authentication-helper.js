@@ -8,7 +8,6 @@ module.exports = function () {
 
       login: function () {
         return client.
-          url(process.env.ROOT_URL).
           waitForExist('a#login-sign-in-link').
           click('a#login-sign-in-link').
           setValue('#login-email', 'me@example.com').
