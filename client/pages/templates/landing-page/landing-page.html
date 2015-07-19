@@ -1,8 +1,14 @@
 <template name="landing-page">
 
+    {{#unless currentUser}}
     <header>
-        {{#markdown}}{{this.description}}{{/markdown}}
+        {{#markdown}}{{description}}{{/markdown}}
     </header>
+    {{/unless}}
+
+    {{#if currentUser}}
+        {{#markdown}}{{premiumContent}}{{/markdown}}
+    {{/if}}
 
     <section class="toc">
         {{#each chapters}}

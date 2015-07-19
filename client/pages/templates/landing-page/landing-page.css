@@ -42,14 +42,22 @@
     background-color: orange;
 }
 
+.landing-page {
+    text-align: center;
+}
+
 .landing-page .toc {
     margin: 0 auto;
     max-width: 900px;
 }
 
 .landing-page .toc .chapter {
+    text-align: left;
     border: 0;
-    padding: 25px;
-    width: 400px;
+    background-color: #eee;
+    margin: 10px;
+    padding: 10px 40px;
+    max-width: 350px;
+    height: 200px;
     float: left;
 }

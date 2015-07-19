@@ -1,24 +1,23 @@
 <template name="chapter">
 
-    <div class="chapter">
-        <h1>{{this.title}}</h1>
+    <h1>{{this.title}}</h1>
 
-        <div class="description">
-            {{#markdown}}{{this.description}}{{/markdown}}
-        </div>
-
-        {{#if subscribed}}
-            {{#markdown}}{{this.premiumContent}}{{/markdown}}
-
-            {{> disqusThread}}
-
-        {{else}}
-            <a href="/">Home</a>
-            <a href="#">Buy Now</a>
-
-            <p>
-                Already have an account? <a class="sign-in" href="#">Sign In</a>
-            </p>
-        {{/if}}
+    <div class="description">
+        {{#markdown}}{{this.description}}{{/markdown}}
     </div>
+
+    {{#if subscribed}}
+        {{#markdown}}{{this.premiumContent}}{{/markdown}}
+
+        {{> disqusThread}}
+
+    {{else}}
+        <a href="/">Home</a>
+        <a href="#">Buy Now</a>
+
+        <p>
+            Already have an account? <a class="sign-in" href="#">Sign In</a>
+        </p>
+    {{/if}}
+
 </template>
