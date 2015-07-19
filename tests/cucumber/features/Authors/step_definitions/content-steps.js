@@ -118,8 +118,6 @@ module.exports = function () {
       waitForExist('video').
       getAttribute('video source', 'src', function (err, src) {
 
-        console.log(src);
-
         var expiresAt = new Date(url.parse(src, true).query.Expires * 1000);
         var diffInSeconds = (expiresAt.getTime() - new Date().getTime()) / 1000;
 
