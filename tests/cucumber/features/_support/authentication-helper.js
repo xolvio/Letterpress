@@ -7,7 +7,9 @@ module.exports = function () {
     this.AuthenticationHelper = {
 
       login: function () {
-        return client.waitForExist('a#login-sign-in-link').
+        return client.
+          url(process.env.ROOT_URL).
+          waitForExist('a#login-sign-in-link').
           click('a#login-sign-in-link').
           setValue('#login-email', 'me@example.com').
           setValue('#login-password', 'letme1n').
