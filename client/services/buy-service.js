@@ -12,8 +12,7 @@ Letterpress.Services.Buy.purchase = function () {
         if (!err) {
           Router.go('/' + paymentPlan + '-confirmation')
         } else {
-          // XXX handle error cases
-          console.log(err);
+          alert('Sorry There was an error.\n' +  err.message);
         }
 
       });
