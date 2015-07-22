@@ -90,6 +90,6 @@ velocity:shim@0.1.0
 webapp@1.2.0
 webapp-hashing@1.0.3
 xolvio:aws-cloudfront-sign@0.1.0
-xolvio:cucumber@0.12.0
+xolvio:cucumber@0.12.2
 xolvio:email-stub@0.2.0
 xolvio:stripe-stub@0.0.2
