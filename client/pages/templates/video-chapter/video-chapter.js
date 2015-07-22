@@ -2,9 +2,9 @@ Template.videoChapter.created = function () {
 
   var self = this;
 
-  self.autorun(function () {
+  self.videoLocation = new ReactiveVar();
 
-    self.videoLocation = new ReactiveVar();
+  self.autorun(function () {
 
     var premiumVideo = Letterpress.Collections.Pages.findOne(self.data._id).premiumVideo;
 
