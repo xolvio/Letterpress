@@ -1,7 +1,7 @@
 Feature: Setup a subscription
 
   As an author
-  I want to configure subscription details
+  I want to configure subscriptions
   So that I can get paid for my content
 
   Background: Setup Stripe
