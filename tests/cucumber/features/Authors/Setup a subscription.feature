@@ -12,7 +12,7 @@ Feature: Setup a subscription
     Given I have setup a "subscribe" payment plan
     When a user pays using Stripe
     Then they see a confirmation screen of their "subscribe" purchase
-    And receive a confirmation email of their "subscribe" purchase
+    And receive a confirmation email of their "subscribe" purchase 
 
   Scenario: Warn user of unpaid subscription
     Given a user is subscribed
