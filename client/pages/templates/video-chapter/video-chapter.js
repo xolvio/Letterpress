@@ -29,7 +29,8 @@ Template.videoChapter.helpers({
 
     // we need this to run after the next tick
     setTimeout(function() {
-      $('video')[0].load();
+      var videoEl = $('video')[0];
+      if (videoEl) videoEl.load();
     }, 0);
 
     return Template.instance().videoLocation.get();

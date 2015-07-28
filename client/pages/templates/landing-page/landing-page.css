@@ -49,15 +49,14 @@
 .landing-page .toc {
     margin: 0 auto;
     max-width: 900px;
+    display: flex;
 }
 
 .landing-page .toc .chapter {
     text-align: left;
-    border: 0;
-    background-color: #eee;
+    border: solid 2px #9c9;
+    border-radius: 10px;
     margin: 10px;
     padding: 10px 40px;
-    max-width: 350px;
-    height: 200px;
-    float: left;
+    flex: 1;
 }

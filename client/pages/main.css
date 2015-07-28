@@ -1,16 +1,16 @@
 html {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    padding: 0;
-    margin: 0 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .main {
-    text-align: left;
-    margin: 0 auto;
-    padding: 5px;
-    max-width: 900px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 5px;
+  max-width: 900px;
 }
