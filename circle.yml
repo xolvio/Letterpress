@@ -6,7 +6,7 @@ machine:
   environment:
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
-    SETTINGS_FILE: "app/settings.json"
+    SETTINGS_FILE: "../environments/build/settings.json"
     STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
 
 dependencies:
