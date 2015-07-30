@@ -84,8 +84,8 @@ deployment:
     commands:
       # Run Meteor-up deployment
       - mup deploy:
-        pwd: environments/production
-        environment:
-          STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
+          pwd: environments/production
+          environment:
+            STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
 
     # STRIPE_SECRET_KEY: $LIVE_STRIPE_SECRET_KEY
