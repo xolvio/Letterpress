@@ -42,6 +42,7 @@ dependencies:
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor and Cucumber related dependencies
     - node ./environments/build/velocity.js:
+        pwd: app
         environment:
           INSTALL_DEPENDENCIES: true
 
@@ -59,6 +60,7 @@ test:
 
     # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
     - node ./environments/build/velocity.js:
+        pwd: app
         environment:
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
@@ -68,6 +70,7 @@ test:
 
     # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
     - node ./environments/build/velocity.js:
+        pwd: app
         environment:
           JASMINE_SERVER_INTEGRATION: 0
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
@@ -75,7 +78,6 @@ test:
           SELENIUM_BROWSER: firefox
     - mkdir -p $CIRCLE_ARTIFACTS/firefox
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
-
 
 deployment:
 
