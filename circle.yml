@@ -3,9 +3,6 @@ machine:
   java:
     version: oraclejdk8
 
-  node:
-    version: 0.10.38
-
   environment:
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
