@@ -10,9 +10,8 @@ export JASMINE_CLIENT_INTEGRATION=1
 export JASMINE_SERVER_INTEGRATION=1
 export CUCUMBER=1
 
-if [ $1 = "--test" ]; then
+if [ "$1" = "--test" ]; then
   export CUCUMBER_TAIL=1;
-  #export SIMIAN_ACCESS_TOKEN=
 fi
 
 meteor $1 --settings settings.json --release velocity:METEOR@1.1.0.2_3 --raw-logs
