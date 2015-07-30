@@ -51,7 +51,7 @@ dependencies:
     - npm install --production:
         pwd: app/tests/cucumber
 
-    # Install Modulus CLI
+    # -- CACHE METEOR UP --
     - npm install -g mupx
 
 test:
@@ -66,7 +66,7 @@ test:
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
           SELENIUM_BROWSER: chrome
     - mkdir -p $CIRCLE_ARTIFACTS/chrome
-    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
+    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
 
     # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
     - node ../environments/build/velocity.js:
@@ -77,7 +77,7 @@ test:
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"
           SELENIUM_BROWSER: firefox
     - mkdir -p $CIRCLE_ARTIFACTS/firefox
-    - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
+    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
 
 deployment:
 
