@@ -3,6 +3,9 @@ machine:
   java:
     version: oraclejdk8
 
+  node:
+    version: 0.10.38
+
   environment:
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
@@ -52,7 +55,7 @@ dependencies:
 #        pwd: app/tests/cucumber
 
     # -- CACHE METEOR UP --
-    - npm install -g mup
+    - npm install -g mupx
 
 #test:
 #
@@ -86,7 +89,7 @@ deployment:
     branch: 'master'
     commands:
       # Run Meteor-up deployment
-      - mup deploy:
+      - mupx deploy:
           pwd: environments/production
           environment:
             MONGO_URL: $LIVE_MONGO_URL
