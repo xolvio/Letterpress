@@ -1,0 +1,37 @@
+{
+  "public": {
+    "price": "1000",
+    "currency": "usd",
+    "disqus": "letterpresssite",
+    "stripe": {
+      "publicKey": "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX"
+    }
+  },
+  "private": {
+    "paymentPlan": "subscribe",
+    "subscriptionDurationMonths": 1,
+    "stripe": {
+      "planId": "velocitySessions",
+      "secretKey": "SET_IN_ENVIRONMENT_VARIABLES",
+      "webhookEndpoint": "GmkW9P8EgQmRXm7D8"
+    },
+    "emails": {
+      "welcome": {
+        "siteName": "The Velocity Sessions",
+        "from": "Sam Hatoum <sam@xolv.io>",
+        "subject": "Welcome to the Velocity Sessions!",
+        "text": "You are now subscribed. To access your content, simply click the link below:"
+      },
+      "failedPayment": {
+        "from": "Sam Hatoum <sam@xolv.io>",
+        "subject": "There was a problem with your payment",
+        "text": "Looks like there was an issue with your payment. Don't worry we'll retry 3 times. You might want to check your Stripe account."
+      }
+    },
+    "aws": {
+      "cfnDistribution": "d20im1j7iedr4x.cloudfront.net",
+      "keypairId" : "APKAI6S56DROMMGID6BA",
+      "privateKeyPath": "/home/ubuntu/.ssh/id_e63a7fbbf2c423eb3271dcfe03a6fec2"
+    }
+  }
+}

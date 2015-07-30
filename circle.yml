@@ -6,7 +6,8 @@ machine:
   environment:
     # Enable this to debug builds
     #VELOCITY_DEBUG: true
-    SETTINGS_FILE: "settings.json"
+    SETTINGS_FILE: "app/settings.json"
+    STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
 
 dependencies:
 
@@ -40,21 +41,24 @@ dependencies:
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor and Cucumber related dependencies
-    - node ./tests/ci/velocity.js:
+    - node ./environments/build/velocity.js:
         environment:
           INSTALL_DEPENDENCIES: true
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install package dependencies for Cucumber support files
     - npm install --production:
-        pwd: tests/cucumber
+        pwd: app/tests/cucumber
+
+    # Install Modulus CLI
+    - npm install -g mupx
 
 test:
 
   override:
 
     # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
-    - node ./tests/ci/velocity.js:
+    - node ./environments/build/velocity.js:
         environment:
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
           CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
@@ -63,7 +67,7 @@ test:
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
 
     # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
-    - node ./tests/ci/velocity.js:
+    - node ./environments/build/velocity.js:
         environment:
           JASMINE_SERVER_INTEGRATION: 0
           CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
@@ -71,3 +75,17 @@ test:
           SELENIUM_BROWSER: firefox
     - mkdir -p $CIRCLE_ARTIFACTS/firefox
     - cp .meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
+
+
+deployment:
+
+  production:
+    branch: 'master'
+    commands:
+      # Run Meteor-up deployment
+      - mup deploy:
+        pwd: environments/production
+        environment:
+          STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
+
+    # STRIPE_SECRET_KEY: $LIVE_STRIPE_SECRET_KEY

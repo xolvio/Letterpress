@@ -1,4 +1,4 @@
-Stripe = StripeAPI(Meteor.settings.private.stripe.secretKey);
+Stripe = StripeAPI(process.env.STRIPE_SECRET_KEY || Meteor.settings.private.stripe.secretKey);
 
 Letterpress.Services.Buy = {
 
