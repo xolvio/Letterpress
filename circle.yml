@@ -88,6 +88,8 @@ deployment:
       - mup deploy:
           pwd: environments/production
           environment:
+            MONGO_URL: $LIVE_MONGO_URL
+            MONGO_OPLOG_URL: $LIVE_MONGO_OPLOG_URL
             STRIPE_SECRET_KEY: $TEST_STRIPE_SECRET_KEY
 
     # STRIPE_SECRET_KEY: $LIVE_STRIPE_SECRET_KEY
