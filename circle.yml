@@ -85,15 +85,12 @@ deployment:
   production:
     branch: 'master'
     commands:
-      # Run Meteor-up deployment
+      # Put our secret environment variables into the mup.json env vars section
+      - sed -i.bak s^%MAIL_URL%^$MAIL_URL^g mup.json
+      - sed -i.bak s^%SIMIAN_ACCESS_TOKEN%^$SIMIAN_ACCESS_TOKEN^g mup.json
+      - sed -i.bak s^%MONGO_URL%^$LIVE_MONGO_URL^g mup.json
+      - sed -i.bak s^%MONGO_OPLOG_URL%^$LIVE_MONGO_OPLOG_URL^g mup.json
+      - sed -i.bak s^%STRIPE_SECRET_KEY%^$TEST_STRIPE_SECRET_KEY^g mup.json
+      # Run Meteor-up deployment using file with secure vars
       - mupx deploy:
           pwd: environments/production
-          environment:
-            PORT: 80,
-            ROOT_URL: "http://able.xolv.io"
-            NODE_ENV: "production" 
-            MONGO_URL: "$LIVE_MONGO_URL"
-            MONGO_OPLOG_URL: "$LIVE_MONGO_OPLOG_URL"
-            STRIPE_SECRET_KEY: "$TEST_STRIPE_SECRET_KEY"
-
-    # STRIPE_SECRET_KEY: $LIVE_STRIPE_SECRET_KEY
