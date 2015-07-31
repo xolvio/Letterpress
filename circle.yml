@@ -18,20 +18,20 @@ dependencies:
 
   override:
 
-    # -- CACHE CHROME --
-    # ...remove default ChromeDriver for safety
-    - sudo rm -rf /usr/local/bin/chromedriver*
-    # ...update to the latest chrome if the version is v38x (TODO need a better grep)
-    - sudo rm /tmp/update-chrome || true
-    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then echo UPDATE_CHROME > /tmp/update-chrome; fi
-    # ...check if we already have a tarred version and untar that
-    - if [ -e /tmp/update-chrome ] && [ -e ~/_opt/google-chrome.tar ]; then sudo tar -xvf ~/_opt/google-chrome.tar -C /; fi
-    # ...otherwise download chrome and tar it
-    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -; fi
-    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'; fi
-    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo apt-get update; fi
-    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo apt-get install google-chrome-stable; fi
-    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then mkdir ~/_opt; tar -cvf ~/_opt/google-chrome.tar /opt/google/chrome/; fi
+#    # -- CACHE CHROME --
+#    # ...remove default ChromeDriver for safety
+#    - sudo rm -rf /usr/local/bin/chromedriver*
+#    # ...update to the latest chrome if the version is v38x (TODO need a better grep)
+#    - sudo rm /tmp/update-chrome || true
+#    - /opt/google/chrome/chrome --version | grep '38' &> /dev/null; if [ $? == 0 ]; then echo UPDATE_CHROME > /tmp/update-chrome; fi
+#    # ...check if we already have a tarred version and untar that
+#    - if [ -e /tmp/update-chrome ] && [ -e ~/_opt/google-chrome.tar ]; then sudo tar -xvf ~/_opt/google-chrome.tar -C /; fi
+#    # ...otherwise download chrome and tar it
+#    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -; fi
+#    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'; fi
+#    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo apt-get update; fi
+#    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then sudo apt-get install google-chrome-stable; fi
+#    - if [ -e /tmp/update-chrome ] && [ ! -e ~/_opt/google-chrome.tar ]; then mkdir ~/_opt; tar -cvf ~/_opt/google-chrome.tar /opt/google/chrome/; fi
 
     # -- CACHE METEOR --
     # Restore the meteor symlink
@@ -39,46 +39,46 @@ dependencies:
     # Install Meteor if the cache didn't restore it
     - if [ ! -e ~/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
 
-    # -- CACHE CUCUMBER NPM MODULES --
-    # Install Meteor and Cucumber related dependencies
-    - node ../environments/build/velocity.js:
-        pwd: app
-        environment:
-          INSTALL_DEPENDENCIES: true
-
-    # -- CACHE CUCUMBER NPM MODULES --
-    # Install package dependencies for Cucumber support files
-    - npm install --production:
-        pwd: app/tests/cucumber
+#    # -- CACHE CUCUMBER NPM MODULES --
+#    # Install Meteor and Cucumber related dependencies
+#    - node ../environments/build/velocity.js:
+#        pwd: app
+#        environment:
+#          INSTALL_DEPENDENCIES: true
+#
+#    # -- CACHE CUCUMBER NPM MODULES --
+#    # Install package dependencies for Cucumber support files
+#    - npm install --production:
+#        pwd: app/tests/cucumber
 
     # -- CACHE METEOR UP --
     - npm install -g mupx
 
-test:
-
-  override:
-
-    # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
-    - node ../environments/build/velocity.js:
-        pwd: app
-        environment:
-          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
-          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
-          SELENIUM_BROWSER: chrome
-    - mkdir -p $CIRCLE_ARTIFACTS/chrome
-    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
-
-    # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
-    - node ../environments/build/velocity.js:
-        pwd: app
-        environment:
-          # no need to run server integration tests again since browser choice has no impact
-          JASMINE_SERVER_INTEGRATION: 0
-          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
-          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"
-          SELENIUM_BROWSER: firefox
-    - mkdir -p $CIRCLE_ARTIFACTS/firefox
-    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
+#test:
+#
+#  override:
+#
+#    # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
+#    - node ../environments/build/velocity.js:
+#        pwd: app
+#        environment:
+#          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/chrome"
+#          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/chrome.cucumber"
+#          SELENIUM_BROWSER: chrome
+#    - mkdir -p $CIRCLE_ARTIFACTS/chrome
+#    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/chrome
+#
+#    # Test the app with Firefox and ensure all artifacts can be traced back to the firefox run
+#    - node ../environments/build/velocity.js:
+#        pwd: app
+#        environment:
+#          # no need to run server integration tests again since browser choice has no impact
+#          JASMINE_SERVER_INTEGRATION: 0
+#          CUCUMBER_SCREENSHOTS_DIR: "$CIRCLE_ARTIFACTS/screenshots/firefox"
+#          CUCUMBER_JSON_OUTPUT: "$CIRCLE_TEST_REPORTS/firefox.cucumber"
+#          SELENIUM_BROWSER: firefox
+#    - mkdir -p $CIRCLE_ARTIFACTS/firefox
+#    - cp app/.meteor/local/log/*.log $CIRCLE_ARTIFACTS/firefox
 
 deployment:
 
@@ -89,6 +89,9 @@ deployment:
       - mupx deploy:
           pwd: environments/production
           environment:
+            PORT: 80, 
+            ROOT_URL: "http://able.xolv.io", 
+            NODE_ENV: "production" ,
             MONGO_URL: "$LIVE_MONGO_URL"
             MONGO_OPLOG_URL: "$LIVE_MONGO_OPLOG_URL"
             STRIPE_SECRET_KEY: "$TEST_STRIPE_SECRET_KEY"
