@@ -12,6 +12,8 @@ args.push(velocityMeteorRelease);
 args.push('--settings');
 args.push(path.resolve(process.cwd(), process.env.SETTINGS_FILE));
 
+
+
 // Setting INSTALL_DEPENDENCIES downloads dependencies and exists. Used for build caching
 if (!!process.env.INSTALL_DEPENDENCIES) {
   process.env.VELOCITY = 0;
@@ -23,13 +25,15 @@ else {
 }
 
 console.log('Starting Meteor with', args, process.cwd());
-var meteorProcess = spawn(
-  '/usr/local/bin/meteor', args, {
-    cwd: process.cwd(),
-    stdio: 'pipe',
-    env: process.env
-  }
-);
+var meteorProcess = spawn('/usr/local/bin/meteor', ['--version']);
+
+//var meteorProcess = spawn(
+//  '/usr/local/bin/meteor', args, {
+//    cwd: process.cwd(),
+//    stdio: 'pipe',
+//    env: process.env
+//  }
+//);
 
 meteorProcess.stderr.pipe(process.stderr);
 meteorProcess.stdout.on('data', function (data) {
