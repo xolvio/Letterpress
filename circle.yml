@@ -89,9 +89,9 @@ deployment:
       - mupx deploy:
           pwd: environments/production
           environment:
-            PORT: 80, 
-            ROOT_URL: "http://able.xolv.io", 
-            NODE_ENV: "production" ,
+            PORT: 80,
+            ROOT_URL: "http://able.xolv.io",
+            NODE_ENV: "production" 
             MONGO_URL: "$LIVE_MONGO_URL"
             MONGO_OPLOG_URL: "$LIVE_MONGO_OPLOG_URL"
             STRIPE_SECRET_KEY: "$TEST_STRIPE_SECRET_KEY"
