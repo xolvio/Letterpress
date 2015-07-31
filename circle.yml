@@ -86,7 +86,7 @@ deployment:
     branch: 'master'
     commands:
       # Put our secret environment variables into the mup.json env vars section
-      - sed -i.bak s^%MAIL_URL%^$MAIL_URL^g environments/production/mup.json
+      - sed -i.bak s^%MAIL_URL%^$LIVE_MAIL_URL^g environments/production/mup.json
       - sed -i.bak s^%SIMIAN_ACCESS_TOKEN%^$SIMIAN_ACCESS_TOKEN^g environments/production/mup.json
       - sed -i.bak s^%MONGO_URL%^$LIVE_MONGO_URL^g environments/production/mup.json
       - sed -i.bak s^%MONGO_OPLOG_URL%^$LIVE_MONGO_OPLOG_URL^g environments/production/mup.json
