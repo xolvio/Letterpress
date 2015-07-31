@@ -22,7 +22,7 @@
   "env": { 
     "PORT": 80, 
     "ROOT_URL": "http://able.xolv.io", 
-    "NODE_ENV": "production" 
+    "NODE_ENV": "production" ,
  
     // These values are set through string replacement for security 
     "MONGO_URL": "%MONGO_URL%", 
