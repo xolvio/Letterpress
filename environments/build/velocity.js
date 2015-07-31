@@ -22,7 +22,7 @@ else {
   args.push('--test');
 }
 
-console.log('Starting Meteor with', args);
+console.log('Starting Meteor with', args, process.cwd());
 var meteorProcess = spawn(
   'meteor', args, {
     cwd: process.cwd(),
