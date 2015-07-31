@@ -59,6 +59,8 @@ dependencies:
   override:
 
     # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
+    - which node
+    - node --version
     - node ../environments/build/velocity.js:
         pwd: app
         environment:

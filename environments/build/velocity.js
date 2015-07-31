@@ -1,3 +1,5 @@
+console.log('velocity.js is starting');
+
 var spawn = require('child_process').spawn;
 var path = require('path');
 
@@ -20,7 +22,7 @@ else {
   args.push('--test');
 }
 
-console.log('Starting Meteor');
+console.log('Starting Meteor with', args);
 var meteorProcess = spawn(
   'meteor', args, {
     cwd: process.cwd(),
