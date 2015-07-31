@@ -6,12 +6,13 @@
 export JASMINE_CLIENT_UNIT=0
 export JASMINE_SERVER_UNIT=0
 
-export JASMINE_CLIENT_INTEGRATION=1
-export JASMINE_SERVER_INTEGRATION=1
+export JASMINE_CLIENT_INTEGRATION=0
+export JASMINE_SERVER_INTEGRATION=0
 export CUCUMBER=1
 export CHIMP_PATH=/home/jonas/projects/chimp/bin/chimp
-#export CHIMP_OPTIONS="--sync=false --debug --log=verbose"
 export VELOCITY_DEBUG=1
+#export VELOCITY_DEBUG_MIRROR=cucumber
+export CUCUMBER_TAIL=1
 
 if [ "$1" = "--test" ]; then
   export CUCUMBER_TAIL=1;

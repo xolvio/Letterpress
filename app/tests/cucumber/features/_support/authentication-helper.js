@@ -1,5 +1,5 @@
 module.exports = function () {
-  this.Before(function (done) {
+  this.Before(function (event, done) {
 
     var client = this.client;
     var server = this.server;
