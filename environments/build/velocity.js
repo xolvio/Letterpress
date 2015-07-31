@@ -1,4 +1,4 @@
-console.log('velocity.js is starting');
+console.log('velocity.js is running');
 
 var spawn = require('child_process').spawn;
 var path = require('path');
@@ -24,16 +24,14 @@ else {
   args.push('--test');
 }
 
-console.log('Starting Meteor with', args, process.cwd());
-var meteorProcess = spawn('/usr/local/bin/meteor', ['--version']);
-
-//var meteorProcess = spawn(
-//  '/usr/local/bin/meteor', args, {
-//    cwd: process.cwd(),
-//    stdio: 'pipe',
-//    env: process.env
-//  }
-//);
+console.log('Starting Meteor');
+var meteorProcess = spawn(
+  'meteor', args, {
+    cwd: process.cwd(),
+    stdio: 'pipe',
+    env: process.env
+  }
+);
 
 meteorProcess.stderr.pipe(process.stderr);
 meteorProcess.stdout.on('data', function (data) {
