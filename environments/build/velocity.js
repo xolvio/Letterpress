@@ -24,7 +24,7 @@ else {
 
 console.log('Starting Meteor with', args, process.cwd());
 var meteorProcess = spawn(
-  'meteor', args, {
+  '/usr/local/bin/meteor', args, {
     cwd: process.cwd(),
     stdio: 'pipe',
     env: process.env
