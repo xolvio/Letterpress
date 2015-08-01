@@ -86,7 +86,6 @@ deployment:
     branch: 'master'
     commands:
       # Copy the CloudFront pem file into the private dir of the app
-      - mkdir app/private
       - cp /home/ubuntu/.ssh/id_e63a7fbbf2c423eb3271dcfe03a6fec2 app/private/pk-APKAI6S56DROMMGID6BA.pem
       # Put our secret environment variables into the mup.json env vars section
       - sed -i.bak s^%MAIL_URL%^$LIVE_MAIL_URL^g environments/production/mup.json
