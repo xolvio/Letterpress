@@ -33,7 +33,7 @@
     "aws": {
       "cfnDistribution": "d20im1j7iedr4x.cloudfront.net",
       "keypairId" : "APKAI6S56DROMMGID6BA",
-      "privateKeyPath": "./private/pk-APKAI6S56DROMMGID6BA.pem"
+      "privateKeyPath": "/bundle/bundle/programs/server/assets/app/pk-APKAI6S56DROMMGID6BA.pem"
     }
   }
 }
