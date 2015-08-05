@@ -10,8 +10,7 @@ export JASMINE_CLIENT_INTEGRATION=0
 export JASMINE_SERVER_INTEGRATION=0
 export CUCUMBER=1
 export CHIMP_PATH=/home/jonas/projects/chimp/bin/chimp
-export VELOCITY_DEBUG=1
-#export VELOCITY_DEBUG_MIRROR=cucumber
+export CHIMP_OPTIONS="--sync=false"
 export CUCUMBER_TAIL=1
 
 if [ "$1" = "--test" ]; then
@@ -19,4 +18,4 @@ if [ "$1" = "--test" ]; then
 fi
 
 cd app
-meteor $1 --settings ../environments/local/settings.json --release velocity:METEOR@1.1.0.2_3 --raw-logs
+meteor $1 --settings ../environments/local/settings.json --release velocity:METEOR@1.1.0.3_2 --raw-logs
