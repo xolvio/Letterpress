@@ -59,7 +59,7 @@ test:
   override:
 
     # Package testing using velocity-cli
-    - velocity test-package login --ci --settings settings.development.json
+    // - velocity test-package login --ci --settings settings.development.json
 
     # Test the app with Chrome and ensure all artifacts can be traced back to the chrome run
     - node ../environments/build/velocity.js:
