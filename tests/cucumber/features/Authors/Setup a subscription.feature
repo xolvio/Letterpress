@@ -24,3 +24,9 @@ Feature: Setup a subscription
     When the user logs in
     Then they are informed of their expired subscription
     And the user is not able to see my content
+
+  Scenario: Revoke access for an unpaid subscription for trial users
+    Given a user has signed up for a trial
+    When the user logs in after 1 week
+    Then they are informed of their expired subscription
+    And the user is not able to see my content
