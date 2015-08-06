@@ -10,6 +10,11 @@ RouterHelper = {
     if (Router.current().url.indexOf(Meteor.absoluteUrl()) !== -1) {
       currentUrl = Router.current().url.substring(Meteor.absoluteUrl().length - 1);
     }
+
+    if (currentUrl === '/#') {
+      currentUrl = '/';
+    }
+
     return currentUrl;
   }
 };
@@ -25,10 +30,6 @@ Router.route('/(.*)', {
   action: function () {
 
     var currentUrl = RouterHelper.currentUrl();
-
-    if (currentUrl === '/#') {
-      currentUrl = '/';
-    }
 
     var page = Letterpress.Collections.Pages.findOne({path: currentUrl});
     if (page) {

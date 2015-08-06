@@ -14,4 +14,5 @@ if [ "$1" = "--test" ]; then
   export CUCUMBER_TAIL=1;
 fi
 
-meteor $1 --settings settings.json --release velocity:METEOR@1.1.0.2_3 --raw-logs
+cd app
+meteor $1 --settings ../environments/local/settings.json --release velocity:METEOR@1.1.0.2_3 --raw-logs
