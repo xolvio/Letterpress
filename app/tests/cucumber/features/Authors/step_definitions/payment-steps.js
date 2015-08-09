@@ -15,8 +15,8 @@ module.exports = function () {
   });
 
   this.When(/^a user pays using Stripe$/, function () {
-    browser.waitForExistSync('a[title="Buy It"]');
-    browser.clickSync('a[title="Buy It"]');
+    client.waitForExistSync('a[title="Buy It"]');
+    client.clickSync('a[title="Buy It"]');
   });
 
   this.Then(/^they see a confirmation screen of their "([^"]*)" purchase$/, function (plan) {
@@ -30,9 +30,9 @@ module.exports = function () {
         break;
     }
     // need a delay here
-    browser.waitForExistSync('.' + plan + '-confirmation');
-    expect(browser.urlSync().value).to.contain('/' + plan + '-confirmation');
-    expect(browser.getTextSync('body')).to.contain(message);
+    client.waitForExistSync('.' + plan + '-confirmation');
+    expect(client.urlSync().value).to.contain('/' + plan + '-confirmation');
+    expect(client.getTextSync('body')).to.contain(message);
   });
 
   this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function () {
@@ -87,31 +87,31 @@ module.exports = function () {
   });
 
   this.When(/^the user logs in$/, function () {
-    browser.waitForExistSync('a#login-sign-in-link');
-    browser.clickSync('a#login-sign-in-link');
-    browser.setValueSync('#login-email', 'me@example.com');
-    browser.setValueSync('#login-password', 'letme1n');
-    browser.clickSync('.login-button-form-submit');
-    browser.waitForExistSync('#login-name-link');
+    client.waitForExistSync('a#login-sign-in-link');
+    client.clickSync('a#login-sign-in-link');
+    client.setValueSync('#login-email', 'me@example.com');
+    client.setValueSync('#login-password', 'letme1n');
+    client.clickSync('.login-button-form-submit');
+    client.waitForExistSync('#login-name-link');
   });
 
   this.Then(/^the user is able to see my content$/, function () {
-    browser.url(process.env.ROOT_URL + 'chapter-1');
-    browser.waitForExistSync('#premuium-content');
-    expect(browser.isVisibleSync('#premuium-content')).to.be.true;
+    client.url(process.env.ROOT_URL + 'chapter-1');
+    client.waitForExistSync('#premuium-content');
+    expect(client.isVisibleSync('#premuium-content')).to.be.true;
   });
 
   this.Then(/^they are informed of their expired subscription$/, function () {
-    browser.waitForExistSync('.subscription-expired');
-    expect(browser.isVisibleSync('.subscription-expired')).to.be.true;
+    client.waitForExistSync('.subscription-expired');
+    expect(client.isVisibleSync('.subscription-expired')).to.be.true;
   });
 
   this.Then(/^the user is not able to see my content$/, function () {
-    browser.clickSync('a*=Home');
-    browser.waitForExistSync('a*=Chapter 1');
-    browser.clickSync('a*=Chapter 1');
-    browser.waitForExistSync('.description');
-    expect(browser.isVisibleSync('#premium-content')).to.be.false;
+    client.clickSync('a*=Home');
+    client.waitForExistSync('a*=Chapter 1');
+    client.clickSync('a*=Chapter 1');
+    client.waitForExistSync('.description');
+    expect(client.isVisibleSync('#premium-content')).to.be.false;
   });
 
 };
