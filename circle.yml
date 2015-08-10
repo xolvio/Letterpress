@@ -39,6 +39,10 @@ dependencies:
     # Install Meteor if the cache didn't restore it
     - if [ ! -e ~/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
 
+    # -- UPDATE NPM --
+    - ../bin/npm install npm
+      pwd: ~/.meteor/packages/meteor-tool/1.1.4/mt-*/dev_bundle/lib
+
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor related dependencies
     - node ../environments/build/velocity.js:
