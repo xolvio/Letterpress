@@ -91,6 +91,7 @@ velocity:source-map-support@0.3.2_1
 webapp@1.2.0
 webapp-hashing@1.0.3
 xolvio:aws-cloudfront-sign@0.1.0
-xolvio:cucumber@0.13.8
+xolvio:cucumber@0.14.0-rc.1
 xolvio:email-stub@0.2.0
+xolvio:env-set@0.0.2
 xolvio:stripe-stub@0.0.2

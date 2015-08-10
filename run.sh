@@ -9,8 +9,6 @@ export JASMINE_SERVER_UNIT=0
 export JASMINE_CLIENT_INTEGRATION=0
 export JASMINE_SERVER_INTEGRATION=0
 export CUCUMBER=1
-export CHIMP_PATH=/home/jonas/projects/chimp/bin/chimp
-export CHIMP_OPTIONS="--sync=false"
 export CUCUMBER_TAIL=1
 
 if [ "$1" = "--test" ]; then

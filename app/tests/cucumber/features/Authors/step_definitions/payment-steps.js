@@ -1,7 +1,5 @@
 module.exports = function () {
 
-  var request = require('request');
-
   this.Given(/^I have configured a Stripe account$/, function () {
     // do nothing, the step specification is valid but does not require automation
   });
@@ -15,8 +13,8 @@ module.exports = function () {
   });
 
   this.When(/^a user pays using Stripe$/, function () {
-    client.waitForExistSync('a[title="Buy It"]');
-    client.clickSync('a[title="Buy It"]');
+    client.waitForExist('a[title="Buy It"]');
+    client.click('a[title="Buy It"]');
   });
 
   this.Then(/^they see a confirmation screen of their "([^"]*)" purchase$/, function (plan) {
@@ -30,19 +28,19 @@ module.exports = function () {
         break;
     }
     // need a delay here
-    client.waitForExistSync('.' + plan + '-confirmation');
-    expect(client.urlSync().value).to.contain('/' + plan + '-confirmation');
-    expect(client.getTextSync('body')).to.contain(message);
+    client.waitForExist('.' + plan + '-confirmation');
+    expect(client.url().value).toMatch('/' + plan + '-confirmation');
+    expect(client.getText('body')).toMatch(message);
   });
 
   this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function () {
     var settings = server.callSync('fixtures/getSettings');
     var emails = server.callSync('emailStub/getEmails');
     var email = emails[0];
-    expect(email.to).to.equal('me@example.com');
-    expect(email.from).to.equal(settings.private.emails.welcome.from);
-    expect(email.subject).to.equal(settings.private.emails.welcome.subject);
-    expect(email.text).to.contain(settings.private.emails.welcome.text);
+    expect(email.to).toEqual('me@example.com');
+    expect(email.from).toEqual(settings.private.emails.welcome.from);
+    expect(email.subject).toEqual(settings.private.emails.welcome.subject);
+    expect(email.text).toMatch(settings.private.emails.welcome.text);
   });
 
   this.Given(/^a user is subscribed$/, function () {
@@ -69,11 +67,11 @@ module.exports = function () {
   this.Then(/^the user receives a repayment information email$/, function () {
     var settings = server.callSync('fixtures/getSettings');
     var emails = server.callSync('emailStub/getEmails');
-    expect(emails.length).to.equal(1, 'Expected to see an email');
+    expect(emails.length).toEqual(1);
     var email = emails[0];
-    expect(email.from).to.equal(settings.private.emails.failedPayment.from);
-    expect(email.subject).to.equal(settings.private.emails.failedPayment.subject);
-    expect(email.text).to.contain(settings.private.emails.failedPayment.text);
+    expect(email.from).toEqual(settings.private.emails.failedPayment.from);
+    expect(email.subject).toEqual(settings.private.emails.failedPayment.subject);
+    expect(email.text).toMatch(settings.private.emails.failedPayment.text);
   });
 
   this.Given(/^a user subscription expired (\d+) month\(s\) ago$/, function (months) {
@@ -87,31 +85,31 @@ module.exports = function () {
   });
 
   this.When(/^the user logs in$/, function () {
-    client.waitForExistSync('a#login-sign-in-link');
-    client.clickSync('a#login-sign-in-link');
-    client.setValueSync('#login-email', 'me@example.com');
-    client.setValueSync('#login-password', 'letme1n');
-    client.clickSync('.login-button-form-submit');
-    client.waitForExistSync('#login-name-link');
+    client.waitForExist('a#login-sign-in-link');
+    client.click('a#login-sign-in-link');
+    client.setValue('#login-email', 'me@example.com');
+    client.setValue('#login-password', 'letme1n');
+    client.click('.login-button-form-submit');
+    client.waitForExist('#login-name-link');
   });
 
   this.Then(/^the user is able to see my content$/, function () {
     client.url(process.env.ROOT_URL + 'chapter-1');
-    client.waitForExistSync('#premuium-content');
-    expect(client.isVisibleSync('#premuium-content')).to.be.true;
+    client.waitForExist('#premuium-content');
+    expect(client.isVisible('#premuium-content')).toBe(true);
   });
 
   this.Then(/^they are informed of their expired subscription$/, function () {
-    client.waitForExistSync('.subscription-expired');
-    expect(client.isVisibleSync('.subscription-expired')).to.be.true;
+    client.waitForExist('.subscription-expired');
+    expect(client.isVisible('.subscription-expired')).toBe(true);
   });
 
   this.Then(/^the user is not able to see my content$/, function () {
-    client.clickSync('a*=Home');
-    client.waitForExistSync('a*=Chapter 1');
-    client.clickSync('a*=Chapter 1');
-    client.waitForExistSync('.description');
-    expect(client.isVisibleSync('#premium-content')).to.be.false;
+    client.click('a*=Home');
+    client.waitForExist('a*=Chapter 1');
+    client.click('a*=Chapter 1');
+    client.waitForExist('.description');
+    expect(client.isVisible('#premium-content')).toBe(false);
   });
 
 };

@@ -1,5 +1,5 @@
 Feature: Create account
-  
+
   As a paying user
   I want to authenticate
   So that I can access the content I paid for
