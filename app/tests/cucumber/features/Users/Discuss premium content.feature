@@ -11,9 +11,9 @@ Feature: Discuss premium content
     Given I have signed up
     And I have logged in
     When I navigate to the private content page
-    And I can join the discussion about the private content
+    Then I can join the discussion about the private content
 
   Scenario: unregistered users can not view a discussion
     Given I am not logged in
     When I navigate to the private content page
-    And I cannot join the discussion about the private content
+    Then I cannot join the discussion about the private content
