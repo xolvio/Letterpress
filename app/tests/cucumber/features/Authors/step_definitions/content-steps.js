@@ -82,16 +82,12 @@ module.exports = function () {
   });
 
   this.Then(/^they should see the preview video in the video player$/, function () {
-    client.waitUntil(function () {
-      return client.getAttribute('video source', 'src');
-    });
+    client.waitForExist('video source');
     expect(client.getAttribute('video source', 'src')).toEqual(this.uploadedPreviewVideo);
   });
 
   this.Then(/^they should see the premium video in the video player$/, function () {
-    client.waitUntil(function () {
-      return client.getAttribute('video source', 'src');
-    });
+    client.waitForExist('video source');
     expect(client.getAttribute('video source', 'src')).toMatch(this.uploadedPremiumVideo);
   });
 
