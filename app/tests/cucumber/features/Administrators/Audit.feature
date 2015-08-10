@@ -1,5 +1,5 @@
 Feature: Audit
-  
+
   As an administrator
   I want to audit charges and payments
   So that I can resolve any discrepancies

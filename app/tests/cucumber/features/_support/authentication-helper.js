@@ -1,31 +1,26 @@
 module.exports = function () {
-  this.Before(function (done) {
-
-    var client = this.client;
-    var server = this.server;
+  this.Before(function () {
 
     this.AuthenticationHelper = {
-
       login: function () {
-        return client.
-          waitForExist('a#login-sign-in-link').
-          click('a#login-sign-in-link').
-          setValue('#login-email', 'me@example.com').
-          setValue('#login-password', 'letme1n').
-          click('.login-button-form-submit').
-          waitForExist('#login-name-link');
+        client.waitForExist('a#login-sign-in-link');
+        client.click('a#login-sign-in-link');
+        client.setValue('#login-email', 'me@example.com');
+        client.setValue('#login-password', 'letme1n');
+        client.click('.login-button-form-submit');
+        client.waitForExist('#login-name-link');
       },
 
       logout: function () {
-        return client.executeAsync(function (done) {
+        client.executeAsync(function (done) {
           Meteor.logout(done);
         });
       },
 
       createAccount: function (profile) {
         profile = profile || {
-            periodEnd: Math.floor(new Date().getTime() / 1000)
-          };
+          periodEnd: Math.floor(new Date().getTime() / 1000)
+        };
 
         return server.call('fixtures/createAccount', {
           email: 'me@example.com',
@@ -35,15 +30,10 @@ module.exports = function () {
       },
 
       createAccountAndLogin : function(profile) {
-        var self = this;
-        return self.createAccount(profile).then(function() {
-          return self.login();
-        });
+        this.createAccount(profile);
+        this.login();
       }
-
     };
-
-    done();
 
   });
 };

@@ -46,6 +46,10 @@ dependencies:
         environment:
           INSTALL_DEPENDENCIES: true
 
+    # -- UPDATE NPM --
+    - cd $HOME/.meteor/packages/meteor-tool/1.1.4/mt-*/dev_bundle/lib && ../bin/npm install npm
+    - cd $HOME/.meteor/packages/velocity_meteor-tool/1.1.4_2/mt-*/dev_bundle/lib && ../bin/npm install npm
+
     # -- CACHE CUCUMBER NPM MODULES --
     # Install package dependencies for Cucumber support files
     - npm install --production:

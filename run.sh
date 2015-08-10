@@ -15,4 +15,4 @@ if [ "$1" = "--test" ]; then
 fi
 
 cd app
-meteor $1 --settings ../environments/local/settings.json --release velocity:METEOR@1.1.0.2_3 --raw-logs
+meteor $1 --settings ../environments/local/settings.json --release velocity:METEOR@1.1.0.3_2 --raw-logs

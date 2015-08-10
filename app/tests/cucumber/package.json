@@ -4,6 +4,7 @@
   "description": "Dependencies for our Cucumber automation layer",
   "private": true,
   "dependencies": {
+    "@xolvio/jasmine-expect": "^1.0.0",
     "request": "2.58.0"
   }
 }

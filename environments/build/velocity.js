@@ -3,7 +3,7 @@ console.log('velocity.js is running');
 var spawn = require('child_process').spawn;
 var path = require('path');
 
-var velocityMeteorRelease = 'velocity:METEOR@1.1.0.2_3';
+var velocityMeteorRelease = 'velocity:METEOR@1.1.0.3_2';
 
 var args = [];
 args.push('--raw-logs');

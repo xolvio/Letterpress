@@ -8,7 +8,7 @@ letterpress:core
 xolvio:aws-cloudfront-sign
 
 # - - Testing packages
-xolvio:cucumber
+xolvio:cucumber@0.14.0-rc.2
 xolvio:stripe-stub
 xolvio:email-stub
 letterpress:fixtures
