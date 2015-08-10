@@ -40,7 +40,7 @@ dependencies:
     - if [ ! -e ~/.meteor/meteor ]; then curl https://install.meteor.com | sh; fi
 
     # -- UPDATE NPM --
-    - ../bin/npm install npm
+    - ../bin/npm install npm:
       pwd: "$HOME/.meteor/packages/meteor-tool/1.1.4/mt-*/dev_bundle/lib"
 
     # -- CACHE CUCUMBER NPM MODULES --
