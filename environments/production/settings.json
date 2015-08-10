@@ -4,6 +4,8 @@
     "currency": "usd",
     "disqus": "letterpresssite",
     "stripe": {
+      "livePublicKey" : "pk_live_GoKiF5ItEKrOVzk1yNBhgzAV",
+      "testPublicKey" : "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX",
       "publicKey": "pk_test_IpuMYnLskDNQ7V1b5NH3HoTX"
     }
   },
@@ -31,7 +33,7 @@
     "aws": {
       "cfnDistribution": "d20im1j7iedr4x.cloudfront.net",
       "keypairId" : "APKAI6S56DROMMGID6BA",
-      "privateKeyPath": "/home/ubuntu/.ssh/id_e63a7fbbf2c423eb3271dcfe03a6fec2"
+      "privateKeyPath": "/bundle/bundle/programs/server/assets/app/pk-APKAI6S56DROMMGID6BA.pem"
     }
   }
 }

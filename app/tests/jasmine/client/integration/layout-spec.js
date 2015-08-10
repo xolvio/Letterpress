@@ -1,12 +1,12 @@
 describe('The layout', function () {
 
   beforeEach(function (done) {
-
-    spyOn(UI._globalHelpers, 'classes').and.callThrough();
-
     Meteor.call('fixtures/seedData', function () {
-      Router.go('/chapter-1');
-      Tracker.afterFlush(done);
+      waitForRouter(function() {
+        spyOn(UI._globalHelpers, 'classes').and.callThrough();
+        Router.go('/chapter-1');
+        Tracker.afterFlush(done);
+      });
     });
   });
 
@@ -27,3 +27,4 @@ describe('The layout', function () {
   });
 
 });
+
