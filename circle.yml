@@ -41,7 +41,7 @@ dependencies:
 
     # -- UPDATE NPM --
     - ../bin/npm install npm:
-      pwd: "$HOME/.meteor/packages/meteor-tool/1.1.4/mt-*/dev_bundle/lib"
+        pwd: $HOME/.meteor/packages/meteor-tool/1.1.4/mt-*/dev_bundle/lib
 
     # -- CACHE CUCUMBER NPM MODULES --
     # Install Meteor related dependencies
