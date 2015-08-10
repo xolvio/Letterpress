@@ -5,11 +5,11 @@ module.exports = function () {
   });
 
   this.Given(/^I have created content$/, function () {
-    server.callSync('fixtures/seedData');
+    server.call('fixtures/seedData');
   });
 
   this.Given(/^I have setup a "([^"]*)" payment plan$/, function (plan) {
-    server.callSync('fixtures/setPaymentPlan', plan);
+    server.call('fixtures/setPaymentPlan', plan);
   });
 
   this.When(/^a user pays using Stripe$/, function () {
@@ -34,8 +34,8 @@ module.exports = function () {
   });
 
   this.Then(/^receive a confirmation email of their "([^"]*)" purchase$/, function () {
-    var settings = server.callSync('fixtures/getSettings');
-    var emails = server.callSync('emailStub/getEmails');
+    var settings = server.call('fixtures/getSettings');
+    var emails = server.call('emailStub/getEmails');
     var email = emails[0];
     expect(email.to).toEqual('me@example.com');
     expect(email.from).toEqual(settings.private.emails.welcome.from);
@@ -52,7 +52,7 @@ module.exports = function () {
   });
 
   this.When(/^a subscription payment error is received from Stripe$/, function () {
-    var meteorSettings = server.callSync('fixtures/getSettings');
+    var meteorSettings = server.call('fixtures/getSettings');
     // make a webhook request pretending an existing customer's stripe invoice failed
     requestSync({
       url: process.env.ROOT_URL + meteorSettings.private.stripe.webhookEndpoint,
@@ -65,8 +65,8 @@ module.exports = function () {
   });
 
   this.Then(/^the user receives a repayment information email$/, function () {
-    var settings = server.callSync('fixtures/getSettings');
-    var emails = server.callSync('emailStub/getEmails');
+    var settings = server.call('fixtures/getSettings');
+    var emails = server.call('emailStub/getEmails');
     expect(emails.length).toEqual(1);
     var email = emails[0];
     expect(email.from).toEqual(settings.private.emails.failedPayment.from);

@@ -5,7 +5,7 @@ module.exports = function () {
   this.Given(/^I created a landing page$/, function () {
     this.thePage = '/';
     // a landing-page is setup in the seed data
-    server.callSync('fixtures/seedData');
+    server.call('fixtures/seedData');
   });
 
   this.Given(/^I uploaded a premium video called "([^"]*)"$/, function (video) {
@@ -24,7 +24,7 @@ module.exports = function () {
     // store the path so humans can use "the page" natural language in future steps
     this.thePage = path;
 
-    server.callSync('fixtures/page/create', {
+    server.call('fixtures/page/create', {
       template: template,
       path: path,
       title: title,
@@ -69,7 +69,7 @@ module.exports = function () {
   });
 
   this.Given(/^I have created a chapter called "([^"]*)" with the description$/, function (title, text) {
-    server.callSync('fixtures/page/create', {
+    server.call('fixtures/page/create', {
       template: 'chapter',
       title: title,
       description: text
