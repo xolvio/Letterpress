@@ -17,11 +17,11 @@ Letterpress is a Meteor application that has been built from scratch using 100% 
 
 To run Letterpress, clone this repo and type:
 
-`./run`
+`./run.sh`
 
 To test locally, type:
 
-`./run --test`
+`./run.sh --test`
 
 #Get the Book
 To learn more about testing with Meteor, consider purchasing our book [The Meteor Testing Manual](http://www.meteortesting.com/?utm_source=letterpress&utm_medium=banner&utm_campaign=letterpress).
