@@ -2,7 +2,7 @@ describe('Accounts API', function () {
 
   describe('isSubscribed', function () {
 
-    it('gets the currently signed in user and checks id they are subscribed', function () {
+    it('gets the currently signed in user and checks if they are subscribed', function () {
 
       // SETUP
       var aUser = {a: 'user'};
