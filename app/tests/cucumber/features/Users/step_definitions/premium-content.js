@@ -35,7 +35,7 @@ module.exports = function () {
 
   this.Then(/^I cannot not see premium content$/, function () {
     client.waitForExist('.sign-in'); // so we know the page has loaded in non-logged in mode
-    expect(client.isVisible('#premuium-content')).toBe(false);
+    expect(client.isVisible('#premium-content')).toBe(false);
   });
 
 };
